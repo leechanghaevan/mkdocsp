@@ -1,1 +1,32 @@
-site_name: My Docs
+site_name: Evan's IT Note
+nav:
+  - Home: index.md
+  - Mkdocs: mkdocs.md
+  - Git: git.md
+  - Nodejs: nodejs.md
+  # - Vuejs: index.md
+  # - Typescript: index.md
+  # - Python: index.md
+  # - Pandas: index.md
+  # - Pytorch: index.md
+  # - Shortcut: index.md
+  # - Docker: index.md
+
+  # - SpringBoot: index.md
+  # - Unity3D: index.md
+  # - PHP: index.md
+
+  - Vscode: vscode.md
+  # - Intellij: index.md
+  # - Pycharm: index.md
+  # - Rider: index.md
+
+  # - MMORPG: index.md
+
+theme: readthedocs
+# site_description: 검색 메타
+# site_author: 검색 메타
+google_analytics: ["UA-36723568-3", "mkdocs.org"]
+
+plugins:
+  - search

@@ -1,17 +1,35 @@
-# Welcome to MkDocs
+# Evan's IT Note
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+    IT 개발 개인 기록소
+    [이메일] castepo@gmail.com
+    [페이스북] https://www.facebook.com/evanleee
 
-## Commands
+## 관심 기술 1
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- Gitt
+- Nodejs
+- Vuejs
+- Typescript
+- Python
+- Pandas
+- Pytorch
+- Shortcut
+- Docker
+- Unity3D
 
-## Project layout
+## 관심 기술 2
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Flutter
+- SpringBoot
+- PHP
+
+## 관심 툴
+
+- Vscode
+- Intellij
+- Pycharm
+- Rider
+
+## 프로젝트
+
+- MMORPG
