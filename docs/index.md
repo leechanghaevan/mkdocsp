@@ -6,7 +6,7 @@
 
 ## 관심 기술 1
 
-- Gitt
+- Git
 - Nodejs
 - Vuejs
 - Typescript
