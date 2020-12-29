@@ -24,7 +24,7 @@
 ## 명령어
 
 - 새 프로젝트 만들기 `mkdocs new [dir-name]` + 폴더 이동 `cd [dir-name]`
-- 테스트 서버 시작 `mkdocs serve`
+- 테스트 서버 시작 `mkdocs serve` (핫리로드 지원됨)
 - 빌드 `mkdocs build`
 - 헬프 `mkdocs -h`
 
@@ -46,6 +46,13 @@
   >     링크: ![img2](img/2020-12-29-03-05-21.png)
   >
   > vscode에서 Ctrl+Alt+V 누르면 클립보드 이미지가 파일로 저장되면서 링크도 생성된다. (Markdown Paste 확장)
+
+## Github Pages에 배포
+
+- 따로 build 할 필요없이 아래 명령어를 실행하면, 빌드후 자동으로 gh-pages 브랜치에 push된다.
+  `mkdocs gh-deploy`
+- GitHub Pages 설정에 가서 Source 브랜치를 `gh-pages`로 변경
+  ![img_page](img/2020-12-29-16-01-40.png)
 
 ---
 
