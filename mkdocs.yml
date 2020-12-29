@@ -1,27 +1,29 @@
 site_name: Evan's IT Note
 nav:
-  - Home: index.md
+  - About: about.md
   - Mkdocs: mkdocs.md
+  - Jekyll: jekyll.md
   - Git: git.md
+  - Chocolatey: chocolatey.md
   - Nodejs: nodejs.md
   # - Vuejs: index.md
   # - Typescript: index.md
-  # - Python: index.md
+  - Python: python.md
   # - Pandas: index.md
   # - Pytorch: index.md
-  # - Shortcut: index.md
-  # - Docker: index.md
+  - Docker: docker.md
 
   # - SpringBoot: index.md
   # - Unity3D: index.md
   # - PHP: index.md
 
-  - Vscode: vscode.md
+  - VSCode: vscode.md
   # - Intellij: index.md
   # - Pycharm: index.md
   # - Rider: index.md
 
   # - MMORPG: index.md
+  - Shortcuts: shortcuts.md
 
 theme: readthedocs
 # site_description: 검색 메타

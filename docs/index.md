@@ -1,8 +1,6 @@
 # Evan's IT Note
 
-    IT 개발 개인 기록소
-    [이메일] castepo@gmail.com
-    [페이스북] https://www.facebook.com/evanleee
+    어떤 프로그래머의 개인 기록소
 
 ## 관심 기술 1
 

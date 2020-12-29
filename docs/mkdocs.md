@@ -1,7 +1,19 @@
 # Mkdocs
 
-> mkdocs는 마크 다운 기반의 웹문서 생성기이다. 본 사이트를 만드는데 사용되었다.  
-> mkdocs를 설치하기 위해선 파이썬이 설치되어 있어야 한다.
+## 개요
+
+- mkdocs는 마크 다운 기반의 웹문서 생성기이다. 본 사이트를 만드는데 사용되었다.
+- mkdocs를 설치하기 위해선 파이썬 매니저인 pip가 설치되어 있어야 한다.
+
+## 사전필요
+
+- 파이썬 설치  
+   <http://www.python.org/downloads>
+- pip 설치  
+  `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py.`  
+  `python get-pip.py.`
+- 아나콘다로 (파이썬 + pip) 한번에 설치  
+  <https://docs.anaconda.com/anaconda/install/>
 
 ## 설치
 
@@ -25,11 +37,15 @@
   >         - Home: index.md
   >         - About: about.md
   >         ...
+
+## 문법
+
+- 일반적인 마크다운 문법을 따른다.
 - 이미지 연결
-  >     저장 위치: docs/img/2020-12-29-03-05-21.png
-  >     링크 형식: ![img2](img/2020-12-29-03-05-21.png)
+  >     경로: docs/img/2020-12-29-03-05-21.png
+  >     링크: ![img2](img/2020-12-29-03-05-21.png)
   >
-  > vscode에서 Ctrl+Alt+v 누르면 클립보드 이미지가 파일로 저장되면서 링크도 생성된다. (Markdown Paste)
+  > vscode에서 Ctrl+Alt+V 누르면 클립보드 이미지가 파일로 저장되면서 링크도 생성된다. (Markdown Paste 확장)
 
 ---
 

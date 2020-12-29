@@ -1,6 +1,10 @@
 # Git
 
-> 깃은 컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 분산 버전 관리 시스템이다. 소프트웨어 개발에서 소스 코드 관리에 주로 사용되지만 어떠한 집합의 파일의 변경사항을 지속적으로 추적하기 위해 사용될 수 있다.
+## 개요
+
+- 깃은 여러 사용자들 간에 공유하는 파일들의 변경 사항을 추적하기 위한 시스템이다. 소스 코드 관리에 주로 사용된다.
+
+## 명령어
 
 - **빈 리포지토리 생성**  
   `git init`
@@ -34,10 +38,10 @@
 - 원격 저장소 주소 확인 (현재 연결된)  
   `git remote -v`
 
->       **사용하지 않는 깃허브 계정 지우기**
->       제어판 - 사용자계정 - Windows자격증명 - github 관련 삭제
+>       사용하지 않는 깃허브 계정 지우기
+>           - 제어판 - 사용자계정 - Windows자격증명 - github 관련 삭제
 >       깃헙에 push 할때 마다 Logon failed 떠서 github계정을 다시 물어보는 경우가 있다.
->       무시해도 잘 진행 된다.
+>           - 무시해도 잘 진행 된다
 
 - 현재 유저 이름 조회/변경  
   `git config user.name`  
@@ -46,17 +50,18 @@
   `git config --global user.email [이메일]`
 
 - **새 원격 저장소 연결**  
-  `git remote add origin [깃헙 리포지토리 주소]`
+  `git remote add [저장소이름] [리포지토리 주소]`
+  `git remote add origin [리포지토리 주소]`
 
 - **푸시 (origin의 master 브랜치에)**  
-  `git push origin [새브랜치]`  
+  `git push [저장소이름] [브랜치]`  
   `git push origin master`
 
 - **풀 (업데이트)**  
   `git pull`
 
 - 현재 브랜치에 다른 브랜치 병합  
-  `git merge [새브랜치]`
+  `git merge [병합할브랜치]`
 
 - 깃 히스토리 보기 (종료는 q)  
   `git log --oneline`
@@ -80,8 +85,11 @@
   `git push origin branch2`
 
 - 깃 업데이트  
-  Windows: `git update-git-for-windows`  
-  Linux/Unix: `git update`
+   Windows: `git update-git-for-windows`  
+   Linux/Unix: `git update`
+
+- 깃 GUI 실행  
+  `gitk`
 
 <!-- > vscode에서 깃허브에 push할 때 마다 크래덴셜을 물어보는 경우
 > Window: `git config --global credential.helper wincred --global`
