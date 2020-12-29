@@ -7,8 +7,8 @@
 
 ## 사전필요
 
-- 파이썬 설치  
-   <http://www.python.org/downloads>
+- 파이썬 설치 [(이동)](python.md)  
+  <http://www.python.org/downloads>
 - pip 설치  
   `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py.`  
   `python get-pip.py.`
@@ -41,7 +41,7 @@
 ## 문법
 
 - 일반적인 마크다운 문법을 따른다.
-- 이미지 연결
+- 이미지 삽입 방법
   >     경로: docs/img/2020-12-29-03-05-21.png
   >     링크: ![img2](img/2020-12-29-03-05-21.png)
   >
@@ -51,8 +51,9 @@
 
 - 따로 build 할 필요없이 아래 명령어를 실행하면, 빌드후 자동으로 gh-pages 브랜치에 push된다.
   `mkdocs gh-deploy`
-- GitHub Pages 설정에 가서 Source 브랜치를 `gh-pages`로 변경하자
-  ![img_page](img/2020-12-29-16-01-40.png)
+- GitHub Pages 설정에 가서 Source 브랜치를 `gh-pages`로 변경하자. [그림 1-0]
+
+> [그림 1-0] ![img_page](img/2020-12-29-16-01-40.png)
 
 ---
 
