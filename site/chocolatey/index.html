@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>VSCode - Evan's IT Note</title>
+  <title>Chocolatey - Evan's IT Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "VSCode";
-    var mkdocs_page_input_path = "vscode.md";
+    var mkdocs_page_name = "Chocolatey";
+    var mkdocs_page_input_path = "chocolatey.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -73,8 +73,18 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">Git</a>
                     </li>
                 </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">Chocolatey</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Chocolatey</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">개요</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#window">Window에 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">명령어</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">추천 프로그램 목록</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <ul>
@@ -89,22 +99,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../docker/">Docker</a>
                     </li>
                 </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">VSCode</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">개요</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">단축키</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">내가 지정한 단축키</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1">추천 확장 1</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2">추천 확장 2</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3">추천 확장 3</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">VSCode</a>
                     </li>
                 </ul>
                 <ul>
@@ -132,7 +128,7 @@
     
       
     
-    <li>VSCode</li>
+    <li>Chocolatey</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -143,57 +139,34 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="vscode">VSCode</h1>
+                <h1 id="chocolatey">Chocolatey</h1>
 <h2 id="_1">개요</h2>
 <ul>
-<li>비주얼 스튜디오 코드는 마이크로소프트가 개발한 범용 코드 편집기이다.</li>
+<li>윈도용 패키지 매니저. 리눅스의 apt, yum 같은 역할</li>
 </ul>
-<h2 id="_2">단축키</h2>
+<h2 id="window">Window에 설치</h2>
 <ul>
-<li>프로젝트 익스플로러 열기 <code>Shift+Ctrl+E</code></li>
-<li>폰트 축소 확대 <code>CTRL+-</code> <code>CTRL++</code></li>
+<li>관리자 권한으로 파워셀 실행 후 아래 명령어 실행</li>
 </ul>
-<h2 id="_3">내가 지정한 단축키</h2>
+<pre><code class="language-1">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+</code></pre>
+<h2 id="_2">명령어</h2>
 <ul>
-<li>커밋 <code>Ctrl+K</code></li>
-<li>대소문자 전환 <code>Shift+Ctrl+C</code> (String Manipulation 확장)</li>
-<li>md 파일에서 클립보드 이미지 붙여넣기 <code>Ctrl+Alt+V</code> (Markdown Paste 확장)</li>
+<li>패키지 설치<br />
+<code>choco install [패키지이름]</code><br />
+<code>choco install [패키지이름] -y</code></li>
+<li>패키지 삭제<br />
+<code>choco uninstall [패키지이름] -y</code></li>
+<li>최신 버전으로 업데이트<br />
+<code>choco upgrade [패키지이름] -y</code></li>
+<li>설치된 목록 확인<br />
+<code>choco list --localonly</code></li>
 </ul>
-<h2 id="1">추천 확장 1</h2>
+<h2 id="_3">추천 프로그램 목록</h2>
 <ul>
-<li>Code Runner <em>소스 코드 바로 실행</em></li>
-<li>Debugger for Chrome</li>
-<li>Docker</li>
-<li>ESLint</li>
-<li>ftp-sync</li>
-<li>Generate short GUID (Shift+Ctrl+U)</li>
-<li>GitLens</li>
-<li>Insert Date String (Shift+Ctrl+I)</li>
-<li>Jupyter</li>
-<li>Markdown Paste</li>
-<li>Markdown Preview Enhanced</li>
-<li>Markdownlint</li>
-<li>Prettier</li>
-<li>Project Manager</li>
-<li>Python</li>
-<li>SQL Formatter</li>
-<li>String Manipulation</li>
-<li>Todo Tree</li>
-<li>TSLint Vue</li>
-<li>Vetur</li>
-<li>vscode-icons</li>
-</ul>
-<h2 id="2">추천 확장 2</h2>
-<ul>
-<li>Preview on Web Server (Browsersync가 같이 설치된다)
-  <code>http://localhost:3001</code></li>
-<li>phpfmt</li>
-<li>Tabnine</li>
-</ul>
-<h2 id="3">추천 확장 3</h2>
-<ul>
-<li>Dart</li>
-<li>Flutter</li>
+<li><code>choco install git -y</code></li>
+<li><code>choco install nodejs -y</code></li>
+<li><code>choco install yarn -y</code></li>
 </ul>
               
             </div>
@@ -202,10 +175,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../shortcuts/" class="btn btn-neutral float-right" title="Shortcuts">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../nodejs/" class="btn btn-neutral float-right" title="Nodejs">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../docker/" class="btn btn-neutral" title="Docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../git/" class="btn btn-neutral" title="Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -231,10 +204,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../docker/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../git/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../shortcuts/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../nodejs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
