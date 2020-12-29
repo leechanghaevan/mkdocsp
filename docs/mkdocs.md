@@ -51,7 +51,7 @@
 
 - 따로 build 할 필요없이 아래 명령어를 실행하면, 빌드후 자동으로 gh-pages 브랜치에 push된다.
   `mkdocs gh-deploy`
-- GitHub Pages 설정에 가서 Source 브랜치를 `gh-pages`로 변경
+- GitHub Pages 설정에 가서 Source 브랜치를 `gh-pages`로 변경하자
   ![img_page](img/2020-12-29-16-01-40.png)
 
 ---
