@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Docker - Evan's IT Note</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Docker";
+    var mkdocs_page_input_path = "docker.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Evan's IT Note</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Mkdocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">Jekyll</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">Git</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">Chocolatey</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodejs/">Nodejs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../python/">Python</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Docker</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">개요</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#window">Window에 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wsl">WSL에 우분투 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#docker-desktop">Docker Desktop 실행시 튜토리얼</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">VSCode</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">Shortcuts</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Evan's IT Note</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Docker</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="docker">Docker</h1>
+<h2 id="_1">개요</h2>
+<ul>
+<li>도커 컨테이너는 어떤 소프트웨어와 실행환경을 완전한 하나의 독립된 파일 시스템으로 분리한다.</li>
+<li>독립적인 "컨테이너"가 하나의 리눅스 인스턴스 안에서 실행할 수 있게 함으로써 가상머신을 유지보수해야 하는 부담을 없애준다.</li>
+<li>도커 이미지가 가상머신 이미지와 다른것은 리눅스 OS가 빠져있다. (즉 가볍다)</li>
+<li>도커는 리눅스 기반이므로 윈도에선 WSL 설치가 필수이다.</li>
+</ul>
+<h2 id="window">Window에 설치</h2>
+<ul>
+<li>vscode에서 마이크로소프트 도커 플러그인 검색 &amp; 설치</li>
+<li>Docker Desktop 설치하라고 뜸</li>
+<li>설치 후 리붓</li>
+<li>WSL2 커널을 업데이트 하라고 뜸 <a href="https://aka.ms/wsl2kernel">https://aka.ms/wsl2kernel</a> 로 연결됨</li>
+<li>연결된 사이트에서 <code>x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지</code> 다운로드 후 설치</li>
+<li>설치후 Docker Desktop Restart</li>
+</ul>
+<h2 id="wsl">WSL에 우분투 설치</h2>
+<ul>
+<li>WSL을 기본으로 설치하면 빈 리눅스 커널만 존재한다. 우분투를 설치해 보자.</li>
+<li>Window store에 가서 ubuntu를 설치</li>
+<li>기본 wsl distro 로 ubuntu 지정
+  <code>wsl --setdefault ubuntu</code></li>
+<li>명령창에서 wsl 실행 (종료는 exit)
+  <code>wsl</code></li>
+</ul>
+<h2 id="docker-desktop">Docker Desktop 실행시 튜토리얼</h2>
+<ul>
+<li>깃헙에서 샘플 이미지 다운로드<br />
+<code>docker run --name repo aline/git clone https://github.com/docker/getting-started.git</code></li>
+<li>다운받은 파일들을 getting-started 폴더로 복사<br />
+<code>docker cp repo:/git/getting-started/ .</code></li>
+<li>이동<br />
+<code>cd getting-started</code></li>
+<li>현재 폴더를 이미지로 빌드<br />
+<code>docker build -t docker101tutorial .</code></li>
+<li>내 도커 이미지를 컨테이너로 실행 (한번 실행해 두면 도커 대시보드에 등록된다)<br />
+<code>cd docker run -d -p 80:80 --name docker-tutorial docker101tutorial</code></li>
+<li>브라우저에서 확인<br />
+<a href="http://127.0.0.1/">http://127.0.0.1/</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vscode/" class="btn btn-neutral float-right" title="VSCode">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../python/" class="btn btn-neutral" title="Python"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../vscode/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
