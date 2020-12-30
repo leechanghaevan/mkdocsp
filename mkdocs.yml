@@ -1,5 +1,9 @@
 site_name: Evan's IT Note
 nav:
+  - PROJECT 1 CHAT:
+      - "- Chat": _chat.md
+  - PROJECT 2 MMO:
+      - "- MMO": _mmo.md
   - HTML:
       - "- HTML": html.md
       - "- CSS": css.md
@@ -21,15 +25,11 @@ nav:
   # - Intellij: index.md
   # - Pycharm: index.md
   # - Rider: index.md
-
   - UNITY3D:
       - "- Unity3D": unity3d.md
-  # - MMORPG: index.md
-  - PROJECT 1 CHAT:
-      - "- Chat": chat.md
-  - PROJECT 2 MMO:
-      - "- MMO": mmo.md
-  - System:
+  - AI:
+      - "- Chatbot": chatbot.md
+  - INFRA:
       - "- AWS": aws.md
       - "- Azure": azure.md
       - "- Linux": linux.md
@@ -41,6 +41,7 @@ nav:
       - "- VSCode": vscode.md
       - "- Docker": docker.md
   - ETC:
+      - "- 벤치 마크": benchmark.md
       - "- 참고 사이트": sites.md
       - "- 참고 단축키": shortcuts.md
       - "- ABOUT ME": about.md
