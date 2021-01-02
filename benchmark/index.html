@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Pytorch - Evan's IT Note</title>
+  <title>- 벤치 마크 - Evan's IT Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Pytorch";
-    var mkdocs_page_input_path = "pytorch.md";
+    var mkdocs_page_name = "- \ubca4\uce58 \ub9c8\ud06c";
+    var mkdocs_page_input_path = "benchmark.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -136,10 +136,14 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ETC</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../terms/">- 용어들</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치 마크</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- 벤치 마크</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#google-analytics-vs-firebase-analytics">Google Analytics vs Firebase Analytics</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../sites/">- 참고 사이트</a>
                     </li>
@@ -170,8 +174,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>ETC &raquo;</li>
+        
+      
     
-    <li>Pytorch</li>
+    <li>- 벤치 마크</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -182,11 +190,63 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="_1">벤치마크</h1>
+<h2 id="google-analytics-vs-firebase-analytics">Google Analytics vs Firebase Analytics</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Google Analytics</th>
+<th align="left">Firebase Analytics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">모바일 + 웹(웹 중심)</td>
+<td align="left">모바일 중심(웹 적용 안됨)</td>
+</tr>
+<tr>
+<td align="left">샘플 데이터 수집(Audience Tool 존재하지 않음)</td>
+<td align="left">전체 데이터 수집(Audience Tool존재)</td>
+</tr>
+<tr>
+<td align="left">screenview중심, Behavior flow파악 가능</td>
+<td align="left">Funnel Analysis(event중심, screenview를 event로 취급가능)</td>
+</tr>
+<tr>
+<td align="left">유료, user data추출 불가능</td>
+<td align="left">무료, user data를 추출하는데 약간의 돈이 들어감</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">user segmenation후 Notification 사용 가능</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">자동으로 app usage data collect</td>
+</tr>
+<tr>
+<td align="left">상대적으로 빠름(샘플 유저)</td>
+<td align="left">상대적으로 느림(전체 유저)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Google BigQuery 접근 가능</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sites/" class="btn btn-neutral float-right" title="- 참고 사이트">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../terms/" class="btn btn-neutral" title="- 용어들"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -210,6 +270,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../terms/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../sites/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
