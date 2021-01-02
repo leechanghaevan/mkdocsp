@@ -28,6 +28,15 @@
 - Vetur
 - vscode-icons
 
+## TSLint 설정 변경
+
+```
+"markdownlint.config": {
+  "MD001": false,
+  "MD040": false
+}
+```
+
 ## 추천 확장 2
 
 - Preview on Web Server (Browsersync가 같이 설치된다)

@@ -25,22 +25,28 @@ nav:
   # - Intellij: index.md
   # - Pycharm: index.md
   # - Rider: index.md
+  - "C#":
+      - "- C#": csharp.md
   - UNITY3D:
       - "- Unity3D": unity3d.md
+      - "- Websocket": unity3d_websocket.md
   - AI:
       - "- Chatbot": chatbot.md
   - INFRA:
       - "- AWS": aws.md
       - "- Azure": azure.md
       - "- Linux": linux.md
-  - TOOLS:
+  - TOOLS-DEV:
       - "- Mkdocs": mkdocs.md
       - "- Jekyll": jekyll.md
       - "- Git": git.md
       - "- Chocolatey": chocolatey.md
       - "- VSCode": vscode.md
       - "- Docker": docker.md
+  - TOOLS-ETC:
+      - "- Blender": blender.md
   - ETC:
+      - "- 용어들": terms.md
       - "- 벤치 마크": benchmark.md
       - "- 참고 사이트": sites.md
       - "- 참고 단축키": shortcuts.md

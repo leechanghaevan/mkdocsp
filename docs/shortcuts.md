@@ -18,11 +18,21 @@
 - 파일 찾기 `Ctrl+P`
 - 프로젝트 익스플로러 열기 `Shift+Ctrl+E`
 - 전체 폰트 축소 확대 `CTRL+-` `CTRL++`
-- 에디터 폰트 축소 확대 `마우스 휠` (설정에서 wheel로 검색하여 체크)
+- 에디터 폰트 축소 확대 `Ctrl+Wheel` (설정에서 wheel로 검색하여 체크)
 - 뒤로 가기 `Alt+Left`
+- 터미널 열기 Ctrl+`
 
 ## VSCode (사용자 정의)
 
 - 커밋 `Ctrl+K`
 - 대소문자 전환 `Shift+Ctrl+C` (String Manipulation 확장)
 - md 파일에서 클립보드 이미지 붙여넣기 `Ctrl+Alt+V` (Markdown Paste 확장)
+
+## 셀 명령어
+
+- 출력 cat [파일이름]
+- 다운로드 curl [URL] > [파일이름]
+
+## Windows
+
+- 😊 이모지 입력 `Window+;`

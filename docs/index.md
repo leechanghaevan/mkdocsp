@@ -2,27 +2,30 @@
 
     어떤 프로그래머의 개인 기록소
 
-## 관심 기술 1
+## 관심1
 
-- Git
-- Nodejs
+- [Nodejs](nodejs.md)
 - Vuejs
-- Typescript
-- Python
+- [Typescript](typescript.md)
+- [Python](python.md)
 - Pandas
 - Pytorch
-- Shortcut
-- Docker
-- Unity3D
 
-## 관심 기술 2
+## 관심2
 
+- C#
+- Java
+- Dart
 - Flutter
 - SpringBoot
 - PHP
 
-## 관심 툴
+## 툴
 
+- Git
+- Shortcut
+- Docker
+- Unity3D
 - Vscode
 - Intellij
 - Pycharm
@@ -30,4 +33,5 @@
 
 ## 프로젝트
 
-- MMORPG
+- [CHAT](_chat.md)
+- [MMORPG](_mmo.md)

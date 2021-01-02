@@ -1,5 +1,10 @@
 # 참고 사이트 모음
 
+## 커뮤니티
+
+- 게임코디: <http://1st.gamecodi.com/>
+- OKKY (구JSP School): <https://okky.kr/>
+
 ## Unity3D 관련
 
 - 에셋 스토어: <https://assetstore.unity.com/>
