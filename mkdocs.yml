@@ -36,13 +36,15 @@ nav:
       - "- AWS": aws.md
       - "- Azure": azure.md
       - "- Linux": linux.md
+      - "- RSA-AES-SHA": crypto.md
+      - "- Docker": docker.md
+      - "- Kubernetes": kubernetes.md
   - TOOLS-DEV:
       - "- Mkdocs": mkdocs.md
       - "- Jekyll": jekyll.md
       - "- Git": git.md
       - "- Chocolatey": chocolatey.md
       - "- VSCode": vscode.md
-      - "- Docker": docker.md
   - TOOLS-ETC:
       - "- Blender": blender.md
   - ETC:

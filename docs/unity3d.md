@@ -12,7 +12,19 @@
 
 ## 단점
 
-- 비슷한 목적의 언리얼 엔진에 비해 렌더링 퍼포먼스가 떨어짐
+- 비슷한 목적의 언리얼 엔진에 비해 고퀄리티 렌더링 퍼포먼스가 떨어진다고 평가됨
+
+## 팁
+
+- 특정 디파인 에서만 실행되는 함수
+
+```c#
+[System.Diagnostics.Conditional("UNITY_EDITOR")]
+public static void Log (object message)
+{
+    UnityEngine.Debug.Log (message);
+}
+```
 
 ---
 

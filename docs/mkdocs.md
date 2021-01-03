@@ -47,7 +47,7 @@
   >
   > vscode에서 Ctrl+Alt+V 누르면 클립보드 이미지가 파일로 저장되면서 링크도 생성된다. (Markdown Paste 확장)
 
-## Github Pages에 배포
+## 배포 (Github Page)
 
 - 따로 build 할 필요없이 아래 명령어를 실행하면, 빌드후 자동으로 gh-pages 브랜치에 push된다.
   `mkdocs gh-deploy`
