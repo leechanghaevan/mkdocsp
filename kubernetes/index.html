@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>🏃‍♀️🏃‍♂️ 헬린2분 - Evan's IT Note</title>
+  <title>- Kubernetes - Evan's IT Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\ud83c\udfc3\u200d\u2640\ufe0f\ud83c\udfc3\u200d\u2642\ufe0f \ud5ec\ub9b02\ubd84";
-    var mkdocs_page_input_path = "test.md";
+    var mkdocs_page_name = "- Kubernetes";
+    var mkdocs_page_input_path = "kubernetes.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -107,7 +107,7 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">INFRA</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../aws/">- AWS</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../azure/">- Azure</a>
@@ -118,7 +118,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- Kubernetes</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- Kubernetes</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">TOOLS-DEV</span></p>
@@ -176,8 +176,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>INFRA &raquo;</li>
+        
+      
     
-    <li>🏃‍♀️🏃‍♂️ 헬린2분</li>
+    <li>- Kubernetes</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -188,102 +192,93 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="2">🏃‍♀️🏃‍♂️ 헬린2분</h1>
-<p><img alt="헬린2분" src="" /></p>
-<blockquote>
-<p>헬린2분,
-침대 중독에서 운동 중독으로! 핫바디가 되고 싶은 당신을 위한 막간 홈트레이닝 추천 서비스</p>
-</blockquote>
-<h2 id="_1">🎁 서비스 핵심기능</h2>
-<h4 id="_2">⚽ 메인 페이지</h4>
-<ul>
-<li>홈트레이닝 영상의 길이를 선택할 수 있음 <em>(2, 5, 10, 15분)</em></li>
-</ul>
-<h4 id="_3">🎳 영상 페이지</h4>
-<ul>
-<li>선택한 시간에 맞는 영상을 랜덤으로 자동 재생</li>
-<li>영상을 다시 추천받거나 종료할 수 있음</li>
-<li>영상에 대한 좋아요/싫어요 수집</li>
-<li>영상 재생을 완료했을 경우:</li>
-<li>종료</li>
-<li>영상 재추천</li>
-<li>비로그인 상태일 경우:</li>
-<li>로그인/회원가입 모달</li>
-</ul>
-<h4 id="_4">🏓 로그인 페이지</h4>
-<ul>
-<li>이메일 주소, 비밀번호로 로그인</li>
-</ul>
-<h4 id="_5">🏑 회원가입 페이지</h4>
-<ul>
-<li>이름, 이메일 주소, 비밀번호로 회원가입</li>
-</ul>
-<h4 id="_6">🤿 마이 페이지</h4>
-<ul>
-<li>이름과 뱃지 표시</li>
-<li>총 운동 시간과 주간 운동 시간 그래프 표시</li>
-<li>뱃지 획득 현황 표시</li>
-</ul>
-<h2 id="_7">💻 개발 담당 부분</h2>
-<h4 id="_8"><strong>권소희</strong></h4>
-<ul>
-<li>메인 페이지 (Input)<blockquote>
-<p>시간 배열 길이에 따라서 시간 블록을 동적으로 생성
-시간 블록을 클릭하면 해당 시간을 받아서 고차컴포넌트<code>withRouter</code>와 <code>history.push()</code>를 통해 해당하는 영상 페이지로 연결</p>
-</blockquote>
-</li>
-<li>로그인/회원가입 페이지<blockquote>
-<p><code>useState</code>를 통해 input 동적으로 받아오기
-로그인/회원가입 컴포넌트를 <code>src/containers/my/SignForm.js</code>에서 한 번에 관리</p>
-</blockquote>
-</li>
-<li>README 문서 작성</li>
-<li>로그인/회원가입 페이지 스타일링</li>
-<li>영상 페이지 css 간격 조정</li>
-</ul>
-<h4 id="_9"><strong>이동훈</strong></h4>
-<ul>
-<li>마이 페이지 (Mypage)<blockquote>
-<p>서버에서 결과 가져오기
-그래프 구현
-redux, redux-saga 이용</p>
-</blockquote>
-</li>
-<li>메인 페이지, 마이페이지 스타일링</li>
-</ul>
-<h4 id="_10"><strong>현주희</strong></h4>
-<ul>
-<li>동영상 재생 페이지 (Result)<blockquote>
-<p>서버에서 영상 url, title, hashtag 받아오기
-youtube 동영상 iframe으로 연결
-redux, redux-saga 이용해서 state 관리</p>
-</blockquote>
-</li>
-<li>로그인/회원가입 페이지<blockquote>
-<p>서버 통신</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="_11">⚒ 사용한 모듈</h2>
-<pre><code>    &quot;axios&quot;: &quot;^0.21.0&quot;,
-    &quot;chart.js&quot;: &quot;^2.9.4&quot;,
-    &quot;immer&quot;: &quot;^8.0.0&quot;,
-    &quot;quill&quot;: &quot;^1.3.7&quot;,
-    &quot;react-chartjs-2&quot;: &quot;^2.11.1&quot;,
-    &quot;react-helmet-async&quot;: &quot;^1.0.7&quot;,
-    &quot;react-redux&quot;: &quot;^7.2.2&quot;,
-    &quot;react-router-dom&quot;: &quot;^5.2.0&quot;,
-    &quot;redux&quot;: &quot;^4.0.5&quot;,
-    &quot;redux-actions&quot;: &quot;^2.6.5&quot;,
-    &quot;redux-devtools-extension&quot;: &quot;^2.13.8&quot;,
-    &quot;redux-saga&quot;: &quot;^1.1.3&quot;,
-    &quot;styled-components&quot;: &quot;^5.2.1&quot;,
-    &quot;styled-reset&quot;: &quot;^4.3.1&quot;,
-</code></pre>
+                <!-- # Kubernetes
+
+## 개요 - 쿠버네티스란?
+
+> 쿠버네티스(Kubernetes "K8s")는 컨테이너화된 애플리케이션의 자동 디플로이, 스케일링 등을 제공하는 관리시스템으로, 오픈 소스 기반이다. 원래 구글에 의해 설계되었고 현재 리눅스 재단에 의해 관리되고 있다. 목적은 여러 클러스터의 호스트 간에 애플리케이션 컨테이너의 배치, 스케일링, 운영을 자동화하기 위한 플랫폼을 제공하기 위함이다. 도커를 포함하여 일련의 컨테이너 도구들과 함께 동작한다. - 위키백과
+
+1. 요약 : 클라우드 환경 구축을 위해, 클라우드 환경 서비스 운영을 위해, 클라우드 환경에서 개발 지원하기위해 만들어진 느낌?? 엄청엄청 강력하다!
+
+1. ha proxy 같은거 처럼 로드밸런싱도 해줄 수 있고
+
+1. 클라우드 솔루션 제공하는 업체 처럼 오토스케일링 기능도 있고
+
+1. 가상 ip와 OS랑 별도인 iptables 만들어서 엔드포인트 <-> 가상ip 연결 가능한거같고
+
+1. 각 컨테이너는 가상ip, 다중 포트, 커스텀 포트 지원하고
+
+1. 각 컨테이너에 대해, 외부 접근, 내부만 접근 가능하게 설정 가능 하고
+
+1. 젠킨스처럼 배포도 가능한거 같다
+   (배포 이력 관리까지 해주네)
+
+1. 크론탭같은 스케쥴링 기능도 있고..
+
+1. 스토리지 옵션에 깃 연동도 가능한거 같고
+
+1. 각 컨테이너들 헬스 체크 하고, 죽은 컨테이너는 지가 다시 살리는 듯?
+
+1. OS는 함께쓰고, 인프라의 CPU, 메모리, 디스크 공간 리소스만 나누니까 VM보다 가벼움
+
+1. 결론 : 클라우드 환경 구축, 운영, 개발지원을 위해 태어난 녀석!
+
+## 기본 개념
+
+1. 마스터
+   클러스터 구성에서 뇌 역할
+   개발자는 마스터에 RESTful로 문의해서 각 컨테이너들 상태 조회하고, 설정도 할 수 있어보인다
+1. 컨테이너
+   지금까지의 VM 느낌인데, OS는 개별이 아니고 공용 사용!
+
+1. 노드
+   노드 == 컨테이너????
+
+1. 파드
+   관련있는 컨테이너들 끼리 묶고싶을 때 논리적 그룹화 개념
+   아마.. 서비스별로 API 1번서버, API 2번서버 컨테이너 만들어놨다면
+   이거 2개를 그룹화하고, 서비스 호출할 때 해당 파드를 호출하는 형식일듯?
+   자동 로드밸런싱 될거같은데, 파드에서 로드밸런싱 해주는지 까지는 아직 모르겠다.
+   여러 컨테이너 런타임 사용 가능하다
+
+1. 컨테이너 런타임
+   컨테이너를 실행시키기 위한 환경
+
+1. 도커 는 CRI-O
+   컨테이너 런타임 종류
+
+1. 레이블
+   키/값 구성이라는 데, 왜 필요한건지는 더 공부해보고 있다
+
+1. 서비스
+   엔드포인트 받아서 원하는 파드 중계하는 역할로 보인다
+
+1. 복제 컨트롤러
+   애플리케이션이 원하는 규모가 되도록 보장하는 역할
+   이미지 인스턴스가 정해진 개수만큼만 실행되도록 관리
+   얘가 아마 오토스케일링도 해주는건가 싶다
+
+1. 레플리카 셋
+   향상된 버전의 복제컨트롤러라는데..
+   결국 1-7. 항목이랑 비슷하다고 이해 하고 있다
+
+---
+
+펌
+<https://stage-loving-developers.tistory.com/category/%EC%9E%90%EA%B8%B0%20%EA%B0%9C%EB%B0%9C/Kubernetes> -->
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mkdocs/" class="btn btn-neutral float-right" title="- Mkdocs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../docker/" class="btn btn-neutral" title="- Docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -307,6 +302,10 @@ redux, redux-saga 이용해서 state 관리</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../docker/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mkdocs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

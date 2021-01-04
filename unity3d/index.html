@@ -104,6 +104,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_3">단점</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">팁</a>
+    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity3d_websocket/">- Websocket</a>
@@ -122,6 +124,12 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../linux/">- Linux</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- RSA-AES-SHA</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- Kubernetes</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">TOOLS-DEV</span></p>
                 <ul>
@@ -134,8 +142,6 @@
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- Chocolatey</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- VSCode</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">TOOLS-ETC</span></p>
@@ -153,9 +159,11 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 참고 단축키</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../about/">- ABOUT ME</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../etc/">- 기타</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../todo/">- TO-DO</a>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">ABOUT</a>
                     </li>
                 </ul>
       </div>
@@ -208,8 +216,18 @@
 </ul>
 <h2 id="_3">단점</h2>
 <ul>
-<li>비슷한 목적의 언리얼 엔진에 비해 렌더링 퍼포먼스가 떨어짐</li>
+<li>비슷한 목적의 언리얼 엔진에 비해 고퀄리티 렌더링 퍼포먼스가 떨어진다고 평가됨</li>
 </ul>
+<h2 id="_4">팁</h2>
+<ul>
+<li>특정 디파인 에서만 실행되는 함수</li>
+</ul>
+<pre><code class="language-c#">[System.Diagnostics.Conditional(&quot;UNITY_EDITOR&quot;)]
+public static void Log (object message)
+{
+    UnityEngine.Debug.Log (message);
+}
+</code></pre>
 <hr />
 <p>참고</p>
 <ul>
