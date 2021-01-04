@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>🏃‍♀️🏃‍♂️ 헬린2분 - Evan's IT Note</title>
+  <title>- RSA-AES-SHA - Evan's IT Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\ud83c\udfc3\u200d\u2640\ufe0f\ud83c\udfc3\u200d\u2642\ufe0f \ud5ec\ub9b02\ubd84";
-    var mkdocs_page_input_path = "test.md";
+    var mkdocs_page_name = "- RSA-AES-SHA";
+    var mkdocs_page_input_path = "crypto.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -107,14 +107,14 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">INFRA</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../aws/">- AWS</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../azure/">- Azure</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../linux/">- Linux</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- RSA-AES-SHA</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- RSA-AES-SHA</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker</a>
                     </li>
@@ -176,8 +176,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>INFRA &raquo;</li>
+        
+      
     
-    <li>🏃‍♀️🏃‍♂️ 헬린2분</li>
+    <li>- RSA-AES-SHA</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -188,102 +192,71 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="2">🏃‍♀️🏃‍♂️ 헬린2분</h1>
-<p><img alt="헬린2분" src="" /></p>
-<blockquote>
-<p>헬린2분,
-침대 중독에서 운동 중독으로! 핫바디가 되고 싶은 당신을 위한 막간 홈트레이닝 추천 서비스</p>
-</blockquote>
-<h2 id="_1">🎁 서비스 핵심기능</h2>
-<h4 id="_2">⚽ 메인 페이지</h4>
-<ul>
-<li>홈트레이닝 영상의 길이를 선택할 수 있음 <em>(2, 5, 10, 15분)</em></li>
-</ul>
-<h4 id="_3">🎳 영상 페이지</h4>
-<ul>
-<li>선택한 시간에 맞는 영상을 랜덤으로 자동 재생</li>
-<li>영상을 다시 추천받거나 종료할 수 있음</li>
-<li>영상에 대한 좋아요/싫어요 수집</li>
-<li>영상 재생을 완료했을 경우:</li>
-<li>종료</li>
-<li>영상 재추천</li>
-<li>비로그인 상태일 경우:</li>
-<li>로그인/회원가입 모달</li>
-</ul>
-<h4 id="_4">🏓 로그인 페이지</h4>
-<ul>
-<li>이메일 주소, 비밀번호로 로그인</li>
-</ul>
-<h4 id="_5">🏑 회원가입 페이지</h4>
-<ul>
-<li>이름, 이메일 주소, 비밀번호로 회원가입</li>
-</ul>
-<h4 id="_6">🤿 마이 페이지</h4>
-<ul>
-<li>이름과 뱃지 표시</li>
-<li>총 운동 시간과 주간 운동 시간 그래프 표시</li>
-<li>뱃지 획득 현황 표시</li>
-</ul>
-<h2 id="_7">💻 개발 담당 부분</h2>
-<h4 id="_8"><strong>권소희</strong></h4>
-<ul>
-<li>메인 페이지 (Input)<blockquote>
-<p>시간 배열 길이에 따라서 시간 블록을 동적으로 생성
-시간 블록을 클릭하면 해당 시간을 받아서 고차컴포넌트<code>withRouter</code>와 <code>history.push()</code>를 통해 해당하는 영상 페이지로 연결</p>
-</blockquote>
-</li>
-<li>로그인/회원가입 페이지<blockquote>
-<p><code>useState</code>를 통해 input 동적으로 받아오기
-로그인/회원가입 컴포넌트를 <code>src/containers/my/SignForm.js</code>에서 한 번에 관리</p>
-</blockquote>
-</li>
-<li>README 문서 작성</li>
-<li>로그인/회원가입 페이지 스타일링</li>
-<li>영상 페이지 css 간격 조정</li>
-</ul>
-<h4 id="_9"><strong>이동훈</strong></h4>
-<ul>
-<li>마이 페이지 (Mypage)<blockquote>
-<p>서버에서 결과 가져오기
-그래프 구현
-redux, redux-saga 이용</p>
-</blockquote>
-</li>
-<li>메인 페이지, 마이페이지 스타일링</li>
-</ul>
-<h4 id="_10"><strong>현주희</strong></h4>
-<ul>
-<li>동영상 재생 페이지 (Result)<blockquote>
-<p>서버에서 영상 url, title, hashtag 받아오기
-youtube 동영상 iframe으로 연결
-redux, redux-saga 이용해서 state 관리</p>
-</blockquote>
-</li>
-<li>로그인/회원가입 페이지<blockquote>
-<p>서버 통신</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="_11">⚒ 사용한 모듈</h2>
-<pre><code>    &quot;axios&quot;: &quot;^0.21.0&quot;,
-    &quot;chart.js&quot;: &quot;^2.9.4&quot;,
-    &quot;immer&quot;: &quot;^8.0.0&quot;,
-    &quot;quill&quot;: &quot;^1.3.7&quot;,
-    &quot;react-chartjs-2&quot;: &quot;^2.11.1&quot;,
-    &quot;react-helmet-async&quot;: &quot;^1.0.7&quot;,
-    &quot;react-redux&quot;: &quot;^7.2.2&quot;,
-    &quot;react-router-dom&quot;: &quot;^5.2.0&quot;,
-    &quot;redux&quot;: &quot;^4.0.5&quot;,
-    &quot;redux-actions&quot;: &quot;^2.6.5&quot;,
-    &quot;redux-devtools-extension&quot;: &quot;^2.13.8&quot;,
-    &quot;redux-saga&quot;: &quot;^1.1.3&quot;,
-    &quot;styled-components&quot;: &quot;^5.2.1&quot;,
-    &quot;styled-reset&quot;: &quot;^4.3.1&quot;,
-</code></pre>
+                <!-- # 암호학
+
+## RSA
+
+위키백과
+
+> RSA는 두 개의 키를 사용한다. 여기서 키란 메시지를 열고 잠그는 상수(constant)를 의미한다. 일반적으로 많은 공개키 알고리즘의 공개키(public key)는 모두에게 알려져 있으며 메시지를 암호화(encrypt)하는데 쓰이며, 암호화된 메시지는 개인키(private key)를 가진 자만이 복호화(decrypt)하여 열어볼 수 있다.
+> 공개키 알고리즘은 누구나 어떤 메시지를 암호화할 수 있지만, 그것을 해독하여 열람할 수 있는 사람은 개인키를 지닌 단 한 사람만이 존재한다는 점에서 대칭키 알고리즘과 차이를 가진다.
+> RSA는 소인수 분해의 난해함에 기반하여, 공개키만을 가지고는 개인키를 쉽게 짐작할 수 없도록 디자인되어 있다.
+
+펌 <https://stage-loving-developers.tistory.com/23>
+
+> 대표적인 비대칭키 암호화 방식이다
+> 비대칭키 라는 것은 암호화할 때 키와 복호화할 때 키가 다르다는 의미인데, 암호화할 때 키를 "공개키", 복호화할 때 키를 "개인키"라고 한다
+> 클라이언트에서 가지고있는 정보를 서버로 보낼 때, 스니핑 등으로 데이터가 노출되면 안되므로 클라이언트가 가지고 있는 "공개키"로 데이터를 암호화하여, 서버로 전달한다
+> 다만, 암호화 가능한 길이가 딱 245byte 까지이므로, 긴 문자열을 암호화하는데는 적합하지 않다
+> 우리는 json 데이터를 주고받고 싶은데, 암호화 가능한 문자열 길이가 제한되어 있으므로 비회원과 통신할 때, 아래 AES 암호화를 섞어서 사용했다
+
+## AES
+
+위키백과
+
+> AES는 미국 정부가 채택한 이후 전 세계적으로 널리 사용되고 있다. 1977년 공표된 DES를 대체한 AES는, 암호화와 복호화 과정에서 동일한 키를 사용하는 대칭 키 알고리즘이다.
+
+펌 <https://stage-loving-developers.tistory.com/23>
+
+> AES는 "Advanced Encryption Standard"를 줄인 말이라고 한다(고급 암호화 표준)
+> "대칭키"라는 임의의 키를 만들어서, 암호화하고자 하는 "문자열"을 "대칭키" 라는 키로 암호화 하는 방식이다
+> 암호화 키의 길이에 따라 AES-128, AES-192, AES-256 종류가 있다
+> SHA 처럼 AES 뒤의 숫자가 bit 길이이다
+> 위의 비대칭키와 다르게 "대칭키" 하나로 암호화 및 복호화 모두 진행하는 방식이다(즉, 같은 키를 가지고 암복호화를 진행한다)
+> 특히 문자열 길이에 상관없이 암호화가 가능하다고 한다
+
+## RSA와 AES 함께 쓰기
+
+펌 <https://stage-loving-developers.tistory.com/23>
+
+> 우리는 245byte를 초과할 수 있는 "긴 문자열"(json 데이터)를 클라이언트와 서버간 주고받아야했다.때문에 RSA로는 암호화해서 데이터를 보낼 수 없었는데, 찾아보니 아래와 같은 방법이 있었다
+>
+> 1. RSA 공개키, 개인키를 서버에서 생성해서 클라이언트에게 "공개키"를 알려준다
+>    (우리는 통신할 때 마다 매번 공개키, 암호화를 생성하지는 않았고, 한 번만 생성한 후 클라이언트 개발 담당자에게 "공개키"를 넘겨줬다)
+> 1. 클라이언트는 "공개키"를 안전한 장소에 보관하고, 서버는 "개인키"를 안전한 장소에 보관한다
+> 1. 클라이언트에서 서버로 데이터를 보낼 때, AES 대칭키를 생성한다. 이 대칭키로 서버로 보낼 데이터를 AES 암호화 한다
+> 1. 서버에서는 클라이언트가 생성한 AES 대칭키를 알고있어야 전달받은 데이터를 복호화 할 수 있다. 때문에 클라이언트에서 AES대칭키를 안전한 장소에 보관된 "공개키"로 RSA 암호화를 진행한다
+> 1. 서버에서는 RSA 암호화된 AES 대칭키를 "개인키"로 RSA 복호화하고, 복호화된 AES 대칭키로 실제 데이터를 AES 복호화한다
+
+## SHA
+
+위키백과
+
+> SHA(Secure Hash Algorithm, 안전한 해시 알고리즘) 함수들은 서로 관련된 암호학적 해시 함수들의 모음이다. 이들 함수는 미국 국가안보국(NSA)이 1993년에 처음으로 설계했으며 미국 국가 표준으로 지정되었다. SHA 함수군에 속하는 최초의 함수는 공식적으로 SHA라고 불리지만, 나중에 설계된 함수들과 구별하기 위하여 SHA-0이라고도 불린다. 2년 후 SHA-0의 변형인 SHA-1이 발표되었으며, 그 후에 4종류의 변형, 즉 SHA-224, SHA-256, SHA-384, SHA-512가 더 발표되었다. 이들을 통칭해서 SHA-2라고 하기도 한다.
+> SHA-1은 SHA 함수들 중 가장 많이 쓰이며, TLS, SSL, PGP, SSH, IPSec 등 많은 보안 프로토콜과 프로그램에서 사용되고 있다. SHA-1은 이전에 널리 사용되던 MD5를 대신해서 쓰이기도 한다. 혹자는 좀 더 중요한 기술에는 SHA-256이나 그 이상의 알고리즘을 사용할 것을 권장한다. -->
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../docker/" class="btn btn-neutral float-right" title="- Docker">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../linux/" class="btn btn-neutral" title="- Linux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -307,6 +280,10 @@ redux, redux-saga 이용해서 state 관리</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../linux/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../docker/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

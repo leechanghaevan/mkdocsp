@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>🏃‍♀️🏃‍♂️ 헬린2분 - Evan's IT Note</title>
+  <title>- 기타 - Evan's IT Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\ud83c\udfc3\u200d\u2640\ufe0f\ud83c\udfc3\u200d\u2642\ufe0f \ud5ec\ub9b02\ubd84";
-    var mkdocs_page_input_path = "test.md";
+    var mkdocs_page_name = "- \uae30\ud0c0";
+    var mkdocs_page_input_path = "etc.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -140,7 +140,7 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ETC</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../terms/">- 용어들</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치 마크</a>
@@ -149,7 +149,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 참고 단축키</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../etc/">- 기타</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- 기타</a>
+    <ul class="current">
+    </ul>
                     </li>
                 </ul>
                 <ul>
@@ -176,8 +178,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>ETC &raquo;</li>
+        
+      
     
-    <li>🏃‍♀️🏃‍♂️ 헬린2분</li>
+    <li>- 기타</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -188,102 +194,29 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="2">🏃‍♀️🏃‍♂️ 헬린2분</h1>
-<p><img alt="헬린2분" src="" /></p>
-<blockquote>
-<p>헬린2분,
-침대 중독에서 운동 중독으로! 핫바디가 되고 싶은 당신을 위한 막간 홈트레이닝 추천 서비스</p>
-</blockquote>
-<h2 id="_1">🎁 서비스 핵심기능</h2>
-<h4 id="_2">⚽ 메인 페이지</h4>
-<ul>
-<li>홈트레이닝 영상의 길이를 선택할 수 있음 <em>(2, 5, 10, 15분)</em></li>
-</ul>
-<h4 id="_3">🎳 영상 페이지</h4>
-<ul>
-<li>선택한 시간에 맞는 영상을 랜덤으로 자동 재생</li>
-<li>영상을 다시 추천받거나 종료할 수 있음</li>
-<li>영상에 대한 좋아요/싫어요 수집</li>
-<li>영상 재생을 완료했을 경우:</li>
-<li>종료</li>
-<li>영상 재추천</li>
-<li>비로그인 상태일 경우:</li>
-<li>로그인/회원가입 모달</li>
-</ul>
-<h4 id="_4">🏓 로그인 페이지</h4>
-<ul>
-<li>이메일 주소, 비밀번호로 로그인</li>
-</ul>
-<h4 id="_5">🏑 회원가입 페이지</h4>
-<ul>
-<li>이름, 이메일 주소, 비밀번호로 회원가입</li>
-</ul>
-<h4 id="_6">🤿 마이 페이지</h4>
-<ul>
-<li>이름과 뱃지 표시</li>
-<li>총 운동 시간과 주간 운동 시간 그래프 표시</li>
-<li>뱃지 획득 현황 표시</li>
-</ul>
-<h2 id="_7">💻 개발 담당 부분</h2>
-<h4 id="_8"><strong>권소희</strong></h4>
-<ul>
-<li>메인 페이지 (Input)<blockquote>
-<p>시간 배열 길이에 따라서 시간 블록을 동적으로 생성
-시간 블록을 클릭하면 해당 시간을 받아서 고차컴포넌트<code>withRouter</code>와 <code>history.push()</code>를 통해 해당하는 영상 페이지로 연결</p>
-</blockquote>
-</li>
-<li>로그인/회원가입 페이지<blockquote>
-<p><code>useState</code>를 통해 input 동적으로 받아오기
-로그인/회원가입 컴포넌트를 <code>src/containers/my/SignForm.js</code>에서 한 번에 관리</p>
-</blockquote>
-</li>
-<li>README 문서 작성</li>
-<li>로그인/회원가입 페이지 스타일링</li>
-<li>영상 페이지 css 간격 조정</li>
-</ul>
-<h4 id="_9"><strong>이동훈</strong></h4>
-<ul>
-<li>마이 페이지 (Mypage)<blockquote>
-<p>서버에서 결과 가져오기
-그래프 구현
-redux, redux-saga 이용</p>
-</blockquote>
-</li>
-<li>메인 페이지, 마이페이지 스타일링</li>
-</ul>
-<h4 id="_10"><strong>현주희</strong></h4>
-<ul>
-<li>동영상 재생 페이지 (Result)<blockquote>
-<p>서버에서 영상 url, title, hashtag 받아오기
-youtube 동영상 iframe으로 연결
-redux, redux-saga 이용해서 state 관리</p>
-</blockquote>
-</li>
-<li>로그인/회원가입 페이지<blockquote>
-<p>서버 통신</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="_11">⚒ 사용한 모듈</h2>
-<pre><code>    &quot;axios&quot;: &quot;^0.21.0&quot;,
-    &quot;chart.js&quot;: &quot;^2.9.4&quot;,
-    &quot;immer&quot;: &quot;^8.0.0&quot;,
-    &quot;quill&quot;: &quot;^1.3.7&quot;,
-    &quot;react-chartjs-2&quot;: &quot;^2.11.1&quot;,
-    &quot;react-helmet-async&quot;: &quot;^1.0.7&quot;,
-    &quot;react-redux&quot;: &quot;^7.2.2&quot;,
-    &quot;react-router-dom&quot;: &quot;^5.2.0&quot;,
-    &quot;redux&quot;: &quot;^4.0.5&quot;,
-    &quot;redux-actions&quot;: &quot;^2.6.5&quot;,
-    &quot;redux-devtools-extension&quot;: &quot;^2.13.8&quot;,
-    &quot;redux-saga&quot;: &quot;^1.1.3&quot;,
-    &quot;styled-components&quot;: &quot;^5.2.1&quot;,
-    &quot;styled-reset&quot;: &quot;^4.3.1&quot;,
-</code></pre>
+                <h1 id="_1">[실업급여 신청 절차]</h1>
+<ol>
+<li><strong>워크넷</strong>(www.work.go.kr)을 통하여 구직신청</li>
+<li>거주지 관할 <strong>고용센터를 방문</strong>(신분증 지참)하여 고용센터에서 실시하는 실업급여 신청자 <strong>취업지원 설명회 참석</strong>
+   (www.ei.go.kr 온라인 교육 수강 가능)</li>
+<li><strong>수급자격인정신청서 및 재취업활동계획서 작성·제출</strong>
+   (워크넷으로 구직등록 후 방문시 워크넷 활용교육 및 구직표 작성 면제가능)</li>
+<li>개별상담을 거쳐 추후 일정에 대하여 안내</li>
+<li>관할 고용센터는 원칙적으로 <strong>접수 후 14일 이내에 수급자격 인정여부를 결정</strong>, 통지</li>
+</ol>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../about/" class="btn btn-neutral float-right" title="ABOUT">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../shortcuts/" class="btn btn-neutral" title="- 참고 단축키"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -307,6 +240,10 @@ redux, redux-saga 이용해서 state 관리</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../shortcuts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
