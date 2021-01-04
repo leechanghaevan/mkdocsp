@@ -55,9 +55,12 @@
 
 > [그림 1-0] ![img_page](img/2020-12-29-16-01-40.png)
 
-## 기타
+<!-- ## 기타
 
-- //todo! pdf로 출력
+### MkPDFs for MkDocs
+
+- PDF로 변환
+  `pip install mkpdfs-mkdocs` -->
 
 ---
 

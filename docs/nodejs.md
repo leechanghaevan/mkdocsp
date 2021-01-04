@@ -1,20 +1,20 @@
-# Node.js
+# 1. Node.js
 
-## 😊 개요
+## 1.1. 개요
 
 > Node.js는 확장성 있는 네트워크 애플리케이션 개발에 사용되는 소프트웨어 플랫폼이다. 작성 언어로 자바스크립트를 활용하며 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 처리 성능을 가지고 있다. - 위키백과
 
 ---
 
-## 😊 설정
+## 1.2. 설정
 
-### 설치
+### 1.2.1. 설치
 
 - Windows:  
   직접 다운로드 또는 choco로 설치  
   `choco install nodejs -y`
 
-### npm 사용법
+### 1.2.2. npm 사용법
 
 - 글로벌로 설치  
   `npm install xxx -g`
@@ -27,7 +27,7 @@
 - 글로벌 설치 목록 조회  
   `npm list -g`
 
-### 새 프로젝트 생성
+### 1.2.3. 새 프로젝트 생성
 
 - 프로젝트명 빈 폴더 생성  
   `mkdir [프로젝트폴더]`  
@@ -41,7 +41,7 @@
 - 특정 라이브러리 설치 (+ package.json에 추가)
   `npm install [라이브러리이름] --save`
 
-### express, socket.io 프로젝트 생성
+### 1.2.4. express, socket.io 프로젝트 생성
 
 - 가이드: <https://expressjs.com/ko/starter/installing.html>  
   `mkdir [프로젝트폴더]`  
@@ -52,15 +52,15 @@
 
 ---
 
-## 😊 주요 내장 모듈
+## 1.3. 주요 내장 모듈
 
-### console 내장 모듈 (콘솔 출력)
+### 1.3.1. console 내장 (콘솔)
 
 ```javascript
 console.log('hello');
 ```
 
-### process 내장 모듈 (시스템 제어)
+### 1.3.2. process 내장 (실행환경)
 
 ```javascript
 process.argv; //실행 변수
@@ -72,9 +72,9 @@ process.memoryUsage(); //메모리 사용량
 process.uptime(); //현재 프로그램이 실행된 시간
 ```
 
-### exports 내장 모듈 (모듈 제어)
+### 1.3.3. exports 내장 (라이브러리)
 
-- 모듈 (라이브러리) 내보내기 가져오기
+> 모듈 (라이브러리) 내보내기 가져오기
 
 ```javascript
 // 모듈 쪽
@@ -88,7 +88,7 @@ let module = require('./xxx');
 module.foo();
 ```
 
-### os (시스템 호출)
+### 1.3.4. os (시스템 호출)
 
 ```javascript
 var os = require('os');
@@ -105,7 +105,7 @@ os.cpus(); //CPU
 os.networkInterfaces(); //네트웍인터페이스
 ```
 
-### url (url 파싱)
+### 1.3.5. url (url 파싱)
 
 ```javascript
 var url = require('url');
@@ -114,16 +114,17 @@ url.format(); //url객체를 url문자열로 변환
 url.resolve(from, to); //조합해서 URL 문자열 생성
 ```
 
-### util (유틸)
+### 1.3.6. util (유틸)
 
 ```javascript
 var util = require("util");
 util.format(,...); //문자열 조합
 ```
 
-### crypo (암호화)
+### 1.3.7. crypo (암호화)
 
-- 해시 생성과 암호화 기능
+> 해시 생성과 암호화 기능
+
 - 해시 (복호화 불가)
 
 ```javascript
@@ -137,7 +138,7 @@ var output = shasum.digest('hex');
 console.log('crypto_hash:', output);
 ```
 
-- AES 암호화
+- 대칭키 암호화 (AES)
 
 ```javascript
 var crypo = require('crypo');
@@ -155,7 +156,7 @@ decipher.update(cipheredOutput, 'base64', 'utf8');
 var decipheredOutput = decipher.final('utf8');
 ```
 
-### fs (파일)
+### 1.3.8. fs (파일)
 
 ```javascript
 // 읽기
@@ -209,7 +210,7 @@ fs.writeFile('textfile.txt', 'Hello World', 'utf8', function (error) {
 });
 ```
 
-### http (웹서버)
+### 1.3.9. http (웹서버)
 
 ```javascript
 var fs = require('fs');
@@ -243,17 +244,69 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
 
 ---
 
-## 😊 주요 외부 모듈
+## 1.4. 주요 외부 모듈
 
-### socket.io
+### 1.4.1. ejs (뷰템플릿 엔진)
 
-- Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)
+> View Template Engine
+> Jave의 Thymeleaf 같은 역할
+
+- 설치  
+  `npm install ejs`
+
+### 1.4.2. jade (뷰템플릿 엔진)
+
+> View Template Engine
+> pug 로 이름 바뀜? //todo! 확인필요
+
+- 설치  
+  `npm install jade`
+
+### 1.4.3. socket.io (실시간 웹통신)
+
+> Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)
 
 ---
 
-## 😊 활용
+## 1.5. 툴
 
-### 예외 처리
+### 1.5.1. pm2 (프로세스 매니저)
+
+- 설치  
+  `npm install pm2 -g`  
+  `pm2 -version`
+- 실행 (실행즉시 daemon화 되어, 에러가 나지 않는 이상 24시간 계속 유지됨)  
+  `pm2 start example.js`
+- 실행 옵션  
+  --watch : PM2가 프로젝트의 변경사항을 감지하여 서버를 자동 리로드 (개발 단계에서 편리)  
+  `pm2 start example.js --watch`  
+  -i max(코어개수) : Node.js의 싱글 스레드를 보완하기 위한 클러스터(Cluster) 모드  
+  -i 뒤에 코어의 개수를 입력하거나 max를 쓰면 최대 코어 개수로 클러스터링(Clustering) 된다  
+  `pm2 start example.js --watch -i max`
+- 종료  
+  `pm2 kill`
+
+### 1.5.2. supervisor (서버 자동 갱신, 잘 안씀)
+
+> 파일의 변경 사항을 인식하고 노드를 재 실행 시켜줌
+
+- 설치:  
+  `npm install -g supervisor`
+- 사용법: node 대신 supervisor를 사용해 실행한다  
+  `node myapp.js` => `supervisor myapp.js`
+- 윈도우에서 실행할 권한이 없다고 뜨면 파워셀을 관리자 권한으로 실행 후 아래 입력한다  
+  `set-executionpolicy unrestricted`
+
+### 1.5.3. forever (잘 안씀)
+
+- 설치:  
+  `npm install -g forever`
+
+---
+
+## 1.6. 활용
+
+### 1.6.1. 예외 처리
 
 - 동기(즉시) 함수는 try catch로 예외처리 한다.
 
@@ -277,7 +330,7 @@ try {
 }
 ```
 
-### 이벤트
+### 1.6.2. 이벤트
 
 - 이벤트 핸들러
 
@@ -325,7 +378,7 @@ rint.timer.on('tick', function (code) {
 
 ---
 
-## 😊 참고
+## 1.7. 참고
 
 1. [Node.js v14.15.3 Documentation 공식 API 문서](https://nodejs.org/dist/latest-v14.x/docs/api/)
 1. [Node.js] Socket.IO와 Redis를 활용한 채팅 서버 개발: <https://library.gabia.com/contents/infrahosting/8018/>
