@@ -1,20 +1,20 @@
 site_name: Evan's IT Note
 nav:
   - PROJECT 1 CHAT:
-      - "- Chat": _chat.md
+      - '- Chat': _chat.md
   - PROJECT 2 MMO:
-      - "- MMO": _mmo.md
+      - '- MMO': _mmo.md
   - HTML:
-      - "- HTML": html.md
-      - "- CSS": css.md
+      - '- HTML': html.md
+      - '- CSS': css.md
   - TYPESCRIPT:
-      - "- Typescript": typescript.md
+      - '- Typescript': typescript.md
   - NODE.JS:
-      - "- NodeJS": nodejs.md
+      - '- NodeJS': nodejs.md
   # - Vue.js: index.md
   # - Typescript: index.md
   - PYTHON:
-      - "- Python": python.md
+      - '- Python': python.md
   # - Pandas: index.md
   # - Pytorch: index.md
 
@@ -25,34 +25,34 @@ nav:
   # - Intellij: index.md
   # - Pycharm: index.md
   # - Rider: index.md
-  - "C#":
-      - "- C#": csharp.md
+  - 'C#':
+      - '- C#': csharp.md
   - UNITY3D:
-      - "- Unity3D": unity3d.md
-      - "- Websocket": unity3d_websocket.md
+      - '- Unity3D': unity3d.md
+      - '- Websocket': unity3d_websocket.md
   - AI:
-      - "- Chatbot": chatbot.md
+      - '- Chatbot': chatbot.md
   - INFRA:
-      - "- AWS": aws.md
-      - "- Azure": azure.md
-      - "- Linux": linux.md
-      - "- RSA-AES-SHA": crypto.md
-      - "- Docker": docker.md
-      - "- Kubernetes": kubernetes.md
+      - '- AWS': aws.md
+      - '- Azure': azure.md
+      - '- Linux': linux.md
+      - '- RSA-AES-SHA': crypto.md
+      - '- Docker': docker.md
+      - '- Kubernetes': kubernetes.md
   - TOOLS-DEV:
-      - "- Mkdocs": mkdocs.md
-      - "- Jekyll": jekyll.md
-      - "- Git": git.md
-      - "- Chocolatey": chocolatey.md
-      - "- VSCode": vscode.md
+      - '- Mkdocs': mkdocs.md
+      - '- Jekyll': jekyll.md
+      - '- Git': git.md
+      - '- Chocolatey': chocolatey.md
+      - '- VSCode': vscode.md
   - TOOLS-ETC:
-      - "- Blender": blender.md
+      - '- Blender': blender.md
   - ETC:
-      - "- 용어들": terms.md
-      - "- 벤치 마크": benchmark.md
-      - "- 참고 사이트": sites.md
-      - "- 참고 단축키": shortcuts.md
-      - "- 기타": etc.md
+      - '- 용어들': terms.md
+      - '- 벤치 마크': benchmark.md
+      - '- 참고 사이트': sites.md
+      - '- 참고 단축키': shortcuts.md
+      - '- 기타': etc.md
   - ABOUT: about.md
     #   - '- TO-DO': todo.md
 
@@ -67,7 +67,7 @@ theme:
 #   search: 83 # s
 # site_description: 검색 메타
 # site_author: 검색 메타
-google_analytics: ["UA-36723568-3", "mkdocs.org"]
+google_analytics: ['UA-36723568-3', 'mkdocs.org']
 
 plugins:
   - search
