@@ -107,7 +107,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#134-os">1.3.4. os (시스템 호출)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#135-url-url">1.3.5. url (url 파싱)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#135-url-url-paring">1.3.5. url (url paring)</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#136-util">1.3.6. util (유틸)</a>
     </li>
@@ -126,6 +126,10 @@
     <li class="toctree-l3"><a class="reference internal" href="#142-jade">1.4.2. jade (뷰템플릿 엔진)</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#143-socketio">1.4.3. socket.io (실시간 웹통신)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#144-express">1.4.4. express (웹서버 프레임웍)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#145-cluster">1.4.5. cluster (코어 하나당 노드 프로세스를 실행한다)</a>
     </li>
         </ul>
     </li>
@@ -260,50 +264,7 @@
           <div role="main">
             <div class="section">
               
-                <hr />
-<ul>
-<li><a href="#1-nodejs">1. Node.js</a></li>
-<li><a href="#11-개요">1.1. 개요</a></li>
-<li><a href="#12-설정">1.2. 설정</a><ul>
-<li><a href="#121-설치">1.2.1. 설치</a></li>
-<li><a href="#122-npm-사용법">1.2.2. npm 사용법</a></li>
-<li><a href="#123-새-프로젝트-생성">1.2.3. 새 프로젝트 생성</a></li>
-<li><a href="#124-express-socketio-프로젝트-생성">1.2.4. express, socket.io 프로젝트 생성</a></li>
-</ul>
-</li>
-<li><a href="#13-주요-내장-모듈">1.3. 주요 내장 모듈</a><ul>
-<li><a href="#131-console-내장-콘솔">1.3.1. console 내장 (콘솔)</a></li>
-<li><a href="#132-process-내장-실행환경">1.3.2. process 내장 (실행환경)</a></li>
-<li><a href="#133-exports-내장-라이브러리">1.3.3. exports 내장 (라이브러리)</a></li>
-<li><a href="#134-os-시스템-호출">1.3.4. os (시스템 호출)</a></li>
-<li><a href="#135-url-url-파싱">1.3.5. url (url 파싱)</a></li>
-<li><a href="#136-util-유틸">1.3.6. util (유틸)</a></li>
-<li><a href="#137-crypo-암호화">1.3.7. crypo (암호화)</a></li>
-<li><a href="#138-fs-파일">1.3.8. fs (파일)</a></li>
-<li><a href="#139-http-웹서버">1.3.9. http (웹서버)</a></li>
-</ul>
-</li>
-<li><a href="#14-주요-외부-모듈">1.4. 주요 외부 모듈</a><ul>
-<li><a href="#141-ejs-뷰템플릿-엔진">1.4.1. ejs (뷰템플릿 엔진)</a></li>
-<li><a href="#142-jade-뷰템플릿-엔진">1.4.2. jade (뷰템플릿 엔진)</a></li>
-<li><a href="#143-socketio-실시간-웹통신">1.4.3. socket.io (실시간 웹통신)</a></li>
-</ul>
-</li>
-<li><a href="#15-툴">1.5. 툴</a><ul>
-<li><a href="#151-pm2-프로세스-매니저">1.5.1. pm2 (프로세스 매니저)</a></li>
-<li><a href="#152-supervisor-서버-자동-갱신-잘-안씀">1.5.2. supervisor (서버 자동 갱신, 잘 안씀)</a></li>
-<li><a href="#153-forever-잘-안씀">1.5.3. forever (잘 안씀)</a></li>
-</ul>
-</li>
-<li><a href="#16-활용">1.6. 활용</a><ul>
-<li><a href="#161-예외-처리">1.6.1. 예외 처리</a></li>
-<li><a href="#162-이벤트">1.6.2. 이벤트</a></li>
-</ul>
-</li>
-<li><a href="#17-참고">1.7. 참고</a></li>
-</ul>
-<hr />
-<h1 id="1-nodejs">1. Node.js</h1>
+                <h1 id="1-nodejs">1. Node.js</h1>
 <h2 id="11">1.1. 개요</h2>
 <blockquote>
 <p>Node.js는 확장성 있는 네트워크 애플리케이션 개발에 사용되는 소프트웨어 플랫폼이다. 작성 언어로 자바스크립트를 활용하며 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 처리 성능을 가지고 있다. - 위키백과</p>
@@ -328,7 +289,21 @@
 <code>npm uninstall xxx -g</code></li>
 <li>글로벌 설치 목록 조회<br />
 <code>npm list -g</code></li>
+<li>package.json 에 명령어 등록해서 프로젝트 실행
+  <code>npm start</code> 또는 <code>npm test</code><br />
+<code>npm run-script kill</code><br />
+<code>npm run-script reload</code></li>
 </ul>
+<pre><code class="language-json">//package.json 예시
+...
+&quot;scripts&quot;: {
+  &quot;start&quot;: &quot;pm2 start app.js -i 0&quot;,
+  &quot;test&quot;: &quot;pm2 start app.js --watch&quot;,
+  &quot;kill&quot;: &quot;pm2 kill&quot;,
+  &quot;reload&quot;: &quot;pm2 reload all&quot;
+},
+...
+</code></pre>
 <h3 id="123">1.2.3. 새 프로젝트 생성</h3>
 <ul>
 <li>프로젝트명 빈 폴더 생성<br />
@@ -355,7 +330,7 @@
 <hr />
 <h2 id="13">1.3. 주요 내장 모듈</h2>
 <h3 id="131-console">1.3.1. console 내장 (콘솔)</h3>
-<pre><code class="language-javascript">console.log('hello');
+<pre><code class="language-javascript">console.log(&quot;hello&quot;);
 </code></pre>
 <h3 id="132-process">1.3.2. process 내장 (실행환경)</h3>
 <pre><code class="language-javascript">process.argv; //실행 변수
@@ -375,11 +350,11 @@ process.uptime(); //현재 프로그램이 실행된 시간
 exports.foo = function () {};
 </code></pre>
 <pre><code class="language-javascript">// 사용하는 쪽
-let module = require('./xxx');
+let module = require(&quot;./xxx&quot;);
 module.foo();
 </code></pre>
 <h3 id="134-os">1.3.4. os (시스템 호출)</h3>
-<pre><code class="language-javascript">var os = require('os');
+<pre><code class="language-javascript">var os = require(&quot;os&quot;);
 os.hostname(); //호스트 이름
 os.type(); //운영체제 이름
 os.platform(); //운영체제 플랫폼?
@@ -392,8 +367,8 @@ os.freemem(); //가용 메모리
 os.cpus(); //CPU
 os.networkInterfaces(); //네트웍인터페이스
 </code></pre>
-<h3 id="135-url-url">1.3.5. url (url 파싱)</h3>
-<pre><code class="language-javascript">var url = require('url');
+<h3 id="135-url-url-paring">1.3.5. url (url paring)</h3>
+<pre><code class="language-javascript">var url = require(&quot;url&quot;);
 url.parse(); //url 문자열을 url 객체로 변환리턴
 url.format(); //url객체를 url문자열로 변환
 url.resolve(from, to); //조합해서 URL 문자열 생성
@@ -410,30 +385,30 @@ util.format(,...); //문자열 조합
 <li>해시 (복호화 불가)</li>
 </ul>
 <pre><code class="language-javascript">// 해시 생성과 암호화를 수행하는 모듈
-var crypo = require('crypo');
+var crypo = require(&quot;crypo&quot;);
 // 해시 생성
-var shasum = crypo.createHash('sha256');
-shasum.update('crypo_hash');
-var output = shasum.digest('hex');
+var shasum = crypo.createHash(&quot;sha256&quot;);
+shasum.update(&quot;crypo_hash&quot;);
+var output = shasum.digest(&quot;hex&quot;);
 //출력
-console.log('crypto_hash:', output);
+console.log(&quot;crypto_hash:&quot;, output);
 </code></pre>
 <ul>
 <li>대칭키 암호화 (AES)</li>
 </ul>
-<pre><code class="language-javascript">var crypo = require('crypo');
-var key = 'mykey';
-var input = 'PASSWORD';
+<pre><code class="language-javascript">var crypo = require(&quot;crypo&quot;);
+var key = &quot;mykey&quot;;
+var input = &quot;PASSWORD&quot;;
 
 //암호화
-var cipher = crypto.createCipher('aes192', key);
-ciper.update(input, 'utf8', 'base64');
-var cipheredOutput = cipher.final('base64');
+var cipher = crypto.createCipher(&quot;aes192&quot;, key);
+ciper.update(input, &quot;utf8&quot;, &quot;base64&quot;);
+var cipheredOutput = cipher.final(&quot;base64&quot;);
 
 //복호화
-var decipher = crypto.createDecipher('aes192', key);
-decipher.update(cipheredOutput, 'base64', 'utf8');
-var decipheredOutput = decipher.final('utf8');
+var decipher = crypto.createDecipher(&quot;aes192&quot;, key);
+decipher.update(cipheredOutput, &quot;base64&quot;, &quot;utf8&quot;);
+var decipheredOutput = decipher.final(&quot;utf8&quot;);
 </code></pre>
 <h3 id="138-fs">1.3.8. fs (파일)</h3>
 <pre><code class="language-javascript">// 읽기
@@ -449,67 +424,67 @@ fs.readFile('textfile.txt', 'utf8' function(error,data){
 });
 </code></pre>
 <pre><code class="language-javascript">// 쓰기
-var fs = require('fs');
+var fs = require(&quot;fs&quot;);
 
 // 쓰기
-var data = 'Hello World';
-fs.writeFile('TextFileOtherWrite.txt', data, 'utf8', function (error) {
-  console.log('Write File Asysnc Complete');
+var data = &quot;Hello World&quot;;
+fs.writeFile(&quot;TextFileOtherWrite.txt&quot;, data, &quot;utf8&quot;, function (error) {
+  console.log(&quot;Write File Asysnc Complete&quot;);
 });
 
 // 즉시 쓰기
-fs.writeFileSync('TextFileOtherWriteSync.txt', data, 'utf8');
-console.log('Write File Sysnc Complete');
+fs.writeFileSync(&quot;TextFileOtherWriteSync.txt&quot;, data, &quot;utf8&quot;);
+console.log(&quot;Write File Sysnc Complete&quot;);
 </code></pre>
 <ul>
 <li>비동기 함수는 에러 코드로 예외처리 한다.</li>
 </ul>
-<pre><code class="language-javascript">var fs = require('fs');
+<pre><code class="language-javascript">var fs = require(&quot;fs&quot;);
 
 // 파일을 읽습니다
-fs.readFileSync('textfile.txt', 'utf8', function (error, data) {
+fs.readFileSync(&quot;textfile.txt&quot;, &quot;utf8&quot;, function (error, data) {
   if (error) {
     console.log(error);
   } else {
-    console.log('File read complete:', data);
+    console.log(&quot;File read complete:&quot;, data);
   }
 });
 
-fs.writeFile('textfile.txt', 'Hello World', 'utf8', function (error) {
+fs.writeFile(&quot;textfile.txt&quot;, &quot;Hello World&quot;, &quot;utf8&quot;, function (error) {
   if (error) {
     console.log(error);
   } else {
-    console.log('File write complete');
+    console.log(&quot;File write complete&quot;);
   }
 });
 </code></pre>
 <h3 id="139-http">1.3.9. http (웹서버)</h3>
-<pre><code class="language-javascript">var fs = require('fs');
-var http = require('http');
+<pre><code class="language-javascript">var fs = require(&quot;fs&quot;);
+var http = require(&quot;http&quot;);
 http
   .createServer(function (request, response) {
     var date = new Date();
 
     //파일 읽어들임
-    fs.readFile('index.html', function (error, data) {
+    fs.readFile(&quot;index.html&quot;, function (error, data) {
       response.writeHead(200, {
-        'content-type': 'text/html', //mime 타입
-        'set-cookie': ['name = aaa', 'date = ' + date.toUTCString()], //쿠키 설정
+        &quot;content-type&quot;: &quot;text/html&quot;, //mime 타입
+        &quot;set-cookie&quot;: [&quot;name = aaa&quot;, &quot;date = &quot; + date.toUTCString()], //쿠키 설정
       });
 
       //출력
-      response.write(': current cookie is ' + request.headers.cookie);
+      response.write(&quot;: current cookie is &quot; + request.headers.cookie);
       response.end(data);
     });
   })
   .listen(80, function () {
-    console.log('server running');
+    console.log(&quot;server running&quot;);
   });
 </code></pre>
 <ul>
 <li>리다이렉션</li>
 </ul>
-<pre><code class="language-javascript">response.writeHead(302, { Location: 'http://www.naver.com' });
+<pre><code class="language-javascript">response.writeHead(302, { Location: &quot;http://www.naver.com&quot; });
 </code></pre>
 <hr />
 <h2 id="14">1.4. 주요 외부 모듈</h2>
@@ -535,6 +510,54 @@ pug 로 이름 바뀜? //todo! 확인필요</p>
 <blockquote>
 <p>Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)</p>
 </blockquote>
+<h3 id="144-express">1.4.4. express (웹서버 프레임웍)</h3>
+<blockquote>
+<p>Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과</p>
+</blockquote>
+<ul>
+<li>express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.</li>
+</ul>
+<pre><code class="language-javascript">const express = require(&quot;express&quot;);
+const app = express();
+const port = 3000;
+//method get, path /
+app.get(&quot;/&quot;, function (req, res) {
+  res.send(&quot;Hello World!&quot;);
+});
+app.listen(port, function () {
+  console.log(`application is listening on port ${port}...`);
+});
+</code></pre>
+<h3 id="145-cluster">1.4.5. cluster (코어 하나당 노드 프로세스를 실행한다)</h3>
+<pre><code class="language-javascript">const numCPUs = require(&quot;os&quot;).cpus().length; //코어개수 확인
+const cluster = require(&quot;cluster&quot;);
+const http = require(&quot;http&quot;);
+
+if (cluster.isMaster) {
+  console.log(`master: ${process.pid}`);
+
+  // CPU 개수마큼 워커를 생산
+  for (let i = 0; i &lt; numCPUs; i++) {
+    cluster.fork();
+  }
+
+  // 워커가 종료되었을 때
+  cluster.on(&quot;exit&quot;, (worker, code, singal) =&gt; {
+    console.log(`${worker.process.pid}: closed!`);
+    // 프로세스 다시 살린다
+    cluster.fork();
+  });
+} else {
+  // 워커들이 포트에서 대기
+  http
+    .createServer((req, res) =&gt; {
+      res.end(`Hi, I'm cluster`);
+    })
+    .listen(8005);
+  console.log(&quot;worker: &quot;, process.pid);
+}
+</code></pre>
+<p>참고: <a href="https://mongojs.tistory.com/15">https://mongojs.tistory.com/15</a></p>
 <hr />
 <h2 id="15">1.5. 툴</h2>
 <h3 id="151-pm2">1.5.1. pm2 (프로세스 매니저)</h3>
@@ -552,7 +575,19 @@ pug 로 이름 바뀜? //todo! 확인필요</p>
 <code>pm2 start example.js --watch -i max</code></li>
 <li>종료<br />
 <code>pm2 kill</code></li>
+<li>실행 프로세스 목록 조회<br />
+<code>pm2 list</code></li>
+<li>모니터링<br />
+<code>pm2 monit</code></li>
+<li>다시 로드
+  <code>pm2 reload all</code></li>
 </ul>
+<p>참고: <a href="https://engineering.linecorp.com/ko/blog/pm2-nodejs/">https://engineering.linecorp.com/ko/blog/pm2-nodejs/</a></p>
+<blockquote>
+<p>pm2 레퍼런스: <a href="https://www.npmjs.com/package/pm2">https://www.npmjs.com/package/pm2</a></p>
+</blockquote>
+<!-- https://github.com/NodeRedis/node-redis -->
+
 <h3 id="152-supervisor">1.5.2. supervisor (서버 자동 갱신, 잘 안씀)</h3>
 <blockquote>
 <p>파일의 변경 사항을 인식하고 노드를 재 실행 시켜줌</p>
@@ -576,11 +611,11 @@ pug 로 이름 바뀜? //todo! 확인필요</p>
 <ul>
 <li>동기(즉시) 함수는 try catch로 예외처리 한다.</li>
 </ul>
-<pre><code class="language-javascript">var fs = require('fs');
+<pre><code class="language-javascript">var fs = require(&quot;fs&quot;);
 
 // 파일을 읽습니다
 try {
-  var data = fs.readFileSync('textfile.txt', 'utf8');
+  var data = fs.readFileSync(&quot;textfile.txt&quot;, &quot;utf8&quot;);
   console.log(data);
 } catch (e) {
   console.log(e);
@@ -588,8 +623,8 @@ try {
 
 // 파일을 씁니다
 try {
-  fs.writeFileSync('textfile.txt', 'Hello World', 'utf8');
-  console.log('file write complete');
+  fs.writeFileSync(&quot;textfile.txt&quot;, &quot;Hello World&quot;, &quot;utf8&quot;);
+  console.log(&quot;file write complete&quot;);
 } catch (e) {
   console.log(e);
 }
@@ -600,24 +635,24 @@ try {
 </ul>
 <pre><code class="language-javascript">// 종료 이벤트 처리
 process.setMaxListeners(15); //최대 리스너 개수 지정 가능
-process.on('exit', function () {
+process.on(&quot;exit&quot;, function () {
   //리스너 등록
-  console.log('앱종료됨');
+  console.log(&quot;앱종료됨&quot;);
 });
-process.once('exit', function () {
+process.once(&quot;exit&quot;, function () {
   //1회성 리스너 등록
-  console.log('앱종료됨');
+  console.log(&quot;앱종료됨&quot;);
 });
 
 // 처리되지 않은 예외 이벤트 처리
-process.on('uncaughtException', onUncaughtException); //리스너 등록
-process.removeListener('exit', onUncaughtException); //리스너 제거
-process.removeAllListener('exit'); //리스너 모두 제거
+process.on(&quot;uncaughtException&quot;, onUncaughtException); //리스너 등록
+process.removeListener(&quot;exit&quot;, onUncaughtException); //리스너 제거
+process.removeAllListener(&quot;exit&quot;); //리스너 모두 제거
 </code></pre>
 <ul>
 <li>이벤트 강제 발생</li>
 </ul>
-<pre><code class="language-javascript">process.emit('exit'); //이벤트 핸들러만 호출하지 실제 시스템이 종료되지는 않는다
+<pre><code class="language-javascript">process.emit(&quot;exit&quot;); //이벤트 핸들러만 호출하지 실제 시스템이 종료되지는 않는다
 </code></pre>
 <ul>
 <li>EventEmitter 모듈 밖으로 내보내기</li>
@@ -625,13 +660,13 @@ process.removeAllListener('exit'); //리스너 모두 제거
 <pre><code class="language-javascript">//rint.js
 exports.timer = new process.EventEmitter();
 setInterval(function () {
-  exports.timer.emit('tick');
+  exports.timer.emit(&quot;tick&quot;);
 }, 1000);
 </code></pre>
 <pre><code class="language-javascript">//app.js
-var rint = require('./rint');
-rint.timer.on('tick', function (code) {
-  console.log('이벤트를 실행합니다.');
+var rint = require(&quot;./rint&quot;);
+rint.timer.on(&quot;tick&quot;, function (code) {
+  console.log(&quot;이벤트를 실행합니다.&quot;);
 });
 </code></pre>
 <hr />
