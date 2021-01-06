@@ -26,6 +26,22 @@
   `npm uninstall xxx -g`
 - 글로벌 설치 목록 조회  
   `npm list -g`
+- package.json 에 명령어 등록해서 프로젝트 실행
+  `npm start` 또는 `npm test`  
+  `npm run-script kill`  
+  `npm run-script reload`
+
+```json
+//package.json 예시
+...
+"scripts": {
+  "start": "pm2 start app.js -i 0",
+  "test": "pm2 start app.js --watch",
+  "kill": "pm2 kill",
+  "reload": "pm2 reload all"
+},
+...
+```
 
 ### 1.2.3. 새 프로젝트 생성
 
@@ -57,7 +73,7 @@
 ### 1.3.1. console 내장 (콘솔)
 
 ```javascript
-console.log('hello');
+console.log("hello");
 ```
 
 ### 1.3.2. process 내장 (실행환경)
@@ -84,14 +100,14 @@ exports.foo = function () {};
 
 ```javascript
 // 사용하는 쪽
-let module = require('./xxx');
+let module = require("./xxx");
 module.foo();
 ```
 
 ### 1.3.4. os (시스템 호출)
 
 ```javascript
-var os = require('os');
+var os = require("os");
 os.hostname(); //호스트 이름
 os.type(); //운영체제 이름
 os.platform(); //운영체제 플랫폼?
@@ -108,7 +124,7 @@ os.networkInterfaces(); //네트웍인터페이스
 ### 1.3.5. url (url 파싱)
 
 ```javascript
-var url = require('url');
+var url = require("url");
 url.parse(); //url 문자열을 url 객체로 변환리턴
 url.format(); //url객체를 url문자열로 변환
 url.resolve(from, to); //조합해서 URL 문자열 생성
@@ -129,31 +145,31 @@ util.format(,...); //문자열 조합
 
 ```javascript
 // 해시 생성과 암호화를 수행하는 모듈
-var crypo = require('crypo');
+var crypo = require("crypo");
 // 해시 생성
-var shasum = crypo.createHash('sha256');
-shasum.update('crypo_hash');
-var output = shasum.digest('hex');
+var shasum = crypo.createHash("sha256");
+shasum.update("crypo_hash");
+var output = shasum.digest("hex");
 //출력
-console.log('crypto_hash:', output);
+console.log("crypto_hash:", output);
 ```
 
 - 대칭키 암호화 (AES)
 
 ```javascript
-var crypo = require('crypo');
-var key = 'mykey';
-var input = 'PASSWORD';
+var crypo = require("crypo");
+var key = "mykey";
+var input = "PASSWORD";
 
 //암호화
-var cipher = crypto.createCipher('aes192', key);
-ciper.update(input, 'utf8', 'base64');
-var cipheredOutput = cipher.final('base64');
+var cipher = crypto.createCipher("aes192", key);
+ciper.update(input, "utf8", "base64");
+var cipheredOutput = cipher.final("base64");
 
 //복호화
-var decipher = crypto.createDecipher('aes192', key);
-decipher.update(cipheredOutput, 'base64', 'utf8');
-var decipheredOutput = decipher.final('utf8');
+var decipher = crypto.createDecipher("aes192", key);
+decipher.update(cipheredOutput, "base64", "utf8");
+var decipheredOutput = decipher.final("utf8");
 ```
 
 ### 1.3.8. fs (파일)
@@ -174,38 +190,38 @@ fs.readFile('textfile.txt', 'utf8' function(error,data){
 
 ```javascript
 // 쓰기
-var fs = require('fs');
+var fs = require("fs");
 
 // 쓰기
-var data = 'Hello World';
-fs.writeFile('TextFileOtherWrite.txt', data, 'utf8', function (error) {
-  console.log('Write File Asysnc Complete');
+var data = "Hello World";
+fs.writeFile("TextFileOtherWrite.txt", data, "utf8", function (error) {
+  console.log("Write File Asysnc Complete");
 });
 
 // 즉시 쓰기
-fs.writeFileSync('TextFileOtherWriteSync.txt', data, 'utf8');
-console.log('Write File Sysnc Complete');
+fs.writeFileSync("TextFileOtherWriteSync.txt", data, "utf8");
+console.log("Write File Sysnc Complete");
 ```
 
 - 비동기 함수는 에러 코드로 예외처리 한다.
 
 ```javascript
-var fs = require('fs');
+var fs = require("fs");
 
 // 파일을 읽습니다
-fs.readFileSync('textfile.txt', 'utf8', function (error, data) {
+fs.readFileSync("textfile.txt", "utf8", function (error, data) {
   if (error) {
     console.log(error);
   } else {
-    console.log('File read complete:', data);
+    console.log("File read complete:", data);
   }
 });
 
-fs.writeFile('textfile.txt', 'Hello World', 'utf8', function (error) {
+fs.writeFile("textfile.txt", "Hello World", "utf8", function (error) {
   if (error) {
     console.log(error);
   } else {
-    console.log('File write complete');
+    console.log("File write complete");
   }
 });
 ```
@@ -213,33 +229,33 @@ fs.writeFile('textfile.txt', 'Hello World', 'utf8', function (error) {
 ### 1.3.9. http (웹서버)
 
 ```javascript
-var fs = require('fs');
-var http = require('http');
+var fs = require("fs");
+var http = require("http");
 http
   .createServer(function (request, response) {
     var date = new Date();
 
     //파일 읽어들임
-    fs.readFile('index.html', function (error, data) {
+    fs.readFile("index.html", function (error, data) {
       response.writeHead(200, {
-        'content-type': 'text/html', //mime 타입
-        'set-cookie': ['name = aaa', 'date = ' + date.toUTCString()], //쿠키 설정
+        "content-type": "text/html", //mime 타입
+        "set-cookie": ["name = aaa", "date = " + date.toUTCString()], //쿠키 설정
       });
 
       //출력
-      response.write(': current cookie is ' + request.headers.cookie);
+      response.write(": current cookie is " + request.headers.cookie);
       response.end(data);
     });
   })
   .listen(80, function () {
-    console.log('server running');
+    console.log("server running");
   });
 ```
 
 - 리다이렉션
 
 ```javascript
-response.writeHead(302, { Location: 'http://www.naver.com' });
+response.writeHead(302, { Location: "http://www.naver.com" });
 ```
 
 ---
@@ -266,6 +282,59 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
 
 > Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)
 
+### express (웹서버)
+
+> Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과
+
+- 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿이라고 보면 된다.
+
+```javascript
+const express = require("express");
+const app = express();
+const port = 3000;
+//method get, path /
+app.get("/", function (req, res) {
+  res.send("Hello World!");
+});
+app.listen(port, function () {
+  console.log(`application is listening on port ${port}...`);
+});
+```
+
+### cluster (코어 하나당 노드 프로세스를 실행한다)
+
+```javascript
+const numCPUs = require("os").cpus().length; //코어개수 확인
+const cluster = require("cluster");
+const http = require("http");
+
+if (cluster.isMaster) {
+  console.log(`master: ${process.pid}`);
+
+  // CPU 개수마큼 워커를 생산
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  // 워커가 종료되었을 때
+  cluster.on("exit", (worker, code, singal) => {
+    console.log(`${worker.process.pid}: closed!`);
+    // 프로세스 다시 살린다
+    cluster.fork();
+  });
+} else {
+  // 워커들이 포트에서 대기
+  http
+    .createServer((req, res) => {
+      res.end(`Hi, I'm cluster`);
+    })
+    .listen(8005);
+  console.log("worker: ", process.pid);
+}
+```
+
+참고: <https://mongojs.tistory.com/15>
+
 ---
 
 ## 1.5. 툴
@@ -285,6 +354,18 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
   `pm2 start example.js --watch -i max`
 - 종료  
   `pm2 kill`
+- 실행 프로세스 목록 조회  
+  `pm2 list`
+- 모니터링  
+  `pm2 monit`
+- 다시 로드
+  `pm2 reload all`
+
+참고: <https://engineering.linecorp.com/ko/blog/pm2-nodejs/>
+
+> pm2 레퍼런스: <https://www.npmjs.com/package/pm2>
+
+<!-- https://github.com/NodeRedis/node-redis -->
 
 ### 1.5.2. supervisor (서버 자동 갱신, 잘 안씀)
 
@@ -311,11 +392,11 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
 - 동기(즉시) 함수는 try catch로 예외처리 한다.
 
 ```javascript
-var fs = require('fs');
+var fs = require("fs");
 
 // 파일을 읽습니다
 try {
-  var data = fs.readFileSync('textfile.txt', 'utf8');
+  var data = fs.readFileSync("textfile.txt", "utf8");
   console.log(data);
 } catch (e) {
   console.log(e);
@@ -323,8 +404,8 @@ try {
 
 // 파일을 씁니다
 try {
-  fs.writeFileSync('textfile.txt', 'Hello World', 'utf8');
-  console.log('file write complete');
+  fs.writeFileSync("textfile.txt", "Hello World", "utf8");
+  console.log("file write complete");
 } catch (e) {
   console.log(e);
 }
@@ -337,25 +418,25 @@ try {
 ```javascript
 // 종료 이벤트 처리
 process.setMaxListeners(15); //최대 리스너 개수 지정 가능
-process.on('exit', function () {
+process.on("exit", function () {
   //리스너 등록
-  console.log('앱종료됨');
+  console.log("앱종료됨");
 });
-process.once('exit', function () {
+process.once("exit", function () {
   //1회성 리스너 등록
-  console.log('앱종료됨');
+  console.log("앱종료됨");
 });
 
 // 처리되지 않은 예외 이벤트 처리
-process.on('uncaughtException', onUncaughtException); //리스너 등록
-process.removeListener('exit', onUncaughtException); //리스너 제거
-process.removeAllListener('exit'); //리스너 모두 제거
+process.on("uncaughtException", onUncaughtException); //리스너 등록
+process.removeListener("exit", onUncaughtException); //리스너 제거
+process.removeAllListener("exit"); //리스너 모두 제거
 ```
 
 - 이벤트 강제 발생
 
 ```javascript
-process.emit('exit'); //이벤트 핸들러만 호출하지 실제 시스템이 종료되지는 않는다
+process.emit("exit"); //이벤트 핸들러만 호출하지 실제 시스템이 종료되지는 않는다
 ```
 
 - EventEmitter 모듈 밖으로 내보내기
@@ -364,15 +445,15 @@ process.emit('exit'); //이벤트 핸들러만 호출하지 실제 시스템이 
 //rint.js
 exports.timer = new process.EventEmitter();
 setInterval(function () {
-  exports.timer.emit('tick');
+  exports.timer.emit("tick");
 }, 1000);
 ```
 
 ```javascript
 //app.js
-var rint = require('./rint');
-rint.timer.on('tick', function (code) {
-  console.log('이벤트를 실행합니다.');
+var rint = require("./rint");
+rint.timer.on("tick", function (code) {
+  console.log("이벤트를 실행합니다.");
 });
 ```
 
