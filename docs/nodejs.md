@@ -26,6 +26,22 @@
   `npm uninstall xxx -g`
 - 글로벌 설치 목록 조회  
   `npm list -g`
+- package.json 에 명령어 등록해서 프로젝트 실행
+  `npm start` 또는 `npm test`  
+  `npm run-script kill`  
+  `npm run-script reload`
+
+```json
+//package.json 예시
+...
+"scripts": {
+  "start": "pm2 start app.js -i 0",
+  "test": "pm2 start app.js --watch",
+  "kill": "pm2 kill",
+  "reload": "pm2 reload all"
+},
+...
+```
 
 ### 1.2.3. 새 프로젝트 생성
 
@@ -266,6 +282,59 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
 
 > Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)
 
+### express (웹서버)
+
+> Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과
+
+- 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿이라고 보면 된다.
+
+```javascript
+const express = require('express');
+const app = express();
+const port = 3000;
+//method get, path /
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+app.listen(port, function () {
+  console.log(`application is listening on port ${port}...`);
+});
+```
+
+### cluster (코어 하나당 노드 프로세스를 실행한다)
+
+```javascript
+const numCPUs = require('os').cpus().length; //코어개수 확인
+const cluster = require('cluster');
+const http = require('http');
+
+if (cluster.isMaster) {
+  console.log(`master: ${process.pid}`);
+
+  // CPU 개수마큼 워커를 생산
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  // 워커가 종료되었을 때
+  cluster.on('exit', (worker, code, singal) => {
+    console.log(`${worker.process.pid}: closed!`);
+    // 프로세스 다시 살린다
+    cluster.fork();
+  });
+} else {
+  // 워커들이 포트에서 대기
+  http
+    .createServer((req, res) => {
+      res.end(`Hi, I'm cluster`);
+    })
+    .listen(8005);
+  console.log('worker: ', process.pid);
+}
+```
+
+참고: <https://mongojs.tistory.com/15>
+
 ---
 
 ## 1.5. 툴
@@ -285,6 +354,18 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
   `pm2 start example.js --watch -i max`
 - 종료  
   `pm2 kill`
+- 실행 프로세스 목록 조회  
+  `pm2 list`
+- 모니터링  
+  `pm2 monit`
+- 다시 로드
+  `pm2 reload all`
+
+참고: <https://engineering.linecorp.com/ko/blog/pm2-nodejs/>
+
+> pm2 레퍼런스: <https://www.npmjs.com/package/pm2>
+
+<!-- https://github.com/NodeRedis/node-redis -->
 
 ### 1.5.2. supervisor (서버 자동 갱신, 잘 안씀)
 
