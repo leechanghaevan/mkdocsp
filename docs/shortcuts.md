@@ -36,3 +36,9 @@
 ## Windows
 
 - 😊 이모지 입력 `Window+;`
+-
+
+## Windows 명령어
+
+- `hostname` 내 컴퓨터 이름
+- `ipconfig /all` IP주소, DNS 등등

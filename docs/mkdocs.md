@@ -7,7 +7,8 @@
 
 ## 사전필요
 
-- 파이썬 설치 [(이동)](python.md)  
+- python, pip 필요
+- python 설치 [(이동)](python.md)  
   <http://www.python.org/downloads>
 - pip 설치  
   `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py.`  

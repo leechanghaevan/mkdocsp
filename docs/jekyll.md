@@ -11,7 +11,9 @@
 ## Linux에 설치
 
 - Install Ruby
-  `sudo apt-get install ruby-full build-essential zlib1g-dev`
+  `sudo apt install ruby-full build-essential zlib1g-dev`
+- Uninstall Ruby
+  `sudo apt remove --auto-remove --purge ruby-full` 또는 `sudo apt purge --auto-remove ruby-full`
 
 - Install Jekyll
   `sudo gem install jekyll bundler`

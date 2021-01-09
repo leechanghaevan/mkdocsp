@@ -14,7 +14,7 @@
   직접 다운로드 또는 choco로 설치  
   `choco install nodejs -y`
 
-### 1.2.2. npm 사용법
+### 1.2.2. 패키지 설치
 
 - 글로벌로 설치  
   `npm install xxx -g`
@@ -26,10 +26,12 @@
   `npm uninstall xxx -g`
 - 글로벌 설치 목록 조회  
   `npm list -g`
-- package.json 에 명령어 등록해서 프로젝트 실행
-  `npm start` 또는 `npm test`  
-  `npm run-script kill`  
-  `npm run-script reload`
+
+### 1.2.3. nodejs 앱 실행
+
+- 기본 실행  
+  `node xxx.js`
+- package.json 에 명령어 등록해서 앱 실행
 
 ```json
 //package.json 예시
@@ -43,27 +45,34 @@
 ...
 ```
 
-### 1.2.3. 새 프로젝트 생성
+```
+npm start
+npm test
+npm run-script kill
+npm run-script reload
+```
 
-- 프로젝트명 빈 폴더 생성  
-  `mkdir [프로젝트폴더]`  
+### 1.2.4. 새 프로젝트 생성
+
+- 프로젝트명 빈 폴더 생성
+  `mkdir [프로젝트폴더]`
   `cd [프로젝트폴더]`
-- 프로젝트 초기화  
+- 프로젝트 초기화
   `npm init`
-- 디펜던시 편집  
+- 디펜던시 편집
   `package.json`
-- 라이브러리 설치  
+- 라이브러리 설치
   `npm install`
 - 특정 라이브러리 설치 (+ package.json에 추가)
   `npm install [라이브러리이름] --save`
 
-### 1.2.4. express, socket.io 프로젝트 생성
+### 1.2.5. express, socket.io 프로젝트 생성
 
-- 가이드: <https://expressjs.com/ko/starter/installing.html>  
-  `mkdir [프로젝트폴더]`  
-  `cd [프로젝트폴더]`  
-  `npm init`  
-  `npm install socket.io --save`  
+- 가이드: <https://expressjs.com/ko/starter/installing.html>
+  `mkdir [프로젝트폴더]`
+  `cd [프로젝트폴더]`
+  `npm init`
+  `npm install socket.io --save`
   `npm install express --save`
 
 ---
@@ -121,7 +130,7 @@ os.cpus(); //CPU
 os.networkInterfaces(); //네트웍인터페이스
 ```
 
-### 1.3.5. url (url 파싱)
+### 1.3.5. url (url paring)
 
 ```javascript
 var url = require('url');
@@ -282,11 +291,11 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
 
 > Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)
 
-### express (웹서버)
+### 1.4.4. express (웹서버 프레임웍)
 
 > Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과
 
-- 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿이라고 보면 된다.
+- express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.
 
 ```javascript
 const express = require('express');
@@ -301,7 +310,9 @@ app.listen(port, function () {
 });
 ```
 
-### cluster (코어 하나당 노드 프로세스를 실행한다)
+### 1.4.5. cluster (코어 하나당 노드 프로세스를 실행한다)
+
+- pm2를 사용하면 굳이 쓸 필요가 있나?
 
 ```javascript
 const numCPUs = require('os').cpus().length; //코어개수 확인
@@ -358,7 +369,7 @@ if (cluster.isMaster) {
   `pm2 list`
 - 모니터링  
   `pm2 monit`
-- 다시 로드
+- 리로드  
   `pm2 reload all`
 
 참고: <https://engineering.linecorp.com/ko/blog/pm2-nodejs/>
