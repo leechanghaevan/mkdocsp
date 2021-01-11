@@ -295,7 +295,11 @@ response.writeHead(302, { Location: 'http://www.naver.com' });
 
 > Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과
 
-- express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.
+> express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.
+
+- 설치:  
+  `npm install express --save` 프로젝트 설치 (추천)  
+  `npm install express -g` 글로벌 설치
 
 ```javascript
 const express = require('express');

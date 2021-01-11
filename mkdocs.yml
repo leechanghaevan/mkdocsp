@@ -1,64 +1,64 @@
 site_name: Evan's IT Note
 nav:
-    - '현재 편집중...': nodejs.md
-    - PROJECT 1 CHAT:
-          - '- Chat': _chat.md
-    - PROJECT 2 MMO:
-          - '- MMO': _mmo.md
-    - HTML:
-          - '- HTML': html.md
-          - '- CSS': css.md
-    - TYPESCRIPT:
-          - '- Typescript': typescript.md
-    - NODE.JS:
-          - '- NodeJS': nodejs.md
-    # - Vue.js: index.md
-    # - Typescript: index.md
-    - PYTHON:
-          - '- Python': python.md
-    # - Pandas: index.md
-    # - Pytorch: index.md
+      - '현재 편집중...': nodejs.md
+      - PROJECT 1 CHAT:
+              - '- Chat': _chat.md
+      - PROJECT 2 MMO:
+              - '- MMO': _mmo.md
+      - HTML:
+              - '- HTML': html.md
+              - '- CSS': css.md
+      - TYPESCRIPT:
+              - '- Typescript': typescript.md
+      - NODE.JS:
+              - '- NodeJS': nodejs.md
+      # - Vue.js: index.md
+      # - Typescript: index.md
+      - PYTHON:
+              - '- Python': python.md
+      # - Pandas: index.md
+      # - Pytorch: index.md
 
-    # - SpringBoot: index.md
-    # - Unity3D: index.md
-    # - PHP: index.md
+      # - SpringBoot: index.md
+      # - Unity3D: index.md
+      # - PHP: index.md
 
-    # - Intellij: index.md
-    # - Pycharm: index.md
-    # - Rider: index.md
-    - 'C#':
-          - '- C#': csharp.md
-    - UNITY3D:
-          - '- Unity3D': unity3d.md
-          - '- Websocket': unity3d_websocket.md
-    - AI:
-          - '- Chatbot': chatbot.md
-    - INFRA:
-          - '- AWS': aws.md
-          - '- Azure': azure.md
-          - '- Linux': linux.md
-          - '- RSA-AES-SHA': crypto.md
-          - '- Docker': docker.md
-          - '- Kubernetes': kubernetes.md
-    - TOOLS-DEV:
-          - '- Mkdocs': mkdocs.md
-          - '- Jekyll': jekyll.md
-          - '- Git': git.md
-          - '- Chocolatey': chocolatey.md
-          - '- VSCode': vscode.md
-    - TOOLS-ETC:
-          - '- Blender': blender.md
-    - ETC:
-          - '- 용어들': terms.md
-          - '- 벤치 마크': benchmark.md
-          - '- 참고 사이트': sites.md
-          - '- 참고 단축키': shortcuts.md
-          - '- 기타': etc.md
-    - ABOUT: about.md
-      #   - '- TO-DO': todo.md
+      # - Intellij: index.md
+      # - Pycharm: index.md
+      # - Rider: index.md
+      - 'C#':
+              - '- C#': csharp.md
+      - UNITY3D:
+              - '- Unity3D': unity3d.md
+              - '- Websocket': unity3d_websocket.md
+      - AI:
+              - '- Chatbot': chatbot.md
+      - INFRA:
+              - '- AWS': aws.md
+              - '- Azure': azure.md
+              - '- Linux': linux.md
+              - '- RSA-AES-SHA': crypto.md
+              - '- Docker': docker.md
+              - '- Kubernetes': kubernetes.md
+      - TOOLS-DEV:
+              - '- Mkdocs': mkdocs.md
+              - '- Jekyll': jekyll.md
+              - '- Git': git.md
+              - '- Chocolatey': chocolatey.md
+              - '- VSCode': vscode.md
+      - TOOLS-ETC:
+              - '- Blender': blender.md
+      - ETC:
+              - '- 용어들': terms.md
+              - '- 벤치 마크': benchmark.md
+              - '- 참고 사이트': sites.md
+              - '- 참고 단축키': shortcuts.md
+              - '- 기타': etc.md
+      - ABOUT: about.md
+        #   - '- TO-DO': todo.md
 
 theme:
-    name: readthedocs
+      name: readthedocs
 # highlightjs: true
 # name: mkdocs
 # shortcuts:
@@ -71,7 +71,7 @@ theme:
 google_analytics: ['UA-36723568-3', 'mkdocs.org']
 
 plugins:
-    - search
+      - search: false
 #   - mkpdfs
 #   - company: "Evan's IT Note"
 #   - author: 'Evan'

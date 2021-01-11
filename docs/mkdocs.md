@@ -13,7 +13,7 @@
 - pip 설치  
   `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py.`  
   `python get-pip.py.`
-- 아나콘다로 (파이썬 + pip) 한번에 설치  
+- 아나콘다로 (python + pip + library) 한번에 설치  
   <https://docs.anaconda.com/anaconda/install/>
 
 ## 설치
