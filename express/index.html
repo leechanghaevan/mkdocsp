@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>- express - - Evan's IT Note</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "- express -";
+    var mkdocs_page_input_path = "express.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36723568-3', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Evan's IT Note</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodejs/">현재 편집중...</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PROJECT 1 CHAT</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../_chat/">- Chat -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PROJECT 2 MMO</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- MMO -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">HTML</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../html/">- HTML -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../css/">- CSS -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">JAVASCRIPT</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../javascript/">- Javascript -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../typescript/">- Typescript -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">NODE.JS</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../nodejs/">- NodeJS -</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- express -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 미들웨어</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#121-router">1.2.1. router 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#122-static">1.2.2. static 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#123-morgan">1.2.3. morgan 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#124-body-parser">1.2.4. body parser 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#125-cookie-parser">1.2.5. cookie parser 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#126-connect-multiparty">1.2.6. connect-multiparty 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#127-express-session">1.2.7. express-session 미들웨어</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#128-ejs">1.2.8. ejs 뷰 엔진 미들웨어</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-express-generator">1.3. express-generator</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14">1.4. 참고</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#141-expresss">1.4.1. expresss 공식 문서</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#142-http">1.4.2. HTTP 상태 코드</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">WEBGL</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../playcanvas/">- PlayCanvas -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../threejs/">- ThreeJS -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PYTHON</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../python/">- Python -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C#</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../csharp/">- C# -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">UNITY3D</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../unity3d/">- Unity3D -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../unity3d_websocket/">- Websocket -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">AI</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../chatbot/">- Chatbot -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">INFRA</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../aws/">- AWS -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../azure/">- Azure -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux/">- Linux -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- Kubernetes -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">ALGOLITHM</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- Cryptography -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">TOOLS-DEV</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- Mkdocs -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">- Jekyll -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">- Git -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- Chocolatey -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">- VSCode -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">TOOLS-ETC</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../blender/">- Blender -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">ETC</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../terms/">- 용어들 -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치 마크 -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sites/">- 참고 사이트 -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 참고 단축키 -</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">ABOUT</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Evan's IT Note</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>NODE.JS &raquo;</li>
+        
+      
+    
+    <li>- express -</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="1-express-nodejs">1. express (nodejs 웹서버 프레임웍)</h1>
+<blockquote>
+<p>Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과</p>
+<p>express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.</p>
+</blockquote>
+<h2 id="11">1.1. 설치</h2>
+<ul>
+<li>프로젝트 설치 (추천)<br />
+<code>npm i express --save</code></li>
+<li>글로벌 설치<br />
+<code>npm i express -g</code></li>
+</ul>
+<h2 id="12">1.2. 미들웨어</h2>
+<h3 id="121-router">1.2.1. router 미들웨어</h3>
+<ul>
+<li>요청 URL의 경로에 따라 다른 처리 함수로 연결해 준다</li>
+<li>자바스프링의 컨트롤러와 같은 개념</li>
+</ul>
+<pre><code class="language-javascript">//라우터 예제
+const express = require('express');
+const app = express();
+const port = 3000;
+
+//method get, path /
+app.get('/', function (req, res) {
+  res.send('Home');
+});
+app.get('/hello', function (req, res) {
+  // 첫 요청엔 HTTP 200을 리턴
+  // 이후엔 항상 같은 값으므로 HTTP 304를 리턴
+  res.send('Hello World');
+});
+app.get('/random', function (req, res) {
+  // 매번 결과가 변하므로 HTTP 200을 리턴
+  res.send('random:' + Math.random());
+});
+app.get('/path/user/:id', function (req, res) {
+  // 패스 파라미터로(/path/user/xxx) 유저아이디 받음
+  res.send('user:' + req.params.id);
+});
+app.get('/param', function (req, res) {
+  // 리퀘스트 파라미터(/param?user=xxx)로 유저아이디 받음
+  res.send('user:' + req.query.user);
+});
+app.get('/bad', function (req, res) {
+  // 잘못된 요청시 명시적으로 400 리턴
+  res.status(400).send('Bad Request');
+});
+app.get('/error', function (req, res) {
+  // 서버 에러시 자동으로 500 리턴
+  throw 'Internal Server Error';
+});
+
+app.listen(port, function () {
+  console.log(`application is listening on http://127.0.0.1:${port}`);
+});
+</code></pre>
+<h3 id="122-static">1.2.2. static 미들웨어</h3>
+<ul>
+<li>이미지 파일 등 정적 컨텐츠 제공</li>
+<li>폴더 구조를 아래와 같이 배치<br />
+  /app.js<br />
+  /static<br />
+  /static/sample.jpg</li>
+<li>서비스 주소 <a href="http://127.0.0.1:3000/sample.jpg">http://127.0.0.1:3000/sample.jpg</a></li>
+</ul>
+<pre><code class="language-javascript">const express = require('express');
+const app = express();
+const port = 3000;
+
+// 정적 컨텐츠 폴더 위치 설정
+app.use(express.static(__dirname + '/static'));
+
+app.listen(port, function () {
+  console.log(`application is listening on http://127.0.0.1:${port}`);
+});
+</code></pre>
+<h3 id="123-morgan">1.2.3. morgan 미들웨어</h3>
+<ul>
+<li>로그 출력 제공</li>
+<li>외부 모듈이므로 설치 필요<br />
+<code>npm i morgan</code></li>
+</ul>
+<pre><code class="language-javascript">const express = require('express');
+const app = express();
+const port = 3000;
+
+const morgan = require('morgan');
+
+// 유저가 접속할때 마다 로그가 자동으로 찍힌다.
+// 로그 옵션은 아래와 같다
+// combined
+// common
+// dev
+// short
+// tiny
+app.use(morgan('combined'));
+
+app.use(function (req, res) {
+  res.send('&lt;h1&gt;express Basic&lt;/h1&gt;');
+});
+
+app.listen(port, function () {
+  console.log(`application is listening on http://127.0.0.1:${port}`);
+});
+</code></pre>
+<h3 id="124-body-parser">1.2.4. body parser 미들웨어</h3>
+<ul>
+<li>POST 전송된 파라미터 읽기
+  <code>req.body.password</code></li>
+<li>외부 모듈이므로 설치 필요<br />
+<code>npm i body-parser</code></li>
+</ul>
+<h3 id="125-cookie-parser">1.2.5. cookie parser 미들웨어</h3>
+<ul>
+<li>쿠키 읽기<br />
+<code>req.cookies.auth</code></li>
+<li>외부 모듈이므로 설치 필요<br />
+<code>npm i cookie-parser</code></li>
+</ul>
+<pre><code class="language-html">&lt;!-- 로긴 뷰 --&gt;
+&lt;form method=&quot;post&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;label&gt;Username&lt;/label&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;login&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;label&gt;Password&lt;/label&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<pre><code class="language-javascript">// - POST 데이터로 기본 로그인 구현
+
+// 앱 설정
+const express = require('express');
+const app = express();
+const port = 3000;
+// 정적 위치 설정
+app.use(express.static(__dirname + '/static'));
+// 뷰 설정
+app.set('views', __dirname + '/view');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+// 쿠키 파서 설정
+const cookieParser = require('cookie-parser');
+// POST 파서 설정
+const bodyParser = require('body-parser');
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+// 파일 읽기
+const fs = require('fs');
+
+// 로긴 페이지로 리디렉션
+app.get('/', function (req, res) {
+  if (req.cookies.auth) {
+    res.send('로긴 성공');
+  } else {
+    res.redirect('/login');
+  }
+});
+
+// 로긴 뷰 렌더
+app.get('/login', function (req, res) {
+  res.render('login.html');
+});
+
+// post
+app.post('/login', function (req, res) {
+  //쿠키 생성
+  var login = req.body.login;
+  var password = req.body.password;
+
+  //출력
+  console.log(login, password);
+  console.log(req.body);
+
+  //로긴 확인
+  if (login == 'evan' &amp;&amp; password == '1234') {
+    // 로긴 성공
+    res.cookie('auth', true);
+    res.redirect('/');
+  } else {
+    //로긴 실패
+    res.redirect('/login');
+  }
+});
+
+app.listen(port, function () {
+  console.log(`application is listening on http://127.0.0.1:${port}`);
+});
+</code></pre>
+<h3 id="126-connect-multiparty">1.2.6. connect-multiparty 미들웨어</h3>
+<ul>
+<li>multipart/form-data 폼 지원 라이브러리</li>
+<li>주로 파일 업로드와 같은 고용량 데이터 전송에 사용한다.</li>
+<li>설치:<br />
+<code>npm i connect-multiparty</code></li>
+</ul>
+<pre><code class="language-html">&lt;!-- 업로드 뷰 --&gt;
+&lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;label&gt;Comment&lt;/label&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;comment&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;label&gt;Password&lt;/label&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;file&quot; name=&quot;image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- 업로드할 파일이 여러개일 경우 --&gt;
+&lt;input type=&quot;file&quot; name=&quot;image&quot; multiple=&quot;multiple&quot; /&gt;
+</code></pre>
+<pre><code class="language-javascript">// connect-multiparty
+// 파일 업로드 예제
+
+// 앱 설정
+const express = require('express');
+const app = express();
+const port = 3000;
+
+//-------------------------------------------
+// 정적 위치 설정
+app.use(express.static(__dirname + '/static'));
+// 뷰엔진 설정
+app.set('views', __dirname + '/view');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+// 쿠키 파서 설정
+// const cookieParser = require('cookie-parser');
+// POST 파서 설정
+// const bodyParser = require('body-parser');
+// app.use(cookieParser());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// 파일 읽기
+// const fs = require('fs');
+// 멀티 파트 파서 설정
+var multipart = require('connect-multiparty');
+app.use(multipart({ uploadDir: __dirname + '/uploaded' }));
+// 세션 설정 (브라우저에서 connect.sid 라는 이름의 세션키 쿠키 확인 가능)
+// var session = require(`express-session`);
+// app.use(session({
+//     secret: 'secret key',
+//     resave: false,
+//     saveUninitialized: true
+// }));
+//-------------------------------------------
+
+// 뷰 렌더
+app.get('/upload', function (req, res) {
+  res.render('upload.html');
+});
+
+app.post('/upload', function (req, res) {
+  var comment = req.body.comment;
+  var imageFile = req.files.image;
+
+  if (imageFile) {
+    //파일이 있을 경우
+    var name = imageFile.name;
+    var path = imageFile.path;
+    var type = imageFile.type;
+
+    if (type.indexOf('image') != -1) {
+      // 이미지 파일입니다.
+      var outputPath = __dirname + '/uploaded/' + Date.now() + '_' + name;
+      fs.rename(path, outputPath, function (error) {
+        res.send('&lt;h1&gt;Success&lt;/h1&gt;');
+      });
+    } else {
+      // 이미지 파일이 아닌 경우 파일을 제거한다.
+      fs.unlink(path, function (error) {
+        res.sendStatus(400); //유저 잘못
+      });
+    }
+  } else {
+    //파일이 없을 경우
+    res.sendStatus(404);
+  }
+});
+
+app.listen(port, function () {
+  console.log(`application is listening on http://127.0.0.1:${port}`);
+});
+</code></pre>
+<h3 id="127-express-session">1.2.7. express-session 미들웨어</h3>
+<ul>
+<li>세션 기능 제공 (쿠키대신 서버에 값 저장)</li>
+</ul>
+<pre><code class="language-javascript">// connect-multiparty
+// 파일 업로드 예제
+
+const port = 3000;
+//-------------------------------------------
+// 익스프레스 설정
+const express = require('express');
+const app = express();
+// 정적 위치 설정
+// app.use(express.static(__dirname + '/static'));
+// 뷰엔진 설정
+// app.set('views', __dirname + '/view');
+// app.set('view engine', 'ejs');
+// app.engine('html', require('ejs').renderFile);
+// 쿠키 파서 설정
+// const cookieParser = require('cookie-parser');
+// POST 파서 설정
+// const bodyParser = require('body-parser');
+// app.use(cookieParser());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// 파일 읽기
+// const fs = require('fs');
+// 멀티 파트 파서 설정
+// var multipart = require('connect-multiparty');
+// app.use(multipart({ uploadDir: __dirname + '/uploaded' }));
+// 세션 설정 (브라우저에서 connect.sid 라는 이름의 세션키 쿠키 확인 가능)
+var session = require(`express-session`);
+app.use(
+  session({
+    secret: 'secret key',
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+//-------------------------------------------
+
+app.use(function (req, res) {
+  req.session.now = new Date().toUTCString();
+  res.send(req.session);
+});
+
+app.listen(port, function () {
+  console.log(`application is listening on http://127.0.0.1:${port}`);
+});
+</code></pre>
+<h3 id="128-ejs">1.2.8. ejs 뷰 엔진 미들웨어</h3>
+<ul>
+<li>뷰 제공</li>
+<li>외부 모듈이므로 설치 필요<br />
+<code>npm i ejs</code></li>
+</ul>
+<pre><code class="language-javascript">// 뷰엔진 설정 부분
+app.set('views', __dirname + '/view');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
+// 렌더 부분
+app.get('/login', function (req, res) {
+  res.render('login.html');
+});
+</code></pre>
+<hr />
+<h2 id="13-express-generator">1.3. express-generator</h2>
+<blockquote>
+<p>express 프로젝트 템플릿을 자동 생성해 준다.</p>
+</blockquote>
+<ul>
+<li>설치 (관리자 권한 필요)<br />
+<code>npm i -g express-generator</code></li>
+<li>실행<br />
+<code>express [프로젝트이름] --view=pug</code> pug 뷰엔진을 가진 템플릿 생성<br />
+<code>cd [프로젝트이름]</code><br />
+<code>npm install</code> 라이브러리 설치<br />
+<code>SET DEBUG=[프로젝트이름]:*</code>
+  <code>npm start</code> 서버 실행</li>
+</ul>
+<hr />
+<h2 id="14">1.4. 참고</h2>
+<h3 id="141-expresss">1.4.1. expresss 공식 문서</h3>
+<p><a href="http://expressjs.com/en/4x/api.html">http://expressjs.com/en/4x/api.html</a></p>
+<h3 id="142-http">1.4.2. HTTP 상태 코드</h3>
+<ul>
+<li>200 OK</li>
+<li>304 Not modified (이전과 페이지 내용이 동일하다는 의미)</li>
+<li>400 Bad Request (유저 잘못)</li>
+<li>403 Forbidden (권한 없음)</li>
+<li>404 Not Found (주소 없음)</li>
+<li>500 Internal Server Error (서버 에러)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../playcanvas/" class="btn btn-neutral float-right" title="- PlayCanvas -">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../nodejs/" class="btn btn-neutral" title="- NodeJS -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../nodejs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../playcanvas/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
