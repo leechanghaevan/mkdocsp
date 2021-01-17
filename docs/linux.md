@@ -58,7 +58,7 @@ which php (php가 설치된 경로 얻기)
 ctrl+c (실행중인 프로그램 종료)
 apt update
 apt install xxx
-npm install xxx
+npm i xxx
 
 자바설치
 [centos]

@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>- NodeJS - Evan's IT Note</title>
+  <title>- NodeJS - - Evan's IT Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "- NodeJS";
+    var mkdocs_page_name = "- NodeJS -";
     var mkdocs_page_input_path = "nodejs.md";
     var mkdocs_page_url = null;
   </script>
@@ -57,171 +57,195 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="./">현재 편집중...</a>
+                    </li>
+                </ul>
                 <p class="caption"><span class="caption-text">PROJECT 1 CHAT</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../_chat/">- Chat</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../_chat/">- Chat -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">PROJECT 2 MMO</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- MMO</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- MMO -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">HTML</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../html/">- HTML</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../html/">- HTML -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../css/">- CSS</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../css/">- CSS -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">TYPESCRIPT</span></p>
+                <p class="caption"><span class="caption-text">JAVASCRIPT</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../typescript/">- Typescript</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../javascript/">- Javascript -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../typescript/">- Typescript -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">NODE.JS</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- NodeJS</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- NodeJS -</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 개요</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 설정</a>
+    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 참고자료</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13">1.3. 설정</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#121">1.2.1. 설치</a>
+    <li class="toctree-l3"><a class="reference internal" href="#131">1.3.1. 설치</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#122-npm">1.2.2. npm 사용법</a>
+    <li class="toctree-l3"><a class="reference internal" href="#132">1.3.2. 패키지 설치</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#123">1.2.3. 새 프로젝트 생성</a>
+    <li class="toctree-l3"><a class="reference internal" href="#133-nodejs">1.3.3. nodejs 앱 실행</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#124-express-socketio">1.2.4. express, socket.io 프로젝트 생성</a>
+    <li class="toctree-l3"><a class="reference internal" href="#134">1.3.4. 새 프로젝트 생성 과정</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#135-express-socketio">1.3.5. express, socket.io 프로젝트 생성 과정</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#13">1.3. 주요 내장 모듈</a>
+    <li class="toctree-l2"><a class="reference internal" href="#14">1.4. 주요 내장 모듈</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#131-console">1.3.1. console 내장 (콘솔)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#141-console">1.4.1. console 내장 (콘솔)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#132-process">1.3.2. process 내장 (실행환경)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#142-process">1.4.2. process 내장 (실행환경)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#133-exports">1.3.3. exports 내장 (라이브러리)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#143-exports">1.4.3. exports 내장 (라이브러리)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#134-os">1.3.4. os (시스템 호출)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#144-os">1.4.4. os (시스템 호출)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#135-url-url-paring">1.3.5. url (url paring)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#145-url-url-paring">1.4.5. url (url paring)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#136-util">1.3.6. util (유틸)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#146-util">1.4.6. util (유틸)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#137-crypo">1.3.7. crypo (암호화)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#147-crypo">1.4.7. crypo (암호화)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#138-fs">1.3.8. fs (파일)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#148-fs">1.4.8. fs (파일)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#139-http">1.3.9. http (웹서버)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#149-http">1.4.9. http (웹서버)</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#14">1.4. 주요 외부 모듈</a>
+    <li class="toctree-l2"><a class="reference internal" href="#15">1.5. 주요 외부 모듈</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#141-ejs">1.4.1. ejs (뷰템플릿 엔진)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#151-ejs">1.5.1. ejs (뷰템플릿 엔진)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#142-jade">1.4.2. jade (뷰템플릿 엔진)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#152-jade">1.5.2. jade (뷰템플릿 엔진)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#143-socketio">1.4.3. socket.io (실시간 웹통신)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#153-socketio">1.5.3. socket.io (실시간 웹통신)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#144-express">1.4.4. express (웹서버 프레임웍)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#154-express">1.5.4. express (웹서버 프레임웍)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#145-cluster">1.4.5. cluster (코어 하나당 노드 프로세스를 실행한다)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#155-cluster">1.5.5. cluster (코어 하나당 노드 프로세스를 실행한다)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#156-mysql">1.5.6. mysql</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#15">1.5. 툴</a>
+    <li class="toctree-l2"><a class="reference internal" href="#16">1.6. 툴</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#151-pm2">1.5.1. pm2 (프로세스 매니저)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#161-pm2">1.6.1. pm2 (프로세스 매니저)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#152-supervisor">1.5.2. supervisor (서버 자동 갱신, 잘 안씀)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#162-supervisor">1.6.2. supervisor (서버 자동 갱신)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#153-forever">1.5.3. forever (잘 안씀)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#163-forever">1.6.3. forever (생략)</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#16">1.6. 활용</a>
+    <li class="toctree-l2"><a class="reference internal" href="#17">1.7. 활용</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#161">1.6.1. 예외 처리</a>
+    <li class="toctree-l3"><a class="reference internal" href="#171">1.7.1. 예외 처리</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#162">1.6.2. 이벤트</a>
+    <li class="toctree-l3"><a class="reference internal" href="#172">1.7.2. 이벤트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#173-db">1.7.3. 가상 DB 생성 코드</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#17">1.7. 참고</a>
+    <li class="toctree-l2"><a class="reference internal" href="#18">1.8. 참고</a>
     </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">WEBGL</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../playcanvas/">- PlayCanvas -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../threejs/">- ThreeJS -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">PYTHON</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../python/">- Python</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../python/">- Python -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">C#</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../csharp/">- C#</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../csharp/">- C# -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">UNITY3D</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../unity3d/">- Unity3D</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../unity3d/">- Unity3D -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../unity3d_websocket/">- Websocket</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../unity3d_websocket/">- Websocket -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">AI</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../chatbot/">- Chatbot</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../chatbot/">- Chatbot -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">INFRA</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../aws/">- AWS</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../aws/">- AWS -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../azure/">- Azure</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../azure/">- Azure -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../linux/">- Linux</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux/">- Linux -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- RSA-AES-SHA</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- Kubernetes -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- Kubernetes</a>
+                </ul>
+                <p class="caption"><span class="caption-text">ALGOLITHM</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- Cryptography -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">TOOLS-DEV</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- Mkdocs</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- Mkdocs -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">- Jekyll</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">- Jekyll -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../git/">- Git</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">- Git -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- Chocolatey</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- Chocolatey -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">- VSCode</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">- VSCode -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">TOOLS-ETC</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../blender/">- Blender</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../blender/">- Blender -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ETC</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../terms/">- 용어들</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../terms/">- 용어들 -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치 마크</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치 마크 -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sites/">- 참고 사이트</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sites/">- 참고 사이트 -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 참고 단축키</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../etc/">- 기타</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 참고 단축키 -</a>
                     </li>
                 </ul>
                 <ul>
@@ -253,7 +277,7 @@
         
       
     
-    <li>- NodeJS</li>
+    <li>- NodeJS -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -269,30 +293,37 @@
 <blockquote>
 <p>Node.js는 확장성 있는 네트워크 애플리케이션 개발에 사용되는 소프트웨어 플랫폼이다. 작성 언어로 자바스크립트를 활용하며 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 처리 성능을 가지고 있다. - 위키백과</p>
 </blockquote>
+<h2 id="12">1.2. 참고자료</h2>
+<ul>
+<li>공식 문서: <a href="https://nodejs.org/ko/docs/">https://nodejs.org/ko/docs/</a></li>
+<li>expresss 공식 문서: <a href="http://expressjs.com/en/4x/api.html">http://expressjs.com/en/4x/api.html</a></li>
+</ul>
 <hr />
-<h2 id="12">1.2. 설정</h2>
-<h3 id="121">1.2.1. 설치</h3>
+<h2 id="13">1.3. 설정</h2>
+<h3 id="131">1.3.1. 설치</h3>
 <ul>
 <li>Windows:<br />
   직접 다운로드 또는 choco로 설치<br />
 <code>choco install nodejs -y</code></li>
 </ul>
-<h3 id="122-npm">1.2.2. npm 사용법</h3>
+<h3 id="132">1.3.2. 패키지 설치</h3>
 <ul>
 <li>글로벌로 설치<br />
-<code>npm install xxx -g</code></li>
+<code>npm i xxx -g</code></li>
 <li>현재 폴더에 설치<br />
-<code>npm install xxx</code></li>
-<li>현재 폴더에 설치 하고 package.json에 추가
-  <code>npm install xxx --save</code></li>
+<code>npm i xxx</code></li>
+<li>현재 폴더에 설치 하고 package.json에 추가<br />
+<code>npm i xxx --save</code> (--save는 생략가능)</li>
 <li>글로벌에서 설치 삭제<br />
 <code>npm uninstall xxx -g</code></li>
 <li>글로벌 설치 목록 조회<br />
 <code>npm list -g</code></li>
-<li>package.json 에 명령어 등록해서 프로젝트 실행
-  <code>npm start</code> 또는 <code>npm test</code><br />
-<code>npm run-script kill</code><br />
-<code>npm run-script reload</code></li>
+</ul>
+<h3 id="133-nodejs">1.3.3. nodejs 앱 실행</h3>
+<ul>
+<li>기본 실행<br />
+<code>node xxx.js</code></li>
+<li>package.json 에 명령어 등록해서 앱 실행</li>
 </ul>
 <pre><code class="language-json">//package.json 예시
 ...
@@ -304,35 +335,40 @@
 },
 ...
 </code></pre>
-<h3 id="123">1.2.3. 새 프로젝트 생성</h3>
+<pre><code>npm start
+npm test
+npm run-script kill
+npm run-script reload
+</code></pre>
+<h3 id="134">1.3.4. 새 프로젝트 생성 과정</h3>
 <ul>
-<li>프로젝트명 빈 폴더 생성<br />
-<code>mkdir [프로젝트폴더]</code><br />
-<code>cd [프로젝트폴더]</code></li>
-<li>프로젝트 초기화<br />
-<code>npm init</code></li>
-<li>디펜던시 편집<br />
-<code>package.json</code></li>
-<li>라이브러리 설치<br />
-<code>npm install</code></li>
+<li>프로젝트명 빈 폴더 생성
+  <code>mkdir [프로젝트폴더]</code>
+  <code>cd [프로젝트폴더]</code></li>
+<li>프로젝트 초기화
+  <code>npm init</code></li>
+<li>디펜던시 편집
+  <code>package.json</code></li>
+<li>라이브러리 설치
+  <code>npm i</code></li>
 <li>특정 라이브러리 설치 (+ package.json에 추가)
-  <code>npm install [라이브러리이름] --save</code></li>
+  <code>npm i [라이브러리이름] --save</code></li>
 </ul>
-<h3 id="124-express-socketio">1.2.4. express, socket.io 프로젝트 생성</h3>
+<h3 id="135-express-socketio">1.3.5. express, socket.io 프로젝트 생성 과정</h3>
 <ul>
 <li>가이드: <a href="https://expressjs.com/ko/starter/installing.html">https://expressjs.com/ko/starter/installing.html</a><br />
 <code>mkdir [프로젝트폴더]</code><br />
 <code>cd [프로젝트폴더]</code><br />
 <code>npm init</code><br />
-<code>npm install socket.io --save</code><br />
-<code>npm install express --save</code></li>
+<code>npm i socket.io --save</code><br />
+<code>npm i express --save</code></li>
 </ul>
 <hr />
-<h2 id="13">1.3. 주요 내장 모듈</h2>
-<h3 id="131-console">1.3.1. console 내장 (콘솔)</h3>
-<pre><code class="language-javascript">console.log(&quot;hello&quot;);
+<h2 id="14">1.4. 주요 내장 모듈</h2>
+<h3 id="141-console">1.4.1. console 내장 (콘솔)</h3>
+<pre><code class="language-javascript">console.log('hello');
 </code></pre>
-<h3 id="132-process">1.3.2. process 내장 (실행환경)</h3>
+<h3 id="142-process">1.4.2. process 내장 (실행환경)</h3>
 <pre><code class="language-javascript">process.argv; //실행 변수
 process.env; //환경변수
 process.version; //Node.js버전
@@ -341,20 +377,30 @@ process.exit(0); //종료
 process.memoryUsage(); //메모리 사용량
 process.uptime(); //현재 프로그램이 실행된 시간
 </code></pre>
-<h3 id="133-exports">1.3.3. exports 내장 (라이브러리)</h3>
+<h3 id="143-exports">1.4.3. exports 내장 (라이브러리)</h3>
 <blockquote>
 <p>모듈 (라이브러리) 내보내기 가져오기</p>
 </blockquote>
-<pre><code class="language-javascript">// 모듈 쪽
+<pre><code class="language-javascript">// 모듈 쪽 방법 1
 // xxx.js 또는 xxx/index.js 의 내용
-exports.foo = function () {};
+var myfunc = function () {};
+module.exports = {
+  func: myfunc,
+  val: 10,
+};
 </code></pre>
-<pre><code class="language-javascript">// 사용하는 쪽
-let module = require(&quot;./xxx&quot;);
+<pre><code class="language-javascript">// 모듈 쪽 방법 2
+// xxx.js 또는 xxx/index.js 의 내용
+// module.exports를 단순히 exports 라고 줄여서 표현한다.
+exports.foo = function () {};
+exports.val = 10;
+</code></pre>
+<pre><code class="language-javascript">// dummyDB.js
+let module = require('./xxx');
 module.foo();
 </code></pre>
-<h3 id="134-os">1.3.4. os (시스템 호출)</h3>
-<pre><code class="language-javascript">var os = require(&quot;os&quot;);
+<h3 id="144-os">1.4.4. os (시스템 호출)</h3>
+<pre><code class="language-javascript">var os = require('os');
 os.hostname(); //호스트 이름
 os.type(); //운영체제 이름
 os.platform(); //운영체제 플랫폼?
@@ -367,17 +413,17 @@ os.freemem(); //가용 메모리
 os.cpus(); //CPU
 os.networkInterfaces(); //네트웍인터페이스
 </code></pre>
-<h3 id="135-url-url-paring">1.3.5. url (url paring)</h3>
-<pre><code class="language-javascript">var url = require(&quot;url&quot;);
+<h3 id="145-url-url-paring">1.4.5. url (url paring)</h3>
+<pre><code class="language-javascript">var url = require('url');
 url.parse(); //url 문자열을 url 객체로 변환리턴
 url.format(); //url객체를 url문자열로 변환
 url.resolve(from, to); //조합해서 URL 문자열 생성
 </code></pre>
-<h3 id="136-util">1.3.6. util (유틸)</h3>
+<h3 id="146-util">1.4.6. util (유틸)</h3>
 <pre><code class="language-javascript">var util = require(&quot;util&quot;);
 util.format(,...); //문자열 조합
 </code></pre>
-<h3 id="137-crypo">1.3.7. crypo (암호화)</h3>
+<h3 id="147-crypo">1.4.7. crypo (암호화)</h3>
 <blockquote>
 <p>해시 생성과 암호화 기능</p>
 </blockquote>
@@ -385,32 +431,32 @@ util.format(,...); //문자열 조합
 <li>해시 (복호화 불가)</li>
 </ul>
 <pre><code class="language-javascript">// 해시 생성과 암호화를 수행하는 모듈
-var crypo = require(&quot;crypo&quot;);
+var crypo = require('crypo');
 // 해시 생성
-var shasum = crypo.createHash(&quot;sha256&quot;);
-shasum.update(&quot;crypo_hash&quot;);
-var output = shasum.digest(&quot;hex&quot;);
+var shasum = crypo.createHash('sha256');
+shasum.update('crypo_hash');
+var output = shasum.digest('hex');
 //출력
-console.log(&quot;crypto_hash:&quot;, output);
+console.log('crypto_hash:', output);
 </code></pre>
 <ul>
 <li>대칭키 암호화 (AES)</li>
 </ul>
-<pre><code class="language-javascript">var crypo = require(&quot;crypo&quot;);
-var key = &quot;mykey&quot;;
-var input = &quot;PASSWORD&quot;;
+<pre><code class="language-javascript">var crypo = require('crypo');
+var key = 'mykey';
+var input = 'PASSWORD';
 
 //암호화
-var cipher = crypto.createCipher(&quot;aes192&quot;, key);
-ciper.update(input, &quot;utf8&quot;, &quot;base64&quot;);
-var cipheredOutput = cipher.final(&quot;base64&quot;);
+var cipher = crypto.createCipher('aes192', key);
+ciper.update(input, 'utf8', 'base64');
+var cipheredOutput = cipher.final('base64');
 
 //복호화
-var decipher = crypto.createDecipher(&quot;aes192&quot;, key);
-decipher.update(cipheredOutput, &quot;base64&quot;, &quot;utf8&quot;);
-var decipheredOutput = decipher.final(&quot;utf8&quot;);
+var decipher = crypto.createDecipher('aes192', key);
+decipher.update(cipheredOutput, 'base64', 'utf8');
+var decipheredOutput = decipher.final('utf8');
 </code></pre>
-<h3 id="138-fs">1.3.8. fs (파일)</h3>
+<h3 id="148-fs">1.4.8. fs (파일)</h3>
 <pre><code class="language-javascript">// 읽기
 var fs = require(&quot;fs&quot;);
 
@@ -424,114 +470,124 @@ fs.readFile('textfile.txt', 'utf8' function(error,data){
 });
 </code></pre>
 <pre><code class="language-javascript">// 쓰기
-var fs = require(&quot;fs&quot;);
+var fs = require('fs');
 
 // 쓰기
-var data = &quot;Hello World&quot;;
-fs.writeFile(&quot;TextFileOtherWrite.txt&quot;, data, &quot;utf8&quot;, function (error) {
-  console.log(&quot;Write File Asysnc Complete&quot;);
+var data = 'Hello World';
+fs.writeFile('TextFileOtherWrite.txt', data, 'utf8', function (error) {
+  console.log('Write File Asysnc Complete');
 });
 
 // 즉시 쓰기
-fs.writeFileSync(&quot;TextFileOtherWriteSync.txt&quot;, data, &quot;utf8&quot;);
-console.log(&quot;Write File Sysnc Complete&quot;);
+fs.writeFileSync('TextFileOtherWriteSync.txt', data, 'utf8');
+console.log('Write File Sysnc Complete');
 </code></pre>
 <ul>
 <li>비동기 함수는 에러 코드로 예외처리 한다.</li>
 </ul>
-<pre><code class="language-javascript">var fs = require(&quot;fs&quot;);
+<pre><code class="language-javascript">var fs = require('fs');
 
 // 파일을 읽습니다
-fs.readFileSync(&quot;textfile.txt&quot;, &quot;utf8&quot;, function (error, data) {
+fs.readFileSync('textfile.txt', 'utf8', function (error, data) {
   if (error) {
     console.log(error);
   } else {
-    console.log(&quot;File read complete:&quot;, data);
+    console.log('File read complete:', data);
   }
 });
 
-fs.writeFile(&quot;textfile.txt&quot;, &quot;Hello World&quot;, &quot;utf8&quot;, function (error) {
+fs.writeFile('textfile.txt', 'Hello World', 'utf8', function (error) {
   if (error) {
     console.log(error);
   } else {
-    console.log(&quot;File write complete&quot;);
+    console.log('File write complete');
   }
 });
 </code></pre>
-<h3 id="139-http">1.3.9. http (웹서버)</h3>
-<pre><code class="language-javascript">var fs = require(&quot;fs&quot;);
-var http = require(&quot;http&quot;);
+<h3 id="149-http">1.4.9. http (웹서버)</h3>
+<pre><code class="language-javascript">var fs = require('fs');
+var http = require('http');
 http
   .createServer(function (request, response) {
     var date = new Date();
 
     //파일 읽어들임
-    fs.readFile(&quot;index.html&quot;, function (error, data) {
+    fs.readFile('index.html', function (error, data) {
       response.writeHead(200, {
-        &quot;content-type&quot;: &quot;text/html&quot;, //mime 타입
-        &quot;set-cookie&quot;: [&quot;name = aaa&quot;, &quot;date = &quot; + date.toUTCString()], //쿠키 설정
+        'content-type': 'text/html', //mime 타입
+        'set-cookie': ['name = aaa', 'date = ' + date.toUTCString()], //쿠키 설정
       });
 
       //출력
-      response.write(&quot;: current cookie is &quot; + request.headers.cookie);
+      response.write(': current cookie is ' + request.headers.cookie);
       response.end(data);
     });
   })
   .listen(80, function () {
-    console.log(&quot;server running&quot;);
+    console.log('server running');
   });
 </code></pre>
 <ul>
 <li>리다이렉션</li>
 </ul>
-<pre><code class="language-javascript">response.writeHead(302, { Location: &quot;http://www.naver.com&quot; });
+<pre><code class="language-javascript">response.writeHead(302, { Location: 'http://www.naver.com' });
 </code></pre>
 <hr />
-<h2 id="14">1.4. 주요 외부 모듈</h2>
-<h3 id="141-ejs">1.4.1. ejs (뷰템플릿 엔진)</h3>
+<h2 id="15">1.5. 주요 외부 모듈</h2>
+<h3 id="151-ejs">1.5.1. ejs (뷰템플릿 엔진)</h3>
 <blockquote>
 <p>View Template Engine
 Jave의 Thymeleaf 같은 역할</p>
 </blockquote>
 <ul>
 <li>설치<br />
-<code>npm install ejs</code></li>
+<code>npm i ejs</code></li>
 </ul>
-<h3 id="142-jade">1.4.2. jade (뷰템플릿 엔진)</h3>
+<h3 id="152-jade">1.5.2. jade (뷰템플릿 엔진)</h3>
 <blockquote>
 <p>View Template Engine
 pug 로 이름 바뀜? //todo! 확인필요</p>
 </blockquote>
 <ul>
 <li>설치<br />
-<code>npm install jade</code></li>
+<code>npm i jade</code></li>
 </ul>
-<h3 id="143-socketio">1.4.3. socket.io (실시간 웹통신)</h3>
+<h3 id="153-socketio">1.5.3. socket.io (실시간 웹통신)</h3>
 <blockquote>
 <p>Socket.io 는 브라우저에서 웹소켓을 지원하던, 지원하지 않던 관계없이 실시간 웹통신을 가능하게 에뮬레이션 해 주는 nodejs 라이브러리이다. (즉 Socket.io를 사용하면 개발할 때 웹소켓을 직접 사용할 필요가 없다는 뜻)</p>
 </blockquote>
-<h3 id="144-express">1.4.4. express (웹서버 프레임웍)</h3>
+<h3 id="154-express">1.5.4. express (웹서버 프레임웍)</h3>
 <blockquote>
 <p>Express.js, 또는 간단히 익스프레스는 Node.js를 위한 웹 프레임워크의 하나로, MIT 허가서로 라이선스되는 자유-오픈 소스 소프트웨어로 출시되었다. 웹 애플리케이션, API 개발을 위해 설계되었다. Node.js의 사실상의 표준 서버 프레임워크로 불리고 있다. - 위키백과</p>
+<p>express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.</p>
 </blockquote>
 <ul>
-<li>express는 자바 스프링 같이 프레임웍이라고 생각하면 된다. 기본 http 모듈은 서블릿 같은 기본 기능이라고 보면 된다.</li>
+<li>설치:<br />
+<code>npm i express</code> 프로젝트에 설치 (프로젝트 독립성 위해)<br />
+<code>npm i express -g</code> 글로벌 설치</li>
 </ul>
-<pre><code class="language-javascript">const express = require(&quot;express&quot;);
+<pre><code class="language-javascript">//기본 예제
+const express = require('express');
 const app = express();
 const port = 3000;
 //method get, path /
-app.get(&quot;/&quot;, function (req, res) {
-  res.send(&quot;Hello World!&quot;);
+app.get('/', function (req, res) {
+  res.send('Hello World!');
 });
 app.listen(port, function () {
   console.log(`application is listening on port ${port}...`);
 });
 </code></pre>
-<h3 id="145-cluster">1.4.5. cluster (코어 하나당 노드 프로세스를 실행한다)</h3>
-<pre><code class="language-javascript">const numCPUs = require(&quot;os&quot;).cpus().length; //코어개수 확인
-const cluster = require(&quot;cluster&quot;);
-const http = require(&quot;http&quot;);
+<ul>
+<li>자세한 내용은 <a href="../express/">express</a> 페이지에서 다룬다.</li>
+</ul>
+<h3 id="155-cluster">1.5.5. cluster (코어 하나당 노드 프로세스를 실행한다)</h3>
+<ul>
+<li>pm2를 사용하면 굳이 쓸 필요가 있나?</li>
+</ul>
+<pre><code class="language-javascript">const numCPUs = require('os').cpus().length; //코어개수 확인
+const cluster = require('cluster');
+const http = require('http');
 
 if (cluster.isMaster) {
   console.log(`master: ${process.pid}`);
@@ -542,7 +598,7 @@ if (cluster.isMaster) {
   }
 
   // 워커가 종료되었을 때
-  cluster.on(&quot;exit&quot;, (worker, code, singal) =&gt; {
+  cluster.on('exit', (worker, code, singal) =&gt; {
     console.log(`${worker.process.pid}: closed!`);
     // 프로세스 다시 살린다
     cluster.fork();
@@ -554,16 +610,33 @@ if (cluster.isMaster) {
       res.end(`Hi, I'm cluster`);
     })
     .listen(8005);
-  console.log(&quot;worker: &quot;, process.pid);
+  console.log('worker: ', process.pid);
 }
 </code></pre>
 <p>참고: <a href="https://mongojs.tistory.com/15">https://mongojs.tistory.com/15</a></p>
+<h3 id="156-mysql">1.5.6. mysql</h3>
+<ul>
+<li>설치
+  <code>npm i mysql</code></li>
+</ul>
+<pre><code class="language-javascript">var mysql = require('mysql');
+var client = mysql.createConnection({
+  user: 'root',
+  password: '비밀번호',
+});
+
+client.query('use company');
+client.query('select * from mydb', function (error, result, fields) {
+  if (error) console.log('error:' + error);
+  else console.log(result);
+});
+</code></pre>
 <hr />
-<h2 id="15">1.5. 툴</h2>
-<h3 id="151-pm2">1.5.1. pm2 (프로세스 매니저)</h3>
+<h2 id="16">1.6. 툴</h2>
+<h3 id="161-pm2">1.6.1. pm2 (프로세스 매니저)</h3>
 <ul>
 <li>설치<br />
-<code>npm install pm2 -g</code><br />
+<code>npm i pm2 -g</code><br />
 <code>pm2 -version</code></li>
 <li>실행 (실행즉시 daemon화 되어, 에러가 나지 않는 이상 24시간 계속 유지됨)<br />
 <code>pm2 start example.js</code></li>
@@ -579,8 +652,8 @@ if (cluster.isMaster) {
 <code>pm2 list</code></li>
 <li>모니터링<br />
 <code>pm2 monit</code></li>
-<li>다시 로드
-  <code>pm2 reload all</code></li>
+<li>리로드<br />
+<code>pm2 reload all</code></li>
 </ul>
 <p>참고: <a href="https://engineering.linecorp.com/ko/blog/pm2-nodejs/">https://engineering.linecorp.com/ko/blog/pm2-nodejs/</a></p>
 <blockquote>
@@ -588,34 +661,38 @@ if (cluster.isMaster) {
 </blockquote>
 <!-- https://github.com/NodeRedis/node-redis -->
 
-<h3 id="152-supervisor">1.5.2. supervisor (서버 자동 갱신, 잘 안씀)</h3>
+<h3 id="162-supervisor">1.6.2. supervisor (서버 자동 갱신)</h3>
 <blockquote>
-<p>파일의 변경 사항을 인식하고 노드를 재 실행 시켜줌</p>
+<p>파일의 변경 사항을 인식하고 노드를 재 실행 시켜줌.<br />
+pm2 사용권장</p>
 </blockquote>
 <ul>
 <li>설치:<br />
-<code>npm install -g supervisor</code></li>
+<code>npm i -g supervisor</code></li>
 <li>사용법: node 대신 supervisor를 사용해 실행한다<br />
 <code>node myapp.js</code> =&gt; <code>supervisor myapp.js</code></li>
 <li>윈도우에서 실행할 권한이 없다고 뜨면 파워셀을 관리자 권한으로 실행 후 아래 입력한다<br />
 <code>set-executionpolicy unrestricted</code></li>
 </ul>
-<h3 id="153-forever">1.5.3. forever (잘 안씀)</h3>
+<h3 id="163-forever">1.6.3. forever (생략)</h3>
+<blockquote>
+<p>pm2 사용권장</p>
+</blockquote>
 <ul>
 <li>설치:<br />
-<code>npm install -g forever</code></li>
+<code>npm i -g forever</code></li>
 </ul>
 <hr />
-<h2 id="16">1.6. 활용</h2>
-<h3 id="161">1.6.1. 예외 처리</h3>
+<h2 id="17">1.7. 활용</h2>
+<h3 id="171">1.7.1. 예외 처리</h3>
 <ul>
 <li>동기(즉시) 함수는 try catch로 예외처리 한다.</li>
 </ul>
-<pre><code class="language-javascript">var fs = require(&quot;fs&quot;);
+<pre><code class="language-javascript">var fs = require('fs');
 
 // 파일을 읽습니다
 try {
-  var data = fs.readFileSync(&quot;textfile.txt&quot;, &quot;utf8&quot;);
+  var data = fs.readFileSync('textfile.txt', 'utf8');
   console.log(data);
 } catch (e) {
   console.log(e);
@@ -623,36 +700,36 @@ try {
 
 // 파일을 씁니다
 try {
-  fs.writeFileSync(&quot;textfile.txt&quot;, &quot;Hello World&quot;, &quot;utf8&quot;);
-  console.log(&quot;file write complete&quot;);
+  fs.writeFileSync('textfile.txt', 'Hello World', 'utf8');
+  console.log('file write complete');
 } catch (e) {
   console.log(e);
 }
 </code></pre>
-<h3 id="162">1.6.2. 이벤트</h3>
+<h3 id="172">1.7.2. 이벤트</h3>
 <ul>
 <li>이벤트 핸들러</li>
 </ul>
 <pre><code class="language-javascript">// 종료 이벤트 처리
 process.setMaxListeners(15); //최대 리스너 개수 지정 가능
-process.on(&quot;exit&quot;, function () {
+process.on('exit', function () {
   //리스너 등록
-  console.log(&quot;앱종료됨&quot;);
+  console.log('앱종료됨');
 });
-process.once(&quot;exit&quot;, function () {
+process.once('exit', function () {
   //1회성 리스너 등록
-  console.log(&quot;앱종료됨&quot;);
+  console.log('앱종료됨');
 });
 
 // 처리되지 않은 예외 이벤트 처리
-process.on(&quot;uncaughtException&quot;, onUncaughtException); //리스너 등록
-process.removeListener(&quot;exit&quot;, onUncaughtException); //리스너 제거
-process.removeAllListener(&quot;exit&quot;); //리스너 모두 제거
+process.on('uncaughtException', onUncaughtException); //리스너 등록
+process.removeListener('exit', onUncaughtException); //리스너 제거
+process.removeAllListener('exit'); //리스너 모두 제거
 </code></pre>
 <ul>
 <li>이벤트 강제 발생</li>
 </ul>
-<pre><code class="language-javascript">process.emit(&quot;exit&quot;); //이벤트 핸들러만 호출하지 실제 시스템이 종료되지는 않는다
+<pre><code class="language-javascript">process.emit('exit'); //이벤트 핸들러만 호출하지 실제 시스템이 종료되지는 않는다
 </code></pre>
 <ul>
 <li>EventEmitter 모듈 밖으로 내보내기</li>
@@ -660,17 +737,59 @@ process.removeAllListener(&quot;exit&quot;); //리스너 모두 제거
 <pre><code class="language-javascript">//rint.js
 exports.timer = new process.EventEmitter();
 setInterval(function () {
-  exports.timer.emit(&quot;tick&quot;);
+  exports.timer.emit('tick');
 }, 1000);
 </code></pre>
 <pre><code class="language-javascript">//app.js
-var rint = require(&quot;./rint&quot;);
-rint.timer.on(&quot;tick&quot;, function (code) {
-  console.log(&quot;이벤트를 실행합니다.&quot;);
+var rint = require('./rint');
+rint.timer.on('tick', function (code) {
+  console.log('이벤트를 실행합니다.');
 });
 </code></pre>
+<h3 id="173-db">1.7.3. 가상 DB 생성 코드</h3>
+<pre><code class="language-javascript">exports.db = (function () {
+  var dummyDB = {};
+  var storage = [];
+
+  dummyDB.find = function (id) {
+    if (id) {
+      //아이디가 존재하면
+      for (var i in storage) {
+        if (storage[i].id == id) return storage[i]; //아이디에 해당하는 값 리턴
+      }
+    }
+
+    //아이디가 없으면
+    return false;
+  };
+
+  dummyDB.insert = function (id, data) {
+    data.id = id;
+    storage.push(data);
+    return data;
+  };
+
+  dummyDB.remove = function (id) {
+    for (var i in storage) {
+      if (storage[i].id == id) {
+        storage.splice(i, 1); //제거
+        return true;
+      }
+    }
+
+    return false; //삭제 실패
+  };
+
+  return dummyDB;
+})(); //정의와 함께 이렇게 바로 함수 실행하면 싱글톤과 같은 역할을 한다.
+</code></pre>
+<pre><code class="language-javascript">// 사용하는 쪽
+const db = require('./dummyDB').db;
+db.insert(12, { name: 'elee', age: 40 });
+console.log(myDB.find(12));
+</code></pre>
 <hr />
-<h2 id="17">1.7. 참고</h2>
+<h2 id="18">1.8. 참고</h2>
 <ol>
 <li><a href="https://nodejs.org/dist/latest-v14.x/docs/api/">Node.js v14.15.3 Documentation 공식 API 문서</a></li>
 <li>[Node.js] Socket.IO와 Redis를 활용한 채팅 서버 개발: <a href="https://library.gabia.com/contents/infrahosting/8018/">https://library.gabia.com/contents/infrahosting/8018/</a></li>
@@ -683,10 +802,10 @@ rint.timer.on(&quot;tick&quot;, function (code) {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python/" class="btn btn-neutral float-right" title="- Python">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../express/" class="btn btn-neutral float-right" title="- express -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../typescript/" class="btn btn-neutral" title="- Typescript"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../typescript/" class="btn btn-neutral" title="- Typescript -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -715,7 +834,7 @@ rint.timer.on(&quot;tick&quot;, function (code) {
         <span><a href="../typescript/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../express/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

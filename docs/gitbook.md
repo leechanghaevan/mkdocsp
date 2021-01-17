@@ -6,7 +6,7 @@
 
 ## 설치
 
-`npm install gitbook -g`
+`npm i gitbook -g`
 
 ## 실행
 
