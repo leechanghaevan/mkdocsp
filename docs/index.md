@@ -1,4 +1,4 @@
-# Evan's IT Note
+# Evan's Dev Note
 
     어떤 프로그래머의 개인 기록소
 

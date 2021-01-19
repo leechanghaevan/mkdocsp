@@ -1,45 +1,36 @@
-# 참고 단축키 모음
+# 1. 단축키 모음
 
-## 웹 브라우저
+## 1.1. 공통 단축키
 
-- 주소창 바로가기 `CTL+L`
+- 전체창 `f11`
 
-## Vi 에디터
+## 1.2. 웹 브라우저
 
-- `i` 편집모드 전환
-- `ESC` 편집모드 종료
-- `:q` 종료
-- `:wq` 저장 후 종료
-- `:q!` 저장하지 않고 종료
+- 주소창 바로가기 `ctrl + L`
+- 주소창 바로가기 `alt + D`
+- 이전페이지 `alt + left`
+- 다음페이지 `alt + right`
+- 개발툴 `f12`
 
-## VSCode
+## 1.3. Vi 에디터
 
-- 명령 찾기 `Shift+Ctrl+P` 또는 `F1`
-- 파일 찾기 `Ctrl+P`
-- 프로젝트 익스플로러 열기 `Shift+Ctrl+E`
-- 전체 폰트 축소 확대 `CTRL+-` `CTRL++`
-- 에디터 폰트 축소 확대 `Ctrl+Wheel` (설정에서 wheel로 검색하여 체크)
-- 뒤로 가기 `Alt+Left`
-- 터미널 열기 Ctrl+`
+- 편집모드 전환 `i`
+- 편집모드 종료 `ESC`
+- 종료 `:q`
+- 저장 후 종료 `:wq`
+- 저장하지 않고 종료 `:q!`
 
-## VSCode (사용자 정의)
+## 1.5. VSCode (사용자 정의)
 
-- 커밋 `Ctrl+K`
-- 대소문자 전환 `Shift+Ctrl+C` (String Manipulation 확장)
-- md 파일에서 클립보드 이미지 붙여넣기 `Ctrl+Alt+V` (Markdown Paste 확장)
+- 커밋 `Ctrl + K`
+- 대소문자 전환 `Shift + Ctrl + C` (String Manipulation 확장)
+- md 파일에서 클립보드 이미지 붙여넣기 `Ctrl + Alt + V` (Markdown Paste 확장)
 
-## 셀 명령어
+## 1.6. Windows 단축키
 
-- 출력 cat [파일이름]
-- 다운로드 curl [URL] > [파일이름]
-
-## Windows
-
-- 😊 이모지 입력 `Window+;`
+- 이모지😊 입력 `Window + ;`
 - 파워셀 보안 정책 축소 `set-executionpolicy unrestricted`
 
-## Windows 명령어
+## 1.7. 크롬
 
-- `hostname` 내 컴퓨터 이름
-- `ipconfig /all` IP주소, DNS 등등
-- `netstat -n -o` 사용중인 포트 스캔
+- 개발툴 켜기 `f12`

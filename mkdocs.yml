@@ -1,26 +1,29 @@
-site_name: Evan's IT Note
+site_name: Evan's Dev Note
 nav:
         - '현재 편집중...': nodejs.md
-        - PROJECT 1 CHAT:
-                  - '- Chat -': _chat.md
-        - PROJECT 2 MMO:
-                  - '- MMO -': _mmo.md
+        - 프로젝트 1 CHAT:
+                  - '- chat -': _chat.md
+        - 프로젝트 2 MMO:
+                  - '- mmo -': _mmo.md
         - HTML:
-                  - '- HTML -': html.md
-                  - '- CSS -': css.md
-        - JAVASCRIPT:
-                  - '- Javascript -': javascript.md
-                  - '- Typescript -': typescript.md
-        - NODE.JS:
-                  - '- NodeJS -': nodejs.md
+                  - '- html -': html.md
+                  - '- css -': css.md
+        - 자바스크립트:
+                  - '- javascript -': javascript.md
+                  - '- typescript -': typescript.md
+        - 노드.JS:
+                  - '- node.js -': nodejs.md
                   - '- express -': express.md
+        - 플러터:
+                  - '- flutter -': flutter.md
         - WEBGL:
-                  - '- PlayCanvas -': playcanvas.md
-                  - '- ThreeJS -': threejs.md
+                  #   - '- PlayCanvas -': playcanvas.md
+                  - '- three.js -': threejs.md
+                  - '- blueprint3d.js -': blueprint3d.md
         # - Vue.js: index.md
         # - Typescript: index.md
-        - PYTHON:
-                  - '- Python -': python.md
+        - 파이썬:
+                  - '- python -': python.md
         # - Pandas: index.md
         # - Pytorch: index.md
 
@@ -31,35 +34,39 @@ nav:
         # - Intellij: index.md
         # - Pycharm: index.md
         # - Rider: index.md
-        - 'C#':
-                  - '- C# -': csharp.md
-        - UNITY3D:
-                  - '- Unity3D -': unity3d.md
-                  - '- Websocket -': unity3d_websocket.md
-        - AI:
-                  - '- Chatbot -': chatbot.md
-        - INFRA:
-                  - '- AWS -': aws.md
-                  - '- Azure -': azure.md
-                  - '- Linux -': linux.md
-                  - '- Docker -': docker.md
-                  - '- Kubernetes -': kubernetes.md
-        - ALGOLITHM:
-                  - '- Cryptography -': crypto.md
-        - TOOLS-DEV:
-                  - '- Mkdocs -': mkdocs.md
-                  - '- Jekyll -': jekyll.md
-                  - '- Git -': git.md
-                  - '- Chocolatey -': chocolatey.md
-                  - '- VSCode -': vscode.md
-        - TOOLS-ETC:
-                  - '- Blender -': blender.md
+        - '씨#':
+                  - '- c# -': csharp.md
+        - 유니티3D:
+                  - '- unity3d -': unity3d.md
+                  - '- websocket -': unity3d_websocket.md
+        - 인공지능:
+                  - '- chatbot -': chatbot.md
+        - 인프라:
+                  - '- aws -': aws.md
+                  - '- azure -': azure.md
+                  - '- linux -': linux.md
+                  - '- docker -': docker.md
+                  - '- kubernetes -': kubernetes.md
+        - 알고리즘:
+                  - '- cryptography -': crypto.md
+        - 툴:
+                  - '- mkdocs -': mkdocs.md
+                  - '- jekyll -': jekyll.md
+                  - '- git -': git.md
+                  - '- chocolatey -': chocolatey.md
+                  - '- vscode -': vscode.md
+                  - '- blender -': blender.md
+        - 빌드 툴:
+                  - '- webpack -': webpack.md
+                  - '- grunt -': grunt.md
         - ETC:
+                  - '- 기타툴': tools.md
+                  - '- 각종에러 -': errors.md
                   - '- 용어들 -': terms.md
-                  - '- 벤치 마크 -': benchmark.md
-                  - '- 참고 사이트 -': sites.md
-                  - '- 참고 단축키 -': shortcuts.md
-                #   - '- 기타 -': etc.md
+                  - '- 벤치마크 -': benchmark.md
+                  - '- 단축키 -': shortcuts.md
+                  - '- 참고사이트 -': sites.md
+                  #   - '- 기타 -': etc.md
         - ABOUT: about.md
           #   - '- TO-DO -': todo.md
 
@@ -79,7 +86,7 @@ google_analytics: ['UA-36723568-3', 'mkdocs.org']
 plugins:
         - search: false
 #   - mkpdfs
-#   - company: "Evan's IT Note"
+#   - company: "Evan's Dev Note"
 #   - author: 'Evan'
 #   - toc_title: TOC
 #   design: mkpdfs-design-sample/report.css
