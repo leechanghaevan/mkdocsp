@@ -345,7 +345,7 @@ console.log(obj1['a' + ++i]);
 <li>requestAnimationframe</li>
 </ul>
 <h3 id="141-setinterval">1.4.1. setInterval</h3>
-<p>일정한 시간 간격으로 작업을 실행합니다. 주기적은 작업을 하는데 그 작업이 시간보다 오래 걸릴 경우 콜백이 지연되고 사라질 수 있습니다. 따라서 애니메이션 구현시 setInterval보단 setTimeout으로!!</p>
+<p>일정한 시간 간격으로 작업을 실행합니다. 오래 걸릴 경우 콜백이 지연되고 사라질 수 있습니다.</p>
 <pre><code class="language-javascript">var Interval = window.setInterval(function, time);
 
 // 변수 Interval 은 clearInterval을 통해서 setInterval()을 종료시킵니다.
@@ -353,8 +353,7 @@ console.log(obj1['a' + ++i]);
 // time 간격으로 function 실행!
 </code></pre>
 <h3 id="142-settimeout">1.4.2. setTimeout</h3>
-<p>작업 사이의 간격을 일정하게 줍니다.</p>
-<p>재귀적으로 호출함으로써 애니메이션을 구현할 수 있습니다.</p>
+<p>작업 주기 함수. 재귀적으로 호출함으로써 애니메이션을 구현할 수 있습니다. (setInterval 보다 호출이 보장됨)</p>
 <pre><code class="language-javascript">var timeout = window.setTimeout(function, time);
 
 // 변수 timeout은 clearTimeout을 통해 setTimeout을 종료시킵니다.
@@ -362,49 +361,12 @@ console.log(obj1['a' + ++i]);
 // window.clearTimeout(timeout); 으로 강제 종료할 수 있습니다.
 </code></pre>
 <h3 id="143-reqeustanimationframe">1.4.3. reqeustAnimationframe</h3>
-<p>앞서 setTimeout도 사실 주기적인 실행을 위한 방법이고(애니메이션을 위해서 생긴 메소드가 X) 연속적인 함수 호출로 애니메이션을 구현할 때 딜레이가 발생할 수 있습니다..</p>
-<p>애니메이션은 끊기지 않고 부드럽게 처리해야하는데, 다행히 브라우저에서 애니메이션 구현을 위한 메서드 reqeustAnimationframe을 제공해줍니다!</p>
-<p>svg나 canvas 및 그래픽스로 웹상에 복잡한 도형을 만들어 움직이는 애니메이션을 줄 때는 이 requestAnimationframe가 유용하게 쓰일 수 있습니다.</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-
-    &lt;style&gt;
-      .outside {
-        position: relative;
-        background-color: #ff0eef;
-        width: 100px;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class=&quot;outside&quot;&gt;내 최애 과일은..&lt;/div&gt;
-
-    &lt;script&gt;
-      var count = 0;
-      var el = document.querySelector('.outside');
-      el.style.left = '0px'; //default값으로 설정
-
-      function run() {
-        if (count &gt; 40) {
-          //count가 40을 넘으면 return
-          return;
-        }
-        count += 2; //  2px씩 증가.
-        el.style.left = parseInt(el.style.left) + count + 'px';
-        console.log(el.style.left);
-        requestAnimationFrame(run);
-        // reqeustAnimationFrame()함수를 통해서 원하는 함수를 인자로 넣어준다.
-        // 브라우저는 인자로 받은 그 비동기 함수가 실행될 적절한 타이밍에 실행시켜줌.
-      }
-      requestAnimationFrame(run);
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<p>애니메이션 전용 주기 호출 함수 (애니메이션을 위한 최적화된 주기 호출)</p>
+<pre><code class="language-javascript">function run() {
+  ...
+  requestAnimationFrame(run);
+}
+requestAnimationFrame(run);
 </code></pre>
 <hr />
 <h2 id="15-api">1.5. API</h2>
