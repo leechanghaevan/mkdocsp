@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Vuejs - Evan's Dev Note</title>
+  <title>- blueprint3d.js - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Vuejs";
-    var mkdocs_page_input_path = "vuejs.md";
+    var mkdocs_page_name = "- blueprint3d.js -";
+    var mkdocs_page_input_path = "blueprint3d.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -98,10 +98,24 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">WEBGL</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../threejs/">- three.js -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../blueprint3d/">- blueprint3d.js -</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- blueprint3d.js -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#blueprint3djs">blueprint3d.js</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">빌드</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#blueprintjs">blueprintjs 확장판</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">빌드</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">파이썬</span></p>
@@ -205,8 +219,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>WEBGL &raquo;</li>
+        
+      
     
-    <li>Vuejs</li>
+    <li>- blueprint3d.js -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -217,11 +235,51 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="3d">블루프린트 3D</h1>
+<h2 id="blueprint3djs">blueprint3d.js</h2>
+<blockquote>
+<p>사용자가 집이나 아파트와 같은 내부 공간을 디자인 할 수 있도록 three.js를 기반으로 구축 된 사용자 정의 가능한 애플리케이션입니다.</p>
+</blockquote>
+<ul>
+<li>깃헙 <a href="https://github.com/furnishup/blueprint3d">https://github.com/furnishup/blueprint3d</a></li>
+</ul>
+<h3 id="_1">빌드</h3>
+<ul>
+<li>다운로드<br />
+<code>git clone https://github.com/furnishup/blueprint3d.git</code></li>
+<li>의존성 설치<br />
+<code>npm install</code><br />
+<code>grunt</code></li>
+<li>웹서버 실행 1 (파이썬 기본 웹서버)<br />
+<code>python -m http.server</code></li>
+<li>웹서버 실행 2 (npm 웹서버 설치)<br />
+<code>npm i -g http-server</code><br />
+<code>http-server</code></li>
+<li>웹브라우저에서 확인
+  <a href="http://localhost:8000">http://localhost:8000</a></li>
+</ul>
+<hr />
+<h2 id="blueprintjs">blueprintjs 확장판</h2>
+<ul>
+<li>깃헙 <a href="https://github.com/aalavandhaann/blueprint-js">https://github.com/aalavandhaann/blueprint-js</a></li>
+</ul>
+<h3 id="_2">빌드</h3>
+<ul>
+<li>다운로드</li>
+</ul>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python/" class="btn btn-neutral float-right" title="- python -">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../threejs/" class="btn btn-neutral" title="- three.js -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -245,6 +303,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../threejs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../python/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

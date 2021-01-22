@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>- Typescript - - Evan's IT Note</title>
+  <title>- typescript - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "- Typescript -";
+    var mkdocs_page_name = "- typescript -";
     var mkdocs_page_input_path = "typescript.md";
     var mkdocs_page_url = null;
   </script>
@@ -48,7 +48,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Evan's IT Note</a>
+        <a href=".." class="icon icon-home"> Evan's Dev Note</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -61,113 +61,138 @@
                     <li class="toctree-l1"><a class="reference internal" href="../nodejs/">현재 편집중...</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">PROJECT 1 CHAT</span></p>
+                <p class="caption"><span class="caption-text">프로젝트 1 CHAT</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../_chat/">- Chat -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../_chat/">- chat -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">PROJECT 2 MMO</span></p>
+                <p class="caption"><span class="caption-text">프로젝트 2 MMO</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- MMO -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- mmo -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">HTML</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../html/">- HTML -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../html/">- html -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../css/">- CSS -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../css/">- css -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">JAVASCRIPT</span></p>
+                <p class="caption"><span class="caption-text">자바스크립트</span></p>
                 <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../javascript/">- Javascript -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../javascript/">- javascript -</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- Typescript -</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- typescript -</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 타입 스크립트 빌드 + 디버깅 하기</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#111">1.1.1. 사전 준비 사항</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#112">1.1.2. 빌드</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#113">1.1.3. 디버깅</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#114-ts">1.1.4. ts 소스 빌드시 아무 방해 메세지도 안뜨게 하는 법</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">NODE.JS</span></p>
+                <p class="caption"><span class="caption-text">노드.JS</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../nodejs/">- NodeJS -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../nodejs/">- node.js -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">플러터</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
+                    </li>
+                </ul>
                 <p class="caption"><span class="caption-text">WEBGL</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../playcanvas/">- PlayCanvas -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../threejs/">- three.js -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../threejs/">- ThreeJS -</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">PYTHON</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../python/">- Python -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../blueprint3d/">- blueprint3d.js -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">C#</span></p>
+                <p class="caption"><span class="caption-text">파이썬</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../csharp/">- C# -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../python/">- python -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">UNITY3D</span></p>
+                <p class="caption"><span class="caption-text">씨#</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../unity3d/">- Unity3D -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../unity3d_websocket/">- Websocket -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../csharp/">- c# -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">AI</span></p>
+                <p class="caption"><span class="caption-text">유니티3D</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../chatbot/">- Chatbot -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../unity3d/">- unity3d -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../unity3d_websocket/">- websocket -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">INFRA</span></p>
+                <p class="caption"><span class="caption-text">인공지능</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../aws/">- AWS -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../azure/">- Azure -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../linux/">- Linux -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- Docker -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- Kubernetes -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../chatbot/">- chatbot -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">ALGOLITHM</span></p>
+                <p class="caption"><span class="caption-text">인프라</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- Cryptography -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../aws/">- aws -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../azure/">- azure -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux/">- linux -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker/">- docker -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../kubernetes/">- kubernetes -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">TOOLS-DEV</span></p>
+                <p class="caption"><span class="caption-text">알고리즘</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- Mkdocs -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">- Jekyll -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../git/">- Git -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- Chocolatey -</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">- VSCode -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">TOOLS-ETC</span></p>
+                <p class="caption"><span class="caption-text">툴</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../blender/">- Blender -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">- jekyll -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../blender/">- blender -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">빌드 툴</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../webpack/">- webpack -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../grunt/">- grunt -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ETC</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tools/">- 기타툴</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../errors/">- 각종에러 -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../terms/">- 용어들 -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치 마크 -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../benchmark/">- 벤치마크 -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sites/">- 참고 사이트 -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 단축키 -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../shortcuts/">- 참고 단축키 -</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sites/">- 참고사이트 -</a>
                     </li>
                 </ul>
                 <ul>
@@ -183,7 +208,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Evan's IT Note</a>
+        <a href="..">Evan's Dev Note</a>
       </nav>
 
       
@@ -195,11 +220,11 @@
     
       
         
-          <li>JAVASCRIPT &raquo;</li>
+          <li>자바스크립트 &raquo;</li>
         
       
     
-    <li>- Typescript -</li>
+    <li>- typescript -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -210,10 +235,51 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="typescript">Typescript</h1>
+                <h1 id="1-typescript">1. Typescript</h1>
 <blockquote>
 <p>타입스크립트는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 마이크로소프트에서 개발, 유지하고 있으며 엄격한 문법을 지원한다. C#의 리드 아키텍트이자 델파이, 터보 파스칼의 창시자인 Anders Hejlsberg가 개발에 참여한다. - 위키백과</p>
 </blockquote>
+<h2 id="11">1.1. 타입 스크립트 빌드 + 디버깅 하기</h2>
+<h3 id="111">1.1.1. 사전 준비 사항</h3>
+<ul>
+<li>vscode에 Debugger for Chrome 확장 설치</li>
+<li>타입 스크립트 설치<br />
+<code>npm i typescript -g</code></li>
+</ul>
+<h3 id="112">1.1.2. 빌드</h3>
+<ul>
+<li>tsconfig.json 생성<br />
+<code>tsc --init</code></li>
+<li>tsconfig.json 에 내용 추가<br />
+<code>"sourceMap":"true"</code><br />
+<code>"outDir":"./dist"</code><br />
+<code>"rootDir":"./src"</code></li>
+<li>ts 소스 빌드<br />
+<code>shift + ctrl + b</code> 또는 터미널에서 <code>tsc</code></li>
+</ul>
+<h3 id="113">1.1.3. 디버깅</h3>
+<ul>
+<li>로컬 웹서버 실행 (live server 또는 webpack-dev-server)</li>
+<li>launch.json 에서 디버깅 URL 로컬 웹서버와 같이 맞추기</li>
+<li>디버깅 실행<br />
+<code>f5</code></li>
+</ul>
+<h3 id="114-ts">1.1.4. ts 소스 빌드시 아무 방해 메세지도 안뜨게 하는 법</h3>
+<ul>
+<li><code>f1</code></li>
+<li><code>tasks:configure default build task</code> 선택</li>
+<li>.vscode 폴더안에 tasks.json 생성 확인</li>
+<li>tasks.json 내용 아래와 같이 추가</li>
+</ul>
+<pre><code class="language-json">      &quot;presentation&quot;: {
+        &quot;reveal&quot;: &quot;silent&quot;,
+        &quot;clear&quot;: true,
+        &quot;showReuseMessage&quot;: false
+      }
+</code></pre>
+<ul>
+<li><code>shift + ctrl + b</code> 로 빌드</li>
+</ul>
               
             </div>
           </div>
@@ -221,10 +287,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../nodejs/" class="btn btn-neutral float-right" title="- NodeJS -">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../nodejs/" class="btn btn-neutral float-right" title="- node.js -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../javascript/" class="btn btn-neutral" title="- Javascript -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../javascript/" class="btn btn-neutral" title="- javascript -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   

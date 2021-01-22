@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Vuejs - Evan's Dev Note</title>
+  <title>- webpack - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Vuejs";
-    var mkdocs_page_input_path = "vuejs.md";
+    var mkdocs_page_name = "- webpack -";
+    var mkdocs_page_input_path = "webpack.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -160,8 +160,14 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">빌드 툴</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../webpack/">- webpack -</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- webpack -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">참고</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../grunt/">- grunt -</a>
                     </li>
@@ -205,8 +211,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>빌드 툴 &raquo;</li>
+        
+      
     
-    <li>Vuejs</li>
+    <li>- webpack -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -217,11 +227,44 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="webpack">WEBPACK</h1>
+<blockquote>
+<p>웹팩은 오픈 소스 자바스크립트 모듈 번들러이다. 주로 자바스크립트를 위한 모듈 번들러이지만 호환 플러그인을 포함하는 경우 HTML, CSS, 심지어는 이미지와 같은 프론트엔드 자산들을 변환할 수 있다. 웹팩은 의존성이 있는 모듈을 취하여 해당 모듈을 대표하는 정적 자산들을 생성한다. - 위키백과</p>
+</blockquote>
+<h2 id="_1">설치</h2>
+<!-- - 설치:
+  `npm install -g webpack webpack-cli` 글로벌 설치
+  `npm i -D webpack webpack-cli` 프로젝트에 설치
+
+- package.json에 추가
+
+```json
+"script": {
+"build": "webpack"
+}
+``` -->
+
+<p><code>npm init -y</code></p>
+<p><code>npm i webpack webpack-cli webpack-dev-server html-webpack-plugin -D</code></p>
+<hr />
+<h2 id="_2">참고</h2>
+<ul>
+<li><a href="https://jeonghwan-kim.github.io/series/2019/12/10/frontend-dev-env-webpack-basic.html">프론트엔드 개발환경의 이해: 웹팩</a></li>
+<li><a href="https://jeonghwan-kim.github.io/series/2020/01/02/frontend-dev-env-webpack-intermediate.html#31-%EB%B0%B0%EA%B2%BD">웹팩 개발 서버</a></li>
+</ul>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../grunt/" class="btn btn-neutral float-right" title="- grunt -">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../blender/" class="btn btn-neutral" title="- blender -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -245,6 +288,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../blender/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../grunt/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
