@@ -11,6 +11,7 @@ nav:
         - 자바스크립트:
                   - '- javascript -': javascript.md
                   - '- typescript -': typescript.md
+                  - '- rxjs -': rxjs.md
         - 노드.JS:
                   - '- node.js -': nodejs.md
                   - '- express -': express.md
@@ -56,8 +57,9 @@ nav:
                   - '- chocolatey -': chocolatey.md
                   - '- vscode -': vscode.md
                   - '- blender -': blender.md
-        - 빌드 툴:
+        - 번들러:
                   - '- webpack -': webpack.md
+                  - '- parcel -': parcel.md
                   - '- grunt -': grunt.md
         - ETC:
                   - '- 기타툴': tools.md

@@ -24,6 +24,9 @@
 - 터미널 열기 `ctrl + ~`
 - 날짜 삽입 `shift + ctrl + I`
 - 아래에 줄 삽입 `ctrl + enter`
+- 빌드 `ctrl + shift + b`
+- 단어 검색 `ctrl+f`
+- (단어 검색 후) 모두 선택 `alt+enter`
 
 ## 추천 확장 1
 

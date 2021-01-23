@@ -4,19 +4,29 @@
 
 ---
 
-## 1.1. Class 구현
+## 1.1. 객체 선언 방법들
 
 ```javascript
-// 이런식으로 생성한 객체는 하나만 존재하며, 인스턴스화 할수 없다.
+// 1. 자바스크립트 오브젝트
+// 이런식으로 생성한 객체는 new 사용할 수 없다.
 var jsObject = {
-  val: '',
+  val: 'jsObject',
 
   foo: function () {
     console.log(this.val);
   },
 };
 
-// 클래스 형태의 자바스크립트 함수
+var jsObject1 = Object.create(jsObject);
+var jsObject2 = Object.create(jsObject);
+jsObject1.val = 'jsObject1';
+jsObject2.val = 'jsObject2';
+jsObject.foo();
+jsObject1.foo();
+jsObject2.foo();
+
+// 2. 생성자 함수
+// 객체의 함수 표헌법으로 선언 (new로 함수를 실행하지 않으면 this를 사용할 수 없다)
 var jsFunction = function (val) {
   this.val = val;
 
@@ -25,30 +35,73 @@ var jsFunction = function (val) {
   };
 };
 
-// 위와 같은 함수의 클래스식 표현
+// 3. 생성자 함수의 클래스 표현법
 class jsClass {
-  val = '';
+  _val = 'jsClass';
 
-  constructor(val) {
-    this.val = val;
+  constructor(v) {
+    this._val = v;
   }
 
   foo() {
-    console.log(this.val);
+    console.log(this._val);
+  }
+
+  get val() {
+    return this._val;
+  }
+
+  set val(v) {
+    this._val = v;
   }
 }
 
-var bbb = new jsObject();
-var ccc = new jsObject();
-// var bbb = new jsClass("1234");
-// var ccc = new jsClass("5678");
-bbb.foo();
-ccc.foo();
+var jsClass1 = new jsClass('jsClass1');
+var jsClass2 = new jsClass('jsClass2');
+jsClass1.foo();
+jsClass2.val = 'setter jsClass2';
+jsClass2.foo();
+```
+
+## 1.2. 객체 복제 (클론)
+
+```javascript
+//객체 복제 방법 1
+var objNew = {}; //생성
+Object.assign(objNew, obj1); //복사
+Object.assign(objNew, obj1, obj2); //여러개의 객체를 하나로 합침
+
+//객체 복제 방법 2
+var objNew = { ...obj1 }; //생성 + 복사
+var objNew = { ...obj1, ...obj2 }; //여러개의 객체를 하나로 합침
+```
+
+## 1.3. 객체 필드 접근
+
+```javascript
+var obj1 = {
+  _a1: '_a1',
+
+  get a1() {
+    return this._a1;
+  },
+
+  set a1(v) {
+    this._a1 = v;
+  },
+};
+
+//닷 접근
+console.log(obj1.a1);
+
+//이름으로 접근
+let i = 0;
+console.log(obj1['a' + ++i]);
 ```
 
 ---
 
-## 1.2. JavaScript로 애니메이션 구현
+## 1.4. JavaScript로 메인루프 구현
 
 JS로 애니메이션 처리 --> 규칙적인 처리를 하도록 구현하면 됩니다. 다음과 같은 방법들이 있습니다.
 
@@ -56,9 +109,9 @@ JS로 애니메이션 처리 --> 규칙적인 처리를 하도록 구현하면 �
 - setTimeout
 - requestAnimationframe
 
-### 1.2.1. setInterval
+### 1.4.1. setInterval
 
-일정한 시간 간격으로 작업을 실행합니다. 주기적은 작업을 하는데 그 작업이 시간보다 오래 걸릴 경우 콜백이 지연되고 사라질 수 있습니다. 따라서 애니메이션 구현시 setInterval보단 setTimeout으로!!
+일정한 시간 간격으로 작업을 실행합니다. 오래 걸릴 경우 콜백이 지연되고 사라질 수 있습니다.
 
 ```javascript
 var Interval = window.setInterval(function, time);
@@ -68,11 +121,9 @@ var Interval = window.setInterval(function, time);
 // time 간격으로 function 실행!
 ```
 
-### 1.2.2. setTimeout
+### 1.4.2. setTimeout
 
-작업 사이의 간격을 일정하게 줍니다.
-
-재귀적으로 호출함으로써 애니메이션을 구현할 수 있습니다.
+작업 주기 함수. 재귀적으로 호출함으로써 애니메이션을 구현할 수 있습니다. (setInterval 보다 호출이 보장됨)
 
 ```javascript
 var timeout = window.setTimeout(function, time);
@@ -82,61 +133,22 @@ var timeout = window.setTimeout(function, time);
 // window.clearTimeout(timeout); 으로 강제 종료할 수 있습니다.
 ```
 
-### 1.2.3. reqeustAnimationframe
+### 1.4.3. reqeustAnimationframe
 
-앞서 setTimeout도 사실 주기적인 실행을 위한 방법이고(애니메이션을 위해서 생긴 메소드가 X) 연속적인 함수 호출로 애니메이션을 구현할 때 딜레이가 발생할 수 있습니다..
+애니메이션 전용 주기 호출 함수 (애니메이션을 위한 최적화된 주기 호출)
 
-애니메이션은 끊기지 않고 부드럽게 처리해야하는데, 다행히 브라우저에서 애니메이션 구현을 위한 메서드 reqeustAnimationframe을 제공해줍니다!
-
-svg나 canvas 및 그래픽스로 웹상에 복잡한 도형을 만들어 움직이는 애니메이션을 줄 때는 이 requestAnimationframe가 유용하게 쓰일 수 있습니다.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-
-    <style>
-      .outside {
-        position: relative;
-        background-color: #ff0eef;
-        width: 100px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="outside">내 최애 과일은..</div>
-
-    <script>
-      var count = 0;
-      var el = document.querySelector('.outside');
-      el.style.left = '0px'; //default값으로 설정
-
-      function run() {
-        if (count > 40) {
-          //count가 40을 넘으면 return
-          return;
-        }
-        count += 2; //  2px씩 증가.
-        el.style.left = parseInt(el.style.left) + count + 'px';
-        console.log(el.style.left);
-        requestAnimationFrame(run);
-        // reqeustAnimationFrame()함수를 통해서 원하는 함수를 인자로 넣어준다.
-        // 브라우저는 인자로 받은 그 비동기 함수가 실행될 적절한 타이밍에 실행시켜줌.
-      }
-      requestAnimationFrame(run);
-    </script>
-  </body>
-</html>
+```javascript
+function run() {
+  ...
+  requestAnimationFrame(run);
+}
+requestAnimationFrame(run);
 ```
 
 ---
 
-## 1.3. API
+## 1.5. API
 
-### 1.3.1. window.requestAnimationFrame()
+### 1.5.1. window.requestAnimationFrame()
 
 - 다음 리페인트에서 그 다음 프레임을 애니메이트하려면 콜백 루틴이 반드시 스스로 requestAnimationFrame()을 호출해야합니다.

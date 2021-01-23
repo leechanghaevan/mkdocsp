@@ -19,7 +19,7 @@
   직접 다운로드 또는 choco로 설치  
   `choco install nodejs -y`
 
-### 1.3.2. 패키지 설치
+### 1.3.2. 개별 패키지 설치
 
 - 글로벌로 설치  
   `npm i xxx -g`
@@ -32,7 +32,16 @@
 - 글로벌 설치 목록 조회  
   `npm list -g`
 
-### 1.3.3. nodejs 앱 실행
+### 1.3.3. 깃헙에서 프로젝트 받아온 경우 실행
+
+- 의존성 라이브러리 설치  
+  `npm i`
+- 취약점 업데이트  
+  `npm audit fix`
+- 실행  
+  `npm start`
+
+### 1.3.4. nodejs 앱 실행
 
 - 기본 실행  
   `node xxx.js`
@@ -57,21 +66,22 @@ npm run-script kill
 npm run-script reload
 ```
 
-### 1.3.4. 새 프로젝트 생성 과정
+### 1.3.5. 새 프로젝트 생성 과정
 
-- 프로젝트명 빈 폴더 생성
-  `mkdir [프로젝트폴더]`
+- 프로젝트명 빈 폴더 생성  
+  `mkdir [프로젝트폴더]`  
   `cd [프로젝트폴더]`
-- 프로젝트 초기화
-  `npm init`
-- 디펜던시 편집
+- 프로젝트 초기화  
+  `npm init`  
+  `npm init -y`
+- 디펜던시 편집  
   `package.json`
-- 라이브러리 설치
+- 라이브러리 설치  
   `npm i`
-- 특정 라이브러리 설치 (+ package.json에 추가)
+- 특정 라이브러리 설치 (+ package.json에 추가)  
   `npm i [라이브러리이름] --save`
 
-### 1.3.5. express, socket.io 프로젝트 생성 과정
+### 1.3.6. express, socket.io 프로젝트 생성 과정
 
 - 가이드: <https://expressjs.com/ko/starter/installing.html>  
   `mkdir [프로젝트폴더]`  
