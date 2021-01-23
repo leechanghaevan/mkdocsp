@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>- jekyll - - Evan's Dev Note</title>
+  <title>- parcel - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "- jekyll -";
-    var mkdocs_page_input_path = "jekyll.md";
+    var mkdocs_page_name = "- parcel -";
+    var mkdocs_page_input_path = "parcel.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -147,22 +147,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">툴</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- jekyll -</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">개요</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#linux">Linux에 설치</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#window-choco">Window에 설치 (choco 사용)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">명령어</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">주의 사항</a>
-    </li>
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../jekyll/">- jekyll -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
@@ -174,10 +162,20 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">번들러</span></p>
-                <ul>
+                <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../webpack/">- webpack -</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../parcel/">- parcel -</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- parcel -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 실행 (+ 서버)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-">1.3. 실행 (- 서버)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-">1.4. 빌드 (+ 미니파이, - 소스맵, - 서버)</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../grunt/">- grunt -</a>
                     </li>
@@ -222,11 +220,11 @@
     
       
         
-          <li>툴 &raquo;</li>
+          <li>번들러 &raquo;</li>
         
       
     
-    <li>- jekyll -</li>
+    <li>- parcel -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -237,84 +235,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="jekyll">Jekyll</h1>
-<h2 id="_1">개요</h2>
+                <h1 id="1-parcel">1. Parcel</h1>
 <blockquote>
-<p>Jekyll은 개인, 프로젝트 또는 조직 사이트를위한 간단한 블로그 인식 정적 사이트 생성기입니다. GitHub의 공동 설립자 인 Tom Preston-Werner가 루비로 작성했으며 오픈 소스 MIT 라이센스에 따라 배포됩니다. - 위키백과</p>
+<p>웹팩보다 가볍고 쉽고 빠르다.
+설정이 필요없는 번들러</p>
 </blockquote>
-<ul>
-<li>Jekyll은 마크 다운 기반의 웹사이트 생성기이다. 주로 블로그를 만드는데 사용된다.</li>
-<li>깃헙페이지에서 기본 지원 + 무료 호스팅.</li>
-<li>Jekyll을 설치하기 위해선 루비를 설치하여야 한다.</li>
-</ul>
-<h2 id="linux">Linux에 설치</h2>
-<ul>
-<li>Install Ruby
-  <code>sudo apt install ruby-full build-essential zlib1g-dev</code></li>
-<li>
-<p>Uninstall Ruby
-  <code>sudo apt remove --auto-remove --purge ruby-full</code> 또는 <code>sudo apt purge --auto-remove ruby-full</code></p>
-</li>
-<li>
-<p>Install Jekyll
-  <code>sudo gem install jekyll bundler</code></p>
-</li>
-</ul>
-<h2 id="window-choco">Window에 설치 (choco 사용)</h2>
-<ul>
-<li>
-<p>루비 설치
-  <code>choco install ruby -y</code></p>
-</li>
-<li>
-<p>파워셀을 따로 열고
-  <code>gem install bundler</code>
-  <code>gem install jekyll</code></p>
-</li>
-<li>
-<p>실행 에러시 아래 명령어 수행 후 시도
-  <code>bundle install</code></p>
-</li>
-</ul>
-<h2 id="_2">명령어</h2>
-<ul>
-<li>
-<p>Create Jekyll project
-  <code>jekyll new PATH</code> and <code>cd PATH</code></p>
-</li>
-<li>
-<p>Test on localhost
-  <code>jekyll serve</code> or <code>jekyll s</code></p>
-</li>
-<li>
-<p>Build
-  <code>jekyll build</code> or <code>jekyll b</code></p>
-</li>
-<li>
-<p>Publish
-  <code>git push origin master</code></p>
-</li>
-</ul>
-<!-- ## 기능
-
-Jekyll provides automatic regeneration when a source changes.
-
-Links inside your blog should be this format. `{{site.baseurl}}/img/2020-12-24-194035.png`.
-`{{site.baseurl}}` is defined in `_config.yml`
-
-Anyone can use Github as a free hosting server for their static website, called Github page, just with a little setup.
-`repository > settings > GitHub Pages`
-
-Once github page setup is complete, you can find the public URL nearby. -->
-
-<h2 id="_3">주의 사항</h2>
-<ul>
-<li>깃헙에 커밋할때 gitignore 에서 _site를 빼줘야 정적 페이지가 깃헙페이지에 호스팅이 된다.</li>
-<li>WSL 리눅스에 Jekyll 설치했을때는 <code>jekyll s</code>의 자동 갱신 기능이 잘 안되었었는데 윈도용으로 설치하니 잘 된다. 역시 윈도에선 윈도용!</li>
-<li>깃헙 페이지에선 여전히 지킬을 기본으로 지원하지만, 정적 블로그의 최근 대세는 Gatsby로 넘어간 것 같다.</li>
-</ul>
-<hr />
-<p>참고</p>
+<p><a href="https://ko.parceljs.org/cli.html">한국어 공식사이트</a></p>
+<h2 id="11">1.1. 설치</h2>
+<p><code>npm install -g parcel-bundler</code></p>
+<h2 id="12">1.2. 실행 (+ 서버)</h2>
+<p><code>parcel serve xxx.js -d xxx/output</code></p>
+<h2 id="13-">1.3. 실행 (- 서버)</h2>
+<p><code>parcel watch xxx.js -d xxx/output</code></p>
+<h2 id="14-">1.4. 빌드 (+ 미니파이, - 소스맵, - 서버)</h2>
+<p><code>parcel build xxx.js -d xxx/dist --no-source-maps</code></p>
               
             </div>
           </div>
@@ -322,10 +256,10 @@ Once github page setup is complete, you can find the public URL nearby. -->
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../git/" class="btn btn-neutral float-right" title="- git -">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../grunt/" class="btn btn-neutral float-right" title="- grunt -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../mkdocs/" class="btn btn-neutral" title="- mkdocs -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../webpack/" class="btn btn-neutral" title="- webpack -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -351,10 +285,10 @@ Once github page setup is complete, you can find the public URL nearby. -->
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../mkdocs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../webpack/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../git/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../grunt/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
