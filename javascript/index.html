@@ -82,27 +82,39 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">- javascript -</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 객체 선언 방법들</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 객체 복제 (클론)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#13">1.3. 객체 필드 접근</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#14">1.4. 이벤트 리스너 비교</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#15-javascript">1.5. JavaScript로 메인루프 구현</a>
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 객체</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#151-setinterval">1.5.1. setInterval</a>
+    <li class="toctree-l3"><a class="reference internal" href="#111">1.1.1. 객체 선언</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#152-settimeout">1.5.2. setTimeout</a>
+    <li class="toctree-l3"><a class="reference internal" href="#112">1.1.2. 객체 복제 (클론)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#153-reqeustanimationframe">1.5.3. reqeustAnimationframe</a>
+    <li class="toctree-l3"><a class="reference internal" href="#113">1.1.3. 객체 접근</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#16-api">1.6. API</a>
+    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 함수 및 객체, 내보내기 / 불러오기</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#161-windowrequestanimationframe">1.6.1. window.requestAnimationFrame()</a>
+    <li class="toctree-l3"><a class="reference internal" href="#121-commonjs-nodejs">1.2.1. commonjs 방식 (nodejs)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#122-es6">1.2.2. es6방식</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13">1.3. 이벤트 리스너 비교</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-javascript">1.4. JavaScript로 메인루프 구현</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#141-setinterval">1.4.1. setInterval</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#142-settimeout">1.4.2. setTimeout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#143-reqeustanimationframe">1.4.3. reqeustAnimationframe</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#15-api">1.5. API</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#151-windowrequestanimationframe">1.5.1. window.requestAnimationFrame()</a>
     </li>
         </ul>
     </li>
@@ -120,8 +132,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">플러터</span></p>
+                <p class="caption"><span class="caption-text">프론트엔드</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reactjs/">- React.js -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
                     </li>
                 </ul>
@@ -172,7 +188,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">툴</span></p>
+                <p class="caption"><span class="caption-text">유틸</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
@@ -181,6 +197,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">편집기</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intellij/">- Intellij -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
                     </li>
@@ -256,7 +277,8 @@
 <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다. - 위키백과</p>
 </blockquote>
 <hr />
-<h2 id="11">1.1. 객체 선언 방법들</h2>
+<h2 id="11">1.1. 객체</h2>
+<h3 id="111">1.1.1. 객체 선언</h3>
 <pre><code class="language-javascript">// 1. 자바스크립트 오브젝트
 // 이런식으로 생성한 객체는 new 사용할 수 없다.
 var jsObject = {
@@ -312,7 +334,7 @@ jsClass1.foo();
 jsClass2.val = 'setter jsClass2';
 jsClass2.foo();
 </code></pre>
-<h2 id="12">1.2. 객체 복제 (클론)</h2>
+<h3 id="112">1.1.2. 객체 복제 (클론)</h3>
 <pre><code class="language-javascript">//객체 복제 방법 1
 var objNew = {}; //생성
 Object.assign(objNew, obj1); //복사
@@ -322,7 +344,7 @@ Object.assign(objNew, obj1, obj2); //여러개의 객체를 하나로 합침
 var objNew = { ...obj1 }; //생성 + 복사
 var objNew = { ...obj1, ...obj2 }; //여러개의 객체를 하나로 합침
 </code></pre>
-<h2 id="13">1.3. 객체 필드 접근</h2>
+<h3 id="113">1.1.3. 객체 접근</h3>
 <pre><code class="language-javascript">var obj1 = {
   _a1: '_a1',
 
@@ -342,7 +364,68 @@ console.log(obj1.a1);
 let i = 0;
 console.log(obj1['a' + ++i]);
 </code></pre>
-<h2 id="14">1.4. 이벤트 리스너 비교</h2>
+<hr />
+<h2 id="12">1.2. 함수 및 객체, 내보내기 / 불러오기</h2>
+<h3 id="121-commonjs-nodejs">1.2.1. commonjs 방식 (nodejs)</h3>
+<pre><code class="language-javascript">const canadianToUs = function (canadian) {
+  return roundTwoDecimals(canadian * exchangeRate);
+};
+
+function usToCanadian(us) {
+  return roundTwoDecimals(us / exchangeRate);
+}
+exports.canadianToUs = canadianToUs; // 내보내기 1
+exports.usToCanadian = usToCanadian; // 내보내기 2
+</code></pre>
+<pre><code class="language-javascript">//사용하기
+const currency = require('./currency-functions');
+console.log(currency.canadianToUs(50));
+console.log(currency.usToCanadian(30));
+</code></pre>
+<h3 id="122-es6">1.2.2. es6방식</h3>
+<pre><code class="language-javascript">// 1. 선언과 동시에 내보내기
+export function canadianToUs(canadian) {
+  return roundTwoDecimals(canadian * exchangeRate);
+}
+
+// 2. 별도로 내보내기
+const usToCanadian = function (us) {
+  return roundTwoDecimals(us / exchangeRate);
+};
+export { usToCanadian };
+</code></pre>
+<pre><code class="language-javascript">// 단일 객체 내보내기
+const obj = {
+  canadianToUs(canadian) {
+    return roundTwoDecimals(canadian * exchangeRate);
+  },
+};
+
+obj.usToCanadian = function (us) {
+  return roundTwoDecimals(us / exchangeRate);
+};
+
+export default obj;
+</code></pre>
+<pre><code class="language-javascript">//직접 가져오기
+import { canadianToUs } from './currency-functions';
+console.log(canadianToUs(50));
+
+//별명으로 가져오기
+import * as currency * from './currency-functions';
+console.log(currency.canadianToUs(50));
+
+//단일 객체 가져오기 (별명은 아무이름 붙여도 된다)
+import currency from &quot;./currency-object&quot;
+console.log(currency.canadianToUs(50));
+</code></pre>
+<p>하나만 내보내기, export default obj는 왜 필요할까?<br />
+<code>export class A {}</code> 에선 가져올때 파일 이름 + 가져올 객체 A의 이름을 알고 있어야 한다.<br />
+<code>export default class A {}</code> 에선 가져올때 파일 이름만 알고 있으면 된다. 굳이 필요한가 싶다.
+export default는 클래스를 위해서 존재하는 것 같다. 하지만 변수 공개 범위 설정이 안되는 자바스크립트 특성상,
+싱글톤 모듈은 굳이 클래스로 작성하는것 보다. 일반 함수로 작성해서 내보낼 함수에만 export를 붙이는게 더 명확한 코딩이 가능할 것 같다.</p>
+<hr />
+<h2 id="13">1.3. 이벤트 리스너 비교</h2>
 <ul>
 <li><strong>onclick</strong> 방식</li>
 </ul>
@@ -363,13 +446,13 @@ console.log(obj1['a' + ++i]);
 );
 </code></pre>
 <hr />
-<h2 id="15-javascript">1.5. JavaScript로 메인루프 구현</h2>
+<h2 id="14-javascript">1.4. JavaScript로 메인루프 구현</h2>
 <ul>
 <li>setInterval</li>
 <li>setTimeout</li>
 <li>requestAnimationframe</li>
 </ul>
-<h3 id="151-setinterval">1.5.1. setInterval</h3>
+<h3 id="141-setinterval">1.4.1. setInterval</h3>
 <p>일정한 시간 간격으로 작업을 실행합니다. 오래 걸릴 경우 콜백이 지연되고 사라질 수 있습니다.</p>
 <pre><code class="language-javascript">var Interval = window.setInterval(function, time);
 
@@ -377,7 +460,7 @@ console.log(obj1['a' + ++i]);
 // window.clearInterval(setInterval)로 강제 종료
 // time 간격으로 function 실행!
 </code></pre>
-<h3 id="152-settimeout">1.5.2. setTimeout</h3>
+<h3 id="142-settimeout">1.4.2. setTimeout</h3>
 <p>작업 주기 함수. 재귀적으로 호출함으로써 애니메이션을 구현할 수 있습니다. (setInterval 보다 호출이 보장됨)</p>
 <pre><code class="language-javascript">var timeout = window.setTimeout(function, time);
 
@@ -385,7 +468,7 @@ console.log(obj1['a' + ++i]);
 // time간격으로 funciton을 한 번 실행합니다.
 // window.clearTimeout(timeout); 으로 강제 종료할 수 있습니다.
 </code></pre>
-<h3 id="153-reqeustanimationframe">1.5.3. reqeustAnimationframe</h3>
+<h3 id="143-reqeustanimationframe">1.4.3. reqeustAnimationframe</h3>
 <p>애니메이션 전용 주기 호출 함수 (애니메이션을 위한 최적화된 주기 호출)</p>
 <pre><code class="language-javascript">function run() {
   ...
@@ -394,8 +477,8 @@ console.log(obj1['a' + ++i]);
 requestAnimationFrame(run);
 </code></pre>
 <hr />
-<h2 id="16-api">1.6. API</h2>
-<h3 id="161-windowrequestanimationframe">1.6.1. window.requestAnimationFrame()</h3>
+<h2 id="15-api">1.5. API</h2>
+<h3 id="151-windowrequestanimationframe">1.5.1. window.requestAnimationFrame()</h3>
 <ul>
 <li>다음 리페인트에서 그 다음 프레임을 애니메이트하려면 콜백 루틴이 반드시 스스로 requestAnimationFrame()을 호출해야합니다.</li>
 </ul>

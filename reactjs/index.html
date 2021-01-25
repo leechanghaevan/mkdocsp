@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>React - Evan's Dev Note</title>
+  <title>- React.js - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "React";
+    var mkdocs_page_name = "- React.js -";
     var mkdocs_page_input_path = "reactjs.md";
     var mkdocs_page_url = null;
   </script>
@@ -94,8 +94,24 @@
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">플러터</span></p>
-                <ul>
+                <p class="caption"><span class="caption-text">프론트엔드</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- React.js -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">특징</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">참고</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">프로젝트 생성</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">기본 문법</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
                     </li>
                 </ul>
@@ -146,7 +162,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">툴</span></p>
+                <p class="caption"><span class="caption-text">유틸</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
@@ -155,6 +171,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">편집기</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intellij/">- Intellij -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
                     </li>
@@ -209,8 +230,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>프론트엔드 &raquo;</li>
+        
+      
     
-    <li>React</li>
+    <li>- React.js -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -222,18 +247,70 @@
             <div class="section">
               
                 <h1 id="react">React</h1>
-<h2 id="_1">설치</h2>
+<h2 id="_1">특징</h2>
+<blockquote>
+<p>리액트를 사용하면 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로써 유지보수성을 높여준다.</p>
+</blockquote>
+<h2 id="_2">참고</h2>
+<p><a href="https://velopert.com/reactjs-tutorials">VELOPERT.LOG</a></p>
+<h2 id="_3">설치</h2>
 <ul>
 <li><code>npm install -g create-react-app</code></li>
+</ul>
+<h2 id="_4">프로젝트 생성</h2>
+<ul>
+<li><code>create-react-app hello-react</code> 프로젝트 생성</li>
 <li><code>yarn start</code> 개발서버 시작</li>
 <li><code>yarn build</code> 번들</li>
 <li><code>yarn test</code> 테스트서버 시작</li>
 <li><code>yarn eject</code> 삭제?</li>
 </ul>
+<h2 id="_5">기본 문법</h2>
+<p>엔트리</p>
+<pre><code class="language-javascript">// App.js
+import './App.css';
+import MyExample from './MyExample';
+
+function App() {
+  return &lt;MyExample name=&quot;리액트&quot; /&gt;;
+}
+
+export default App;
+</code></pre>
+<p>컴포넌트</p>
+<pre><code class="language-javascript">// MyExample.js
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {
+    const value = 1;
+    return (
+      &lt;div&gt;
+        {(function () {
+          if (value === 1) return &lt;div&gt;하나&lt;/div&gt;;
+          if (value === 2) return &lt;div&gt;둘&lt;/div&gt;;
+          if (value === 3) return &lt;div&gt;셋&lt;/div&gt;;
+        })()}
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default App;
+</code></pre>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vuejs/" class="btn btn-neutral float-right" title="- Vue.js -">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../express/" class="btn btn-neutral" title="- express -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -257,6 +334,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../express/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../vuejs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

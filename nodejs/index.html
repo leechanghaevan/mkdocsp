@@ -178,8 +178,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">플러터</span></p>
+                <p class="caption"><span class="caption-text">프론트엔드</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reactjs/">- React.js -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
                     </li>
                 </ul>
@@ -230,7 +234,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">툴</span></p>
+                <p class="caption"><span class="caption-text">유틸</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
@@ -239,6 +243,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">편집기</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intellij/">- Intellij -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
                     </li>
@@ -415,9 +424,10 @@ process.memoryUsage(); //메모리 사용량
 process.uptime(); //현재 프로그램이 실행된 시간
 </code></pre>
 <h3 id="143-exports">1.4.3. exports 내장 (라이브러리)</h3>
-<blockquote>
-<p>모듈 (라이브러리) 내보내기 가져오기</p>
-</blockquote>
+<ul>
+<li>모듈 (라이브러리) 내보내기 / 불러오기</li>
+<li>ES6 방식 (import)가 아니라, CommonJS 방식 (require("xxx"))를 사용한다.</li>
+</ul>
 <pre><code class="language-javascript">// 모듈 쪽 방법 1
 // xxx.js 또는 xxx/index.js 의 내용
 var myfunc = function () {};
@@ -432,7 +442,8 @@ module.exports = {
 exports.foo = function () {};
 exports.val = 10;
 </code></pre>
-<pre><code class="language-javascript">// dummyDB.js
+<pre><code class="language-javascript">// 사용 측
+// dummyDB.js
 let module = require('./xxx');
 module.foo();
 </code></pre>
