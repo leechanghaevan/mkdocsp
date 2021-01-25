@@ -94,6 +94,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#114-ts">1.1.4. ts 소스 빌드시 아무 방해 메세지도 안뜨게 하는 법</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#115">1.1.5. 문법</a>
+    </li>
         </ul>
     </li>
     </ul>
@@ -284,6 +286,25 @@
 <ul>
 <li><code>shift + ctrl + b</code> 로 빌드</li>
 </ul>
+<h3 id="115">1.1.5. 문법</h3>
+<p>타입 종류</p>
+<ul>
+<li>boolean</li>
+<li>number</li>
+<li>string</li>
+<li>array <code>list:number[]</code></li>
+<li>tuple <code>point:[string, number]</code></li>
+<li>enum <code>enum Color {Red=1, Green, Blue}</code></li>
+<li>any</li>
+<li>void</li>
+<li>null</li>
+<li>undefined 변수 초기값</li>
+<li>object</li>
+</ul>
+<p>유저 타입 정의<br />
+<code>type UNIQID = string | null</code></p>
+<p>유저 타입 정의 (특정 값만 받아들이게)<br />
+<code>type USER_TYPE = 'TESTER' | 'ADMIN'</code></p>
               
             </div>
           </div>

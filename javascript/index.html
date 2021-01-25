@@ -88,19 +88,21 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#13">1.3. 객체 필드 접근</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#14-javascript">1.4. JavaScript로 메인루프 구현</a>
+    <li class="toctree-l2"><a class="reference internal" href="#14">1.4. 이벤트 리스너 비교</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#15-javascript">1.5. JavaScript로 메인루프 구현</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#141-setinterval">1.4.1. setInterval</a>
+    <li class="toctree-l3"><a class="reference internal" href="#151-setinterval">1.5.1. setInterval</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#142-settimeout">1.4.2. setTimeout</a>
+    <li class="toctree-l3"><a class="reference internal" href="#152-settimeout">1.5.2. setTimeout</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#143-reqeustanimationframe">1.4.3. reqeustAnimationframe</a>
+    <li class="toctree-l3"><a class="reference internal" href="#153-reqeustanimationframe">1.5.3. reqeustAnimationframe</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#15-api">1.5. API</a>
+    <li class="toctree-l2"><a class="reference internal" href="#16-api">1.6. API</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#151-windowrequestanimationframe">1.5.1. window.requestAnimationFrame()</a>
+    <li class="toctree-l3"><a class="reference internal" href="#161-windowrequestanimationframe">1.6.1. window.requestAnimationFrame()</a>
     </li>
         </ul>
     </li>
@@ -340,15 +342,34 @@ console.log(obj1.a1);
 let i = 0;
 console.log(obj1['a' + ++i]);
 </code></pre>
+<h2 id="14">1.4. 이벤트 리스너 비교</h2>
+<ul>
+<li><strong>onclick</strong> 방식</li>
+</ul>
+<pre><code class="language-javascript">document.getElementById('trigger').onclick = () =&gt; {
+  alert('hello!');
+};
+</code></pre>
+<ul>
+<li><strong>addEventListener</strong> 방식 (여러개의 리스너를 지정할 수 있다)<br />
+  또한 마지막 파라미터를 true 로 주면 이벤트 호출 방향을 부모에서 자식으로 역전 할 수 있다. (버블링 =&gt; 캡쳐링)</li>
+</ul>
+<pre><code class="language-javascript">document.getElementById('trigger').addEventListener(
+  'click',
+  () =&gt; {
+    alert('hello!');
+  },
+  false
+);
+</code></pre>
 <hr />
-<h2 id="14-javascript">1.4. JavaScript로 메인루프 구현</h2>
-<p>JS로 애니메이션 처리 --&gt; 규칙적인 처리를 하도록 구현하면 됩니다. 다음과 같은 방법들이 있습니다.</p>
+<h2 id="15-javascript">1.5. JavaScript로 메인루프 구현</h2>
 <ul>
 <li>setInterval</li>
 <li>setTimeout</li>
 <li>requestAnimationframe</li>
 </ul>
-<h3 id="141-setinterval">1.4.1. setInterval</h3>
+<h3 id="151-setinterval">1.5.1. setInterval</h3>
 <p>일정한 시간 간격으로 작업을 실행합니다. 오래 걸릴 경우 콜백이 지연되고 사라질 수 있습니다.</p>
 <pre><code class="language-javascript">var Interval = window.setInterval(function, time);
 
@@ -356,7 +377,7 @@ console.log(obj1['a' + ++i]);
 // window.clearInterval(setInterval)로 강제 종료
 // time 간격으로 function 실행!
 </code></pre>
-<h3 id="142-settimeout">1.4.2. setTimeout</h3>
+<h3 id="152-settimeout">1.5.2. setTimeout</h3>
 <p>작업 주기 함수. 재귀적으로 호출함으로써 애니메이션을 구현할 수 있습니다. (setInterval 보다 호출이 보장됨)</p>
 <pre><code class="language-javascript">var timeout = window.setTimeout(function, time);
 
@@ -364,7 +385,7 @@ console.log(obj1['a' + ++i]);
 // time간격으로 funciton을 한 번 실행합니다.
 // window.clearTimeout(timeout); 으로 강제 종료할 수 있습니다.
 </code></pre>
-<h3 id="143-reqeustanimationframe">1.4.3. reqeustAnimationframe</h3>
+<h3 id="153-reqeustanimationframe">1.5.3. reqeustAnimationframe</h3>
 <p>애니메이션 전용 주기 호출 함수 (애니메이션을 위한 최적화된 주기 호출)</p>
 <pre><code class="language-javascript">function run() {
   ...
@@ -373,8 +394,8 @@ console.log(obj1['a' + ++i]);
 requestAnimationFrame(run);
 </code></pre>
 <hr />
-<h2 id="15-api">1.5. API</h2>
-<h3 id="151-windowrequestanimationframe">1.5.1. window.requestAnimationFrame()</h3>
+<h2 id="16-api">1.6. API</h2>
+<h3 id="161-windowrequestanimationframe">1.6.1. window.requestAnimationFrame()</h3>
 <ul>
 <li>다음 리페인트에서 그 다음 프레임을 애니메이트하려면 콜백 루틴이 반드시 스스로 requestAnimationFrame()을 호출해야합니다.</li>
 </ul>
