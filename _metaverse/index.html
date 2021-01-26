@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>- html - - Evan's Dev Note</title>
+  <title>- metaverse - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "- html -";
-    var mkdocs_page_input_path = "html.md";
+    var mkdocs_page_name = "- metaverse -";
+    var mkdocs_page_input_path = "_metaverse.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -67,8 +67,26 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">프로젝트 2 Metaverse</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../_metaverse/">- metaverse -</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- metaverse -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 사용기술</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12">1.2. 사전준비</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13">1.3. 프로젝트 설정</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#131">1.3.1. 타입 스크립트 설정</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#132">1.3.2. 라이브러리 다운로드</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#133">1.3.3. 타입 스크립트 컴파일</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#134-js">1.3.4. 빌드 (js묶음 + 미니파이)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">프로젝트 3 MMO</span></p>
@@ -77,12 +95,8 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">HTML</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- html -</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">개요</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../html/">- html -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../css/">- css -</a>
                     </li>
@@ -228,11 +242,11 @@
     
       
         
-          <li>HTML &raquo;</li>
+          <li>프로젝트 2 Metaverse &raquo;</li>
         
       
     
-    <li>- html -</li>
+    <li>- metaverse -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -243,11 +257,60 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="html">HTML</h1>
-<h2 id="_1">개요</h2>
+                <h1 id="1">1. 메타버스 프로젝트</h1>
 <blockquote>
-<p>하이퍼텍스트 마크업 언어는 웹 페이지를 위한 지배적인 마크업 언어다. HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공한다. - 위키백과</p>
+<p>가상 공간을 웹 기반으로 만든다.</p>
 </blockquote>
+<h2 id="11">1.1. 사용기술</h2>
+<ul>
+<li>threejs</li>
+<li>nodejs</li>
+<li>socketio</li>
+<li>react?</li>
+</ul>
+<h2 id="12">1.2. 사전준비</h2>
+<p><code>nodejs 다운로드 설치</code><br />
+<code>nodejs i three</code><br />
+<code>nodejs i rxjs</code>
+<code>nodejs i -g typescript</code><br />
+<code>nodejs i -g parcel</code></p>
+<h2 id="13">1.3. 프로젝트 설정</h2>
+<h3 id="131">1.3.1. 타입 스크립트 설정</h3>
+<p>tsconfig.json</p>
+<pre><code class="language-json">&quot;target&quot;: &quot;es5&quot;
+&quot;sourceMap&quot;: true
+&quot;outDir&quot;: &quot;./dist&quot;,
+&quot;rootDir&quot;: &quot;./_src&quot;,
+</code></pre>
+<ul>
+<li>import 문 변환하지 않고 남겨둠.</li>
+<li>단점: 임포트 경로가 지저분하다. <code>import * as THREE from '../../../node_modules/three/src/three.js</code></li>
+<li>장점: commonjs 없이 동작한다.</li>
+</ul>
+<pre><code class="language-json">&quot;module&quot;: &quot;es2015&quot;
+</code></pre>
+<ul>
+<li>import 문을 commonjs 형태로 변환한다.</li>
+<li>단점: commonjs 모듈을 번들러를 통해 묶어 주어야 한다.</li>
+<li>장점: 임포트 경로가 깔끔하다. <code>import * as THREE from 'three</code></li>
+</ul>
+<pre><code class="language-json">&quot;module&quot;: &quot;commonjs&quot;
+&quot;moduleResolution&quot;: &quot;node&quot;
+</code></pre>
+<p>타입스크립트 컴파일시 팝업창 안뜨고 조용히 진행되게<br />
+tasks.json</p>
+<pre><code class="language-json">&quot;presentation&quot;: {
+&quot;reveal&quot;: &quot;silent&quot;,
+&quot;clear&quot;: true,
+&quot;showReuseMessage&quot;: false
+}
+</code></pre>
+<h3 id="132">1.3.2. 라이브러리 다운로드</h3>
+<p><code>node i</code></p>
+<h3 id="133">1.3.3. 타입 스크립트 컴파일</h3>
+<p><code>shift + ctrl + b</code> 또는 터미널에서 <code>tsc</code></p>
+<h3 id="134-js">1.3.4. 빌드 (js묶음 + 미니파이)</h3>
+<p><code>npm run build03</code></p>
               
             </div>
           </div>
@@ -255,10 +318,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../css/" class="btn btn-neutral float-right" title="- css -">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../_mmo/" class="btn btn-neutral float-right" title="- mmo -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../_mmo/" class="btn btn-neutral" title="- mmo -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../_chat/" class="btn btn-neutral" title="- chat -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -284,10 +347,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../_mmo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../_chat/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../css/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../_mmo/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
