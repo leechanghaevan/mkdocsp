@@ -32,7 +32,13 @@
 - 글로벌 설치 목록 조회  
   `npm list -g`
 
-### 1.3.3. 깃헙에서 프로젝트 받아온 경우 실행
+### 1.3.3. yarn 설치
+
+- yarn 은 향상된 npm이다. (필요?)
+- `npm i -g yarn`
+- `yarn --version`
+
+### 1.3.4. 깃헙에서 프로젝트 받아온 경우 실행
 
 - 의존성 라이브러리 설치  
   `npm i`
@@ -41,7 +47,7 @@
 - 실행  
   `npm start`
 
-### 1.3.4. nodejs 앱 실행
+### 1.3.5. nodejs 앱 실행
 
 - 기본 실행  
   `node xxx.js`
@@ -66,7 +72,7 @@ npm run-script kill
 npm run-script reload
 ```
 
-### 1.3.5. 새 프로젝트 생성 과정
+### 1.3.6. 새 프로젝트 생성 과정
 
 - 프로젝트명 빈 폴더 생성  
   `mkdir [프로젝트폴더]`  
@@ -81,7 +87,7 @@ npm run-script reload
 - 특정 라이브러리 설치 (+ package.json에 추가)  
   `npm i [라이브러리이름] --save`
 
-### 1.3.6. express, socket.io 프로젝트 생성 과정
+### 1.3.7. express, socket.io 프로젝트 생성 과정
 
 - 가이드: <https://expressjs.com/ko/starter/installing.html>  
   `mkdir [프로젝트폴더]`  
@@ -114,7 +120,8 @@ process.uptime(); //현재 프로그램이 실행된 시간
 
 ### 1.4.3. exports 내장 (라이브러리)
 
-> 모듈 (라이브러리) 내보내기 가져오기
+- 모듈 (라이브러리) 내보내기 / 불러오기
+- ES6 방식 (import)가 아니라, CommonJS 방식 (require("xxx"))를 사용한다.
 
 ```javascript
 // 모듈 쪽 방법 1
@@ -135,6 +142,7 @@ exports.val = 10;
 ```
 
 ```javascript
+// 사용 측
 // dummyDB.js
 let module = require('./xxx');
 module.foo();

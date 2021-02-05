@@ -14,7 +14,10 @@
 
 - tsconfig.json 생성  
   `tsc --init`
-- tsconfig.json 에 내용 추가  
+- tsconfig.json 에 내용 추가 1
+  `"module": "es2015"` import 사용, node_modules 가져올때 경로를 디테일하게 지정해 주어야 하는 경로 문제가 발생한다.
+  `"module": "commonjs"` require 사용, 컴파일 에러는 발생하지 않으나, 번들러를 통해 소스를 통합시켜 주지 않으면 브라우저에서 로딩이 안된다.
+- tsconfig.json 에 내용 추가 2
   `"sourceMap":"true"`  
   `"outDir":"./dist"`  
   `"rootDir":"./src"`
@@ -44,3 +47,34 @@
 ```
 
 - `shift + ctrl + b` 로 빌드
+
+### 1.1.5. 문법
+
+타입 종류
+
+- boolean
+- number
+- string
+- array `list:number[]`
+- tuple `point:[string, number]`
+- enum `enum Color {Red=1, Green, Blue}`
+- any
+- void
+- null
+- undefined 변수 초기값
+- object
+
+유저 타입 정의  
+`type UNIQID = string | null`
+
+유저 타입 정의 (특정 값만 받아들이게)  
+`type USER_TYPE = 'TESTER' | 'ADMIN'`
+
+함수의 모든 파라미터 사용하기
+
+```typescript
+function foo() {
+  console.log(arguments[0]);
+  console.log(arguments[1]);
+}
+```

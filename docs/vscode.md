@@ -6,27 +6,34 @@
 
 ## 디버깅
 
+> 크롬 디버깅의 경우 별도의 웹서버가 실행중이어야 하며. 디버깅 주소와 웹서버의 주소 포트가 일치하여야 한다.
+
 - `f5` 디버깅 시작 / 재개
 - `shift + ctrl + f5` 디버깅 리로드
 - `f10` 스텝오버
 - `f11` 스텝인
 - `f6` 멈춤
 
-## 단축키
+## 개발 단축키
 
 - html 스켈레톤 만들기 `! + enter`
 - 명령 찾기 `shift + Ctrl + P` 또는 `F1`
 - 파일 찾기 `ctrl + P`
 - 전체 폰트 축소 확대 `ctrl + -` `ctrl + + `
 - 에디터 폰트 축소 확대 `ctrl + wheel` (설정에서 wheel로 검색하여 체크)
-- 뒤로 가기 `alt + left`
-- 앞으로 가기 `alt + right`
 - 터미널 열기 `ctrl + ~`
-- 날짜 삽입 `shift + ctrl + I`
-- 아래에 줄 삽입 `ctrl + enter`
 - 빌드 `ctrl + shift + b`
+- quick fix `ctrl + .` 개인적으로 intelliJ 방식 키를 할당함 `alt + enter`
+
+## 편집 단축키
+
 - 단어 검색 `ctrl+f`
 - (단어 검색 후) 모두 선택 `alt+enter`
+- 날짜 삽입 `shift + ctrl + I`
+- 아래에 줄 삽입 `ctrl + enter`
+- 뒤로 가기 `alt + left`
+- 앞으로 가기 `alt + right`
+- import 정리 `shift + alt + o`
 
 ## 추천 확장 1
 

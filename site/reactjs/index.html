@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>- cryptography - - Evan's Dev Note</title>
+  <title>- React.js - - Evan's Dev Note</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "- cryptography -";
-    var mkdocs_page_input_path = "crypto.md";
+    var mkdocs_page_name = "- React.js -";
+    var mkdocs_page_input_path = "reactjs.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -102,8 +102,22 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">프론트엔드</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../reactjs/">- React.js -</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- React.js -</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">특징</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">참고</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">프로젝트 생성</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">기본 문법</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ssr-spa">SSR - SPA</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
                     </li>
@@ -153,32 +167,8 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">알고리즘</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">- cryptography -</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_2">암호화 알고리즘</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#rsa">RSA</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#aes">AES</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sha">SHA</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#encoding-encryption-hashing">Encoding / Encryption / Hashing 차이</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#encoding">Encoding(부호화)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#encryption">Encryption(암호화)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hashing">Hashing(해싱)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#objfusecation">Objfusecation(난독화)</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">유틸</span></p>
@@ -250,11 +240,11 @@
     
       
         
-          <li>알고리즘 &raquo;</li>
+          <li>프론트엔드 &raquo;</li>
         
       
     
-    <li>- cryptography -</li>
+    <li>- React.js -</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -265,108 +255,59 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">암호화</h1>
-<hr />
-<h2 id="_2">암호화 알고리즘</h2>
-<h3 id="rsa">RSA</h3>
-<ul>
-<li>공개키(비대칭키) 알고리즘 (암호화, 복호화 가능)</li>
-<li>암호화는 공개키로 누구나 가능</li>
-<li>복호화는 개인키 소지자만 가능</li>
-<li>암호화 가능한 문자열 길이가 제한되어 있으므로, AES 암호화 섞어서 사용 필요</li>
-</ul>
+                <h1 id="react">React</h1>
+<h2 id="_1">특징</h2>
 <blockquote>
-<p>큰 숫자를 소인수 분해하는 것이 어렵다는 것에 기반을 두고 있다. 그러므로 큰 수의 소인수 분해를 획기적으로 빠르게 할 수 있는 알고리즘이나 양자 컴퓨터가 나온다면 취약해질 수 있다.</p>
+<p>리액트를 사용하면 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로써 유지보수성을 높여준다.</p>
 </blockquote>
-<h3 id="aes">AES</h3>
+<h2 id="_2">참고</h2>
+<p><a href="https://velopert.com/reactjs-tutorials">VELOPERT.LOG</a></p>
+<h2 id="_3">설치</h2>
 <ul>
-<li>대칭키 알고리즘 (암호화, 복호화 가능)</li>
-<li>키 길이에 따라 AES-128, AES-192, AES-256</li>
-<li>암호화 대상 길이 제한 없음</li>
+<li><code>npm install -g create-react-app</code></li>
 </ul>
-<h3 id="sha">SHA</h3>
+<h2 id="_4">프로젝트 생성</h2>
 <ul>
-<li>해시 알고리즘 (암호화만 가능)</li>
-<li>SHA-1은 이전에 널리 사용되던 MD5를 대신해서 쓰이기도 한다</li>
-<li>더 중요한 데이터에는 SHA-256이나 그 이상의 알고리즘을 사용할 것을 권장한다</li>
+<li><code>create-react-app hello-react</code> 프로젝트 생성</li>
+<li><code>yarn start</code> 개발서버 시작</li>
+<li><code>yarn build</code> 번들</li>
+<li><code>yarn test</code> 테스트서버 시작</li>
+<li><code>yarn eject</code></li>
 </ul>
-<hr />
-<h2 id="encoding-encryption-hashing">Encoding / Encryption / Hashing 차이</h2>
-<h3 id="encoding">Encoding(부호화)</h3>
-<ul>
-<li>다른 유형의 시스템에서 적절하고 안전하게 사용할 수 있도록 데이터를 변환</li>
-<li>ascii, unicode, base64</li>
-<li>원래 형태로 돌아가려면 알고리즘 필요, 키 필요 없음</li>
-</ul>
-<h3 id="encryption">Encryption(암호화)</h3>
-<ul>
-<li>다른 사람으로부터 비밀을 유지하기 위해 데이터를 변환</li>
-<li>원래 형태로 돌아가려면 알고리즘 및 키가 모두 필요</li>
-</ul>
-<h3 id="hashing">Hashing(해싱)</h3>
-<ul>
-<li>데이터의 무결성 을 보장하기위한 목적으로 사용됨</li>
-<li>동일한 입력은 항상 동일한 출력을 생성</li>
-<li>출력에서 입력으로 역변환할 수 없어야 함</li>
-</ul>
-<h3 id="objfusecation">Objfusecation(난독화)</h3>
-<ul>
-<li>공격이나 복사를 더 어렵게 만들기 위해 무언가를 이해하기 어렵게 만드는 것</li>
-<li>난독화는 제어가 아니라 단지 인간이 이해하기 어려운 장애물이라는 점에 유의</li>
-<li>원래 형태로 돌릴 수 있다는 점에서 인코딩과 유사</li>
-</ul>
-<!-- # 암호학
+<h2 id="_5">기본 문법</h2>
+<p>엔트리</p>
+<pre><code class="language-javascript">// App.js
+import './App.css';
+import MyExample from './MyExample';
 
-## RSA
+function App() {
+  return &lt;MyExample name=&quot;리액트&quot; /&gt;;
+}
 
-위키백과
+export default App;
+</code></pre>
+<p>컴포넌트</p>
+<pre><code class="language-javascript">// MyExample.js
+import React, { Component } from 'react';
 
-> RSA는 두 개의 키를 사용한다. 여기서 키란 메시지를 열고 잠그는 상수(constant)를 의미한다. 일반적으로 많은 공개키 알고리즘의 공개키(public key)는 모두에게 알려져 있으며 메시지를 암호화(encrypt)하는데 쓰이며, 암호화된 메시지는 개인키(private key)를 가진 자만이 복호화(decrypt)하여 열어볼 수 있다.
-> 공개키 알고리즘은 누구나 어떤 메시지를 암호화할 수 있지만, 그것을 해독하여 열람할 수 있는 사람은 개인키를 지닌 단 한 사람만이 존재한다는 점에서 대칭키 알고리즘과 차이를 가진다.
-> RSA는 소인수 분해의 난해함에 기반하여, 공개키만을 가지고는 개인키를 쉽게 짐작할 수 없도록 디자인되어 있다.
+class App extends Component {
+  render() {
+    const value = 1;
+    return (
+      &lt;div&gt;
+        {(function () {
+          if (value === 1) return &lt;div&gt;하나&lt;/div&gt;;
+          if (value === 2) return &lt;div&gt;둘&lt;/div&gt;;
+          if (value === 3) return &lt;div&gt;셋&lt;/div&gt;;
+        })()}
+      &lt;/div&gt;
+    );
+  }
+}
 
-펌 <https://stage-loving-developers.tistory.com/23>
-
-> 대표적인 비대칭키 암호화 방식이다
-> 비대칭키 라는 것은 암호화할 때 키와 복호화할 때 키가 다르다는 의미인데, 암호화할 때 키를 "공개키", 복호화할 때 키를 "개인키"라고 한다
-> 클라이언트에서 가지고있는 정보를 서버로 보낼 때, 스니핑 등으로 데이터가 노출되면 안되므로 클라이언트가 가지고 있는 "공개키"로 데이터를 암호화하여, 서버로 전달한다
-> 다만, 암호화 가능한 길이가 딱 245byte 까지이므로, 긴 문자열을 암호화하는데는 적합하지 않다
-> 우리는 json 데이터를 주고받고 싶은데, 암호화 가능한 문자열 길이가 제한되어 있으므로 비회원과 통신할 때, 아래 AES 암호화를 섞어서 사용했다
-
-## AES
-
-위키백과
-
-> AES는 미국 정부가 채택한 이후 전 세계적으로 널리 사용되고 있다. 1977년 공표된 DES를 대체한 AES는, 암호화와 복호화 과정에서 동일한 키를 사용하는 대칭 키 알고리즘이다.
-
-펌 <https://stage-loving-developers.tistory.com/23>
-
-> AES는 "Advanced Encryption Standard"를 줄인 말이라고 한다(고급 암호화 표준)
-> "대칭키"라는 임의의 키를 만들어서, 암호화하고자 하는 "문자열"을 "대칭키" 라는 키로 암호화 하는 방식이다
-> 암호화 키의 길이에 따라 AES-128, AES-192, AES-256 종류가 있다
-> SHA 처럼 AES 뒤의 숫자가 bit 길이이다
-> 위의 비대칭키와 다르게 "대칭키" 하나로 암호화 및 복호화 모두 진행하는 방식이다(즉, 같은 키를 가지고 암복호화를 진행한다)
-> 특히 문자열 길이에 상관없이 암호화가 가능하다고 한다
-
-## RSA와 AES 함께 쓰기
-
-펌 <https://stage-loving-developers.tistory.com/23>
-
-> 우리는 245byte를 초과할 수 있는 "긴 문자열"(json 데이터)를 클라이언트와 서버간 주고받아야했다.때문에 RSA로는 암호화해서 데이터를 보낼 수 없었는데, 찾아보니 아래와 같은 방법이 있었다
->
-> 1. RSA 공개키, 개인키를 서버에서 생성해서 클라이언트에게 "공개키"를 알려준다
->    (우리는 통신할 때 마다 매번 공개키, 암호화를 생성하지는 않았고, 한 번만 생성한 후 클라이언트 개발 담당자에게 "공개키"를 넘겨줬다)
-> 1. 클라이언트는 "공개키"를 안전한 장소에 보관하고, 서버는 "개인키"를 안전한 장소에 보관한다
-> 1. 클라이언트에서 서버로 데이터를 보낼 때, AES 대칭키를 생성한다. 이 대칭키로 서버로 보낼 데이터를 AES 암호화 한다
-> 1. 서버에서는 클라이언트가 생성한 AES 대칭키를 알고있어야 전달받은 데이터를 복호화 할 수 있다. 때문에 클라이언트에서 AES대칭키를 안전한 장소에 보관된 "공개키"로 RSA 암호화를 진행한다
-> 1. 서버에서는 RSA 암호화된 AES 대칭키를 "개인키"로 RSA 복호화하고, 복호화된 AES 대칭키로 실제 데이터를 AES 복호화한다
-
-## SHA
-
-위키백과
-
-> SHA(Secure Hash Algorithm, 안전한 해시 알고리즘) 함수들은 서로 관련된 암호학적 해시 함수들의 모음이다. 이들 함수는 미국 국가안보국(NSA)이 1993년에 처음으로 설계했으며 미국 국가 표준으로 지정되었다. SHA 함수군에 속하는 최초의 함수는 공식적으로 SHA라고 불리지만, 나중에 설계된 함수들과 구별하기 위하여 SHA-0이라고도 불린다. 2년 후 SHA-0의 변형인 SHA-1이 발표되었으며, 그 후에 4종류의 변형, 즉 SHA-224, SHA-256, SHA-384, SHA-512가 더 발표되었다. 이들을 통칭해서 SHA-2라고 하기도 한다.
-> SHA-1은 SHA 함수들 중 가장 많이 쓰이며, TLS, SSL, PGP, SSH, IPSec 등 많은 보안 프로토콜과 프로그램에서 사용되고 있다. SHA-1은 이전에 널리 사용되던 MD5를 대신해서 쓰이기도 한다. 혹자는 좀 더 중요한 기술에는 SHA-256이나 그 이상의 알고리즘을 사용할 것을 권장한다. -->
+export default App;
+</code></pre>
+<h2 id="ssr-spa">SSR - SPA</h2>
               
             </div>
           </div>
@@ -374,10 +315,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../mkdocs/" class="btn btn-neutral float-right" title="- mkdocs -">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../vuejs/" class="btn btn-neutral float-right" title="- Vue.js -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kubernetes/" class="btn btn-neutral" title="- kubernetes -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../express/" class="btn btn-neutral" title="- express -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -403,10 +344,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kubernetes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../express/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../mkdocs/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../vuejs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

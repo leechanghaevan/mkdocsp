@@ -14,7 +14,7 @@
 ## 사용할 기술
 
 - nodejs (서버)
-- vuejs (클라)
+- typescript (클라)
 
 ## 게임챗 기본 함수
 

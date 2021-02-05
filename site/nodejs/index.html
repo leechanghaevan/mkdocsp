@@ -66,7 +66,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../_chat/">- chat -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">프로젝트 2 MMO</span></p>
+                <p class="caption"><span class="caption-text">프로젝트 2 Metaverse</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../_metaverse/">- metaverse -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">프로젝트 3 MMO</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- mmo -</a>
                     </li>
@@ -86,6 +91,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../rxjs/">- rxjs -</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../jquery/">- jquery -</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">노드.JS</span></p>
                 <ul class="current">
@@ -101,13 +108,15 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#132">1.3.2. 개별 패키지 설치</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#133">1.3.3. 깃헙에서 프로젝트 받아온 경우 실행</a>
+    <li class="toctree-l3"><a class="reference internal" href="#133-yarn">1.3.3. yarn 설치</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#134-nodejs">1.3.4. nodejs 앱 실행</a>
+    <li class="toctree-l3"><a class="reference internal" href="#134">1.3.4. 깃헙에서 프로젝트 받아온 경우 실행</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#135">1.3.5. 새 프로젝트 생성 과정</a>
+    <li class="toctree-l3"><a class="reference internal" href="#135-nodejs">1.3.5. nodejs 앱 실행</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#136-express-socketio">1.3.6. express, socket.io 프로젝트 생성 과정</a>
+    <li class="toctree-l3"><a class="reference internal" href="#136">1.3.6. 새 프로젝트 생성 과정</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#137-express-socketio">1.3.7. express, socket.io 프로젝트 생성 과정</a>
     </li>
         </ul>
     </li>
@@ -176,8 +185,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">플러터</span></p>
+                <p class="caption"><span class="caption-text">프론트엔드</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reactjs/">- React.js -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
                     </li>
                 </ul>
@@ -228,7 +241,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">툴</span></p>
+                <p class="caption"><span class="caption-text">유틸</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
@@ -237,6 +250,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">편집기</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intellij/">- Intellij -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
                     </li>
@@ -252,7 +270,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../grunt/">- grunt -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">ETC</span></p>
+                <p class="caption"><span class="caption-text">기타</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../tools/">- 기타툴</a>
                     </li>
@@ -338,7 +356,13 @@
 <li>글로벌 설치 목록 조회<br />
 <code>npm list -g</code></li>
 </ul>
-<h3 id="133">1.3.3. 깃헙에서 프로젝트 받아온 경우 실행</h3>
+<h3 id="133-yarn">1.3.3. yarn 설치</h3>
+<ul>
+<li>yarn 은 향상된 npm이다. (필요?)</li>
+<li><code>npm i -g yarn</code></li>
+<li><code>yarn --version</code></li>
+</ul>
+<h3 id="134">1.3.4. 깃헙에서 프로젝트 받아온 경우 실행</h3>
 <ul>
 <li>의존성 라이브러리 설치<br />
 <code>npm i</code></li>
@@ -347,7 +371,7 @@
 <li>실행<br />
 <code>npm start</code></li>
 </ul>
-<h3 id="134-nodejs">1.3.4. nodejs 앱 실행</h3>
+<h3 id="135-nodejs">1.3.5. nodejs 앱 실행</h3>
 <ul>
 <li>기본 실행<br />
 <code>node xxx.js</code></li>
@@ -368,7 +392,7 @@ npm test
 npm run-script kill
 npm run-script reload
 </code></pre>
-<h3 id="135">1.3.5. 새 프로젝트 생성 과정</h3>
+<h3 id="136">1.3.6. 새 프로젝트 생성 과정</h3>
 <ul>
 <li>프로젝트명 빈 폴더 생성<br />
 <code>mkdir [프로젝트폴더]</code><br />
@@ -383,7 +407,7 @@ npm run-script reload
 <li>특정 라이브러리 설치 (+ package.json에 추가)<br />
 <code>npm i [라이브러리이름] --save</code></li>
 </ul>
-<h3 id="136-express-socketio">1.3.6. express, socket.io 프로젝트 생성 과정</h3>
+<h3 id="137-express-socketio">1.3.7. express, socket.io 프로젝트 생성 과정</h3>
 <ul>
 <li>가이드: <a href="https://expressjs.com/ko/starter/installing.html">https://expressjs.com/ko/starter/installing.html</a><br />
 <code>mkdir [프로젝트폴더]</code><br />
@@ -407,9 +431,10 @@ process.memoryUsage(); //메모리 사용량
 process.uptime(); //현재 프로그램이 실행된 시간
 </code></pre>
 <h3 id="143-exports">1.4.3. exports 내장 (라이브러리)</h3>
-<blockquote>
-<p>모듈 (라이브러리) 내보내기 가져오기</p>
-</blockquote>
+<ul>
+<li>모듈 (라이브러리) 내보내기 / 불러오기</li>
+<li>ES6 방식 (import)가 아니라, CommonJS 방식 (require("xxx"))를 사용한다.</li>
+</ul>
 <pre><code class="language-javascript">// 모듈 쪽 방법 1
 // xxx.js 또는 xxx/index.js 의 내용
 var myfunc = function () {};
@@ -424,7 +449,8 @@ module.exports = {
 exports.foo = function () {};
 exports.val = 10;
 </code></pre>
-<pre><code class="language-javascript">// dummyDB.js
+<pre><code class="language-javascript">// 사용 측
+// dummyDB.js
 let module = require('./xxx');
 module.foo();
 </code></pre>
@@ -834,7 +860,7 @@ console.log(myDB.find(12));
         <a href="../express/" class="btn btn-neutral float-right" title="- express -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../rxjs/" class="btn btn-neutral" title="- rxjs -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../jquery/" class="btn btn-neutral" title="- jquery -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -860,7 +886,7 @@ console.log(myDB.find(12));
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../rxjs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../jquery/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../express/" style="color: #fcfcfc">Next &raquo;</a></span>

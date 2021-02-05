@@ -3,7 +3,9 @@ nav:
         - '현재 편집중...': nodejs.md
         - 프로젝트 1 CHAT:
                   - '- chat -': _chat.md
-        - 프로젝트 2 MMO:
+        - 프로젝트 2 Metaverse:
+                  - '- metaverse -': _metaverse.md
+        - 프로젝트 3 MMO:
                   - '- mmo -': _mmo.md
         - HTML:
                   - '- html -': html.md
@@ -12,16 +14,18 @@ nav:
                   - '- javascript -': javascript.md
                   - '- typescript -': typescript.md
                   - '- rxjs -': rxjs.md
+                  - '- jquery -': jquery.md
         - 노드.JS:
                   - '- node.js -': nodejs.md
                   - '- express -': express.md
-        - 플러터:
+        - 프론트엔드:
+                  - '- React.js -': reactjs.md
+                  - '- Vue.js -': vuejs.md
                   - '- flutter -': flutter.md
         - WEBGL:
                   #   - '- PlayCanvas -': playcanvas.md
                   - '- three.js -': threejs.md
                   - '- blueprint3d.js -': blueprint3d.md
-        # - Vue.js: index.md
         # - Typescript: index.md
         - 파이썬:
                   - '- python -': python.md
@@ -50,18 +54,20 @@ nav:
                   - '- kubernetes -': kubernetes.md
         - 알고리즘:
                   - '- cryptography -': crypto.md
-        - 툴:
+        - 유틸:
                   - '- mkdocs -': mkdocs.md
                   - '- jekyll -': jekyll.md
                   - '- git -': git.md
                   - '- chocolatey -': chocolatey.md
+        - 편집기:
+                  - '- Intellij -': intellij.md
                   - '- vscode -': vscode.md
                   - '- blender -': blender.md
         - 번들러:
                   - '- webpack -': webpack.md
                   - '- parcel -': parcel.md
                   - '- grunt -': grunt.md
-        - ETC:
+        - 기타:
                   - '- 기타툴': tools.md
                   - '- 각종에러 -': errors.md
                   - '- 용어들 -': terms.md

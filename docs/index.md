@@ -1,7 +1,8 @@
 # Evan's Dev Note
 
-    어떤 프로그래머의 개인 기록소. 빈 내용 많음. 집필중...
+<!-- 어떤 프로그래머의 개인 기록소. 빈 내용 많음. 집필중... -->
 
+<!--
 ## 관심1
 
 - [Nodejs](nodejs.md)
@@ -29,9 +30,10 @@
 - Vscode
 - Intellij
 - Pycharm
-- Rider
+- Rider -->
 
-## 프로젝트
+## 프로젝트 2021
 
 - [CHAT](_chat.md)
+- [METAVERSE](_metaverse.md)
 - [MMORPG](_mmo.md)

@@ -66,7 +66,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../_chat/">- chat -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">프로젝트 2 MMO</span></p>
+                <p class="caption"><span class="caption-text">프로젝트 2 Metaverse</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../_metaverse/">- metaverse -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">프로젝트 3 MMO</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- mmo -</a>
                     </li>
@@ -79,6 +84,10 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_1">개요</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#css_1">CSS 변수 할당 및 사칙연산</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">키워드</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -90,6 +99,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../rxjs/">- rxjs -</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../jquery/">- jquery -</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">노드.JS</span></p>
                 <ul>
@@ -98,8 +109,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">플러터</span></p>
+                <p class="caption"><span class="caption-text">프론트엔드</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reactjs/">- React.js -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
                     </li>
                 </ul>
@@ -150,7 +165,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">툴</span></p>
+                <p class="caption"><span class="caption-text">유틸</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
@@ -159,6 +174,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">편집기</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intellij/">- Intellij -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
                     </li>
@@ -174,7 +194,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../grunt/">- grunt -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">ETC</span></p>
+                <p class="caption"><span class="caption-text">기타</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../tools/">- 기타툴</a>
                     </li>
@@ -234,6 +254,19 @@
 <blockquote>
 <p>종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로, HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다. - 위키백과</p>
 </blockquote>
+<h2 id="css_1">CSS 변수 할당 및 사칙연산</h2>
+<pre><code class="language-css">:root {
+  --canvas-height: 370px; /* 변수할당 */
+  --content-width: 800px;
+  --menu-width: 300px;
+  --menu-height: calc(var(--canvas-height) - 100px); /* 변수사용 + 계산 */
+}
+</code></pre>
+<h2 id="_2">키워드</h2>
+<p>보이기</p>
+<pre><code class="language-css">display: none; /* 화면에서 안보임 */
+visibility: hidden; /* 화면에서 안보임. 자리는 차지함 */
+</code></pre>
               
             </div>
           </div>

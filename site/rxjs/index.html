@@ -66,7 +66,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../_chat/">- chat -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">프로젝트 2 MMO</span></p>
+                <p class="caption"><span class="caption-text">프로젝트 2 Metaverse</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../_metaverse/">- metaverse -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">프로젝트 3 MMO</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../_mmo/">- mmo -</a>
                     </li>
@@ -86,7 +91,19 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">- rxjs -</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subject">Subject</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#observable">Observable</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#from">from</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fromevent">fromEvent</a>
+    </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../jquery/">- jquery -</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">노드.JS</span></p>
@@ -96,8 +113,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../express/">- express -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">플러터</span></p>
+                <p class="caption"><span class="caption-text">프론트엔드</span></p>
                 <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reactjs/">- React.js -</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../vuejs/">- Vue.js -</a>
+                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="../flutter/">- flutter -</a>
                     </li>
                 </ul>
@@ -148,7 +169,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../crypto/">- cryptography -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">툴</span></p>
+                <p class="caption"><span class="caption-text">유틸</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">- mkdocs -</a>
                     </li>
@@ -157,6 +178,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../git/">- git -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../chocolatey/">- chocolatey -</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">편집기</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../intellij/">- Intellij -</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../vscode/">- vscode -</a>
                     </li>
@@ -172,7 +198,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../grunt/">- grunt -</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">ETC</span></p>
+                <p class="caption"><span class="caption-text">기타</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../tools/">- 기타툴</a>
                     </li>
@@ -228,9 +254,9 @@
             <div class="section">
               
                 <h1 id="rxjs">RxJS</h1>
-<blockquote>
-<p>반응형 프로그래밍은 한번 코딩을 해 놓으면 이후에 데이터가 변화하는 행동을 알아서 처리하는 것을 의미 한다</p>
-</blockquote>
+<ul>
+<li>데이터가 변동되면 무엇을 하라고 사용자가 한번만 정의를 내리고, 나머지 이후의 데이터가 변동되는 행위에 대한 행동을 맏기는 행위를 반응형이라고 한다.</li>
+</ul>
 <p>전통 방식</p>
 <pre><code class="language-javascript">function event() {
   // ...
@@ -253,6 +279,143 @@ el.addEventListener('click', event);
   () =&gt; console.log('complete')
 );
 </code></pre>
+<h2 id="_1">설치</h2>
+<p><code>npm i rxjs</code></p>
+<h2 id="subject">Subject</h2>
+<ul>
+<li>현재 주제 부터 감시. 지나간 주제는 감시하지 않음</li>
+</ul>
+<pre><code class="language-javascript">import { BehaviorSubject } from 'rxjs';
+
+const subject = new BehaviorSubject('우유');
+
+//구독자1 (마지막 우유 부터 구독함)
+subject.subscribe((v) =&gt; {
+  console.log(`구독자1 ${v} 받음`);
+});
+//구독자2
+subject.subscribe((v) =&gt; {
+  console.log(`구독자2 ${v} 받음`);
+});
+
+//주스로 주제 변경
+subject.next('쥬스');
+
+//구독자3 (마지막 쥬스 부터 구독함)
+subject.subscribe((v) =&gt; {
+  console.log(`구독자3 ${v} 받음`);
+});
+
+//실행결과
+// 구독자1 우유 받음
+// 구독자2 우유 받음
+// 구독자1 쥬스 받음
+// 구독자2 쥬스 받음
+// 구독자3 쥬스 받음
+</code></pre>
+<h2 id="observable">Observable</h2>
+<ul>
+<li>구독자는 관찰객체의 과거에서 미래까지 모든 행위를 구독 받는다.</li>
+</ul>
+<pre><code class="language-javascript">import { Observable } from 'rxjs';
+
+const observable = new Observable((obs) =&gt; {
+  try {
+    obs.next('우유');
+    obs.next('주스');
+    obs.complete();
+  } catch (error) {
+    obs.error(error);
+  }
+});
+
+//구독자1
+observable.subscribe(
+  (v) =&gt; {
+    console.log(`구독자1 ${v} 받음`);
+  },
+  (error) =&gt; {
+    console.log(`구독자1 ${error}} 에러`);
+  },
+  () =&gt; {
+    console.log(`구독자1 구독 완료`);
+  }
+);
+
+//구독자2
+observable.subscribe((v) =&gt; {
+  console.log(`구독자2 ${v} 받음`);
+});
+
+//구독자3 (3초뒤 구독 시작)
+setTimeout(() =&gt; {
+  observable.subscribe(
+    (v) =&gt; {
+      console.log(`구독자3 ${v} 받음`);
+    },
+    null,
+    null
+  );
+}, 3000);
+
+//실행결과
+// 구독자1 우유 받음
+// 구독자1 주스 받음
+// 구독자1 구독 완료
+// 구독자2 우유 받음
+// 구독자2 주스 받음
+// 3초뒤...
+// 구독자3 우유 받음
+// 구독자3 주스 받음
+</code></pre>
+<h2 id="from">from</h2>
+<ul>
+<li>고정된 일련 데이터에 대한 구독</li>
+</ul>
+<pre><code class="language-javascript">import { from } from 'rxjs';
+
+const array = from([1, 2, 3, 4]);
+array.subscribe((val) =&gt; console.log(val)); //1~5까지 숫자 1개씩 출력
+// 1
+// 2
+// 3
+// 4
+
+const text = from('우유');
+text.subscribe((val) =&gt; console.log(val)); //hello world 글자 1개씩 출력
+// 우
+// 유
+
+const map = new Map();
+map.set(1, '우유');
+map.set(2, '1234');
+
+const mapSource = from(map);
+mapSource.subscribe((val) =&gt; console.log(val));
+
+map.set(2, '주스'); //출력되지 않는다
+
+// [1, '우유']
+// [2, '1234']
+</code></pre>
+<h2 id="fromevent">fromEvent</h2>
+<ul>
+<li>이벤트 구독</li>
+</ul>
+<pre><code class="language-javascript">import { Observable, fromEvent } from 'rxjs';
+
+this.mousePositon$ = fromEvent(document, 'mousemove');
+
+// ③ 옵저버는 옵저버블을 구독하고 옵저버블이 방출한 데이터를 전파받아 사용한다.
+this.mousePositon$.subscribe(
+  (event: MouseEvent) =&gt; {
+    this.posX = event.clientX;
+    this.posY = event.clientY;
+  },
+  (error) =&gt; console.log(error),
+  () =&gt; console.log('complete!')
+);
+</code></pre>
               
             </div>
           </div>
@@ -260,7 +423,7 @@ el.addEventListener('click', event);
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../nodejs/" class="btn btn-neutral float-right" title="- node.js -">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../jquery/" class="btn btn-neutral float-right" title="- jquery -">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../typescript/" class="btn btn-neutral" title="- typescript -"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -292,7 +455,7 @@ el.addEventListener('click', event);
         <span><a href="../typescript/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../nodejs/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../jquery/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -4,7 +4,9 @@
 
 ---
 
-## 1.1. 객체 선언 방법들
+## 1.1. 객체
+
+### 1.1.1. 객체 선언
 
 ```javascript
 // 1. 자바스크립트 오브젝트
@@ -63,7 +65,7 @@ jsClass2.val = 'setter jsClass2';
 jsClass2.foo();
 ```
 
-## 1.2. 객체 복제 (클론)
+### 1.1.2. 객체 복제 (클론)
 
 ```javascript
 //객체 복제 방법 1
@@ -76,7 +78,7 @@ var objNew = { ...obj1 }; //생성 + 복사
 var objNew = { ...obj1, ...obj2 }; //여러개의 객체를 하나로 합침
 ```
 
-## 1.3. 객체 필드 접근
+### 1.1.3. 객체 접근
 
 ```javascript
 var obj1 = {
@@ -101,9 +103,107 @@ console.log(obj1['a' + ++i]);
 
 ---
 
-## 1.4. JavaScript로 메인루프 구현
+## 1.2. 함수 및 객체, 내보내기 / 불러오기
 
-JS로 애니메이션 처리 --> 규칙적인 처리를 하도록 구현하면 됩니다. 다음과 같은 방법들이 있습니다.
+### 1.2.1. commonjs 방식 (nodejs)
+
+```javascript
+const canadianToUs = function (canadian) {
+  return roundTwoDecimals(canadian * exchangeRate);
+};
+
+function usToCanadian(us) {
+  return roundTwoDecimals(us / exchangeRate);
+}
+exports.canadianToUs = canadianToUs; // 내보내기 1
+exports.usToCanadian = usToCanadian; // 내보내기 2
+```
+
+```javascript
+//사용하기
+const currency = require('./currency-functions');
+console.log(currency.canadianToUs(50));
+console.log(currency.usToCanadian(30));
+```
+
+### 1.2.2. es6방식
+
+```javascript
+// 1. 선언과 동시에 내보내기
+export function canadianToUs(canadian) {
+  return roundTwoDecimals(canadian * exchangeRate);
+}
+
+// 2. 별도로 내보내기
+const usToCanadian = function (us) {
+  return roundTwoDecimals(us / exchangeRate);
+};
+export { usToCanadian };
+```
+
+```javascript
+// 단일 객체 내보내기
+const obj = {
+  canadianToUs(canadian) {
+    return roundTwoDecimals(canadian * exchangeRate);
+  },
+};
+
+obj.usToCanadian = function (us) {
+  return roundTwoDecimals(us / exchangeRate);
+};
+
+export default obj;
+```
+
+```javascript
+//직접 가져오기
+import { canadianToUs } from './currency-functions';
+console.log(canadianToUs(50));
+
+//별명으로 가져오기
+import * as currency * from './currency-functions';
+console.log(currency.canadianToUs(50));
+
+//단일 객체 가져오기 (별명은 아무이름 붙여도 된다)
+import currency from "./currency-object"
+console.log(currency.canadianToUs(50));
+```
+
+하나만 내보내기, export default obj는 왜 필요할까?  
+`export class A {}` 에선 가져올때 파일 이름 + 가져올 객체 A의 이름을 알고 있어야 한다.  
+`export default class A {}` 에선 가져올때 파일 이름만 알고 있으면 된다. 굳이 필요한가 싶다.
+export default는 클래스를 위해서 존재하는 것 같다. 하지만 변수 공개 범위 설정이 안되는 자바스크립트 특성상,
+싱글톤 모듈은 굳이 클래스로 작성하는것 보다. 일반 함수로 작성해서 내보낼 함수에만 export를 붙이는게 더 명확한 코딩이 가능할 것 같다.
+
+---
+
+## 1.3. 이벤트 리스너 비교
+
+- **onclick** 방식
+
+```javascript
+document.getElementById('trigger').onclick = () => {
+  alert('hello!');
+};
+```
+
+- **addEventListener** 방식 (여러개의 리스너를 지정할 수 있다)  
+  또한 마지막 파라미터를 true 로 주면 이벤트 호출 방향을 부모에서 자식으로 역전 할 수 있다. (버블링 => 캡쳐링)
+
+```javascript
+document.getElementById('trigger').addEventListener(
+  'click',
+  () => {
+    alert('hello!');
+  },
+  false
+);
+```
+
+---
+
+## 1.4. JavaScript로 메인루프 구현
 
 - setInterval
 - setTimeout
