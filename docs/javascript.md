@@ -252,3 +252,23 @@ requestAnimationFrame(run);
 ### 1.5.1. window.requestAnimationFrame()
 
 - 다음 리페인트에서 그 다음 프레임을 애니메이트하려면 콜백 루틴이 반드시 스스로 requestAnimationFrame()을 호출해야합니다.
+
+### foreach 반복
+
+```javascript
+//foreach가 존재하긴 하나 콜백 형태로 괴랄하다. 아래와 같이 for of를 사용하자.
+list = [];
+for (let item of list) {
+  if (item.handle == handle) {
+    item.close();
+    return;
+  }
+}
+
+//for in 은 객체의 프로퍼티를 나열하는데 사용된다. dictionary 처럼 사용 가능
+dic = {};
+dic['rabbit'] = 'bunny';
+for (let key in dic) {
+  console.log(dic[key]);
+}
+```

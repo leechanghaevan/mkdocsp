@@ -1,4 +1,4 @@
-# 1. Social Universe (메타버스) 프로젝트
+# 1. Virtual Space (메타버스) 프로젝트
 
 > 3D 소셜 공간을 웹 기반으로 구현한다.
 
@@ -18,49 +18,31 @@
 ### 1.2.1. 사전준비
 
 `nodejs 다운로드 설치`  
-`nodejs i three`  
-`nodejs i rxjs`
-`nodejs i -g typescript`  
-`nodejs i -g parcel`
+`npm i three`  
+`npm i -g typescript`  
+`npm i -g parcel`
 
 ### 1.2.2. 타입 스크립트 설정
 
 tsconfig.json
 
 ```json
-"target": "es5"
-"sourceMap": true
-"outDir": "./dist",
-"rootDir": "./_src",
+"compilerOptions": {
+    "target": "es5"
+    "module": "es2015"
+    "sourceMap": true
+    "outDir": "./dist",
+    "rootDir": "./_src",
+    "removeComments": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+},
+"exclude": ["node_modules"]
 ```
 
-- import 문 변환하지 않고 남겨둠.
-- 단점: 임포트 경로가 지저분하다. `import * as THREE from '../../../node_modules/three/src/three.js`
-- 장점: commonjs 없이 동작한다.
-
-```json
-"module": "es2015"
-```
-
-- import 문을 commonjs 형태로 변환한다.
-- 단점: commonjs 모듈을 번들러를 통해 묶어 주어야 한다.
-- 장점: 임포트 경로가 깔끔하다. `import * as THREE from 'three`
-
-```json
-"module": "commonjs"
-"moduleResolution": "node"
-```
-
-vscode 에서 타입스크립트 컴파일시 팝업창 안뜨고 조용히 진행되게  
-tasks.json
-
-```json
-"presentation": {
-"reveal": "silent",
-"clear": true,
-"showReuseMessage": false
-}
-```
+기타 설정은 [typescript](typescript.md) 참고
 
 ### 1.2.3. 라이브러리 다운로드
 

@@ -14,24 +14,24 @@
 
 - tsconfig.json 생성  
   `tsc --init`
-- tsconfig.json 에 내용 추가 1
-  `"module": "es2015"` import 사용, node_modules 가져올때 경로를 디테일하게 지정해 주어야 하는 경로 문제가 발생한다.
-  `"module": "commonjs"` require 사용, 컴파일 에러는 발생하지 않으나, 번들러를 통해 소스를 통합시켜 주지 않으면 브라우저에서 로딩이 안된다.
-- tsconfig.json 에 내용 추가 2
+- tsconfig.json 에 내용 추가 1  
+  `"module": "es2015"` (추천) import 사용, node_modules 가져올때 경로를 디테일하게 지정해 주어야 하는 경로 문제가 발생한다.  
+  `"module": "commonjs"` (비추) require 사용, 컴파일 에러는 발생하지 않으나, 번들러를 통해 소스를 통합시켜 주지 않으면 브라우저에서 로딩이 안된다.
+- tsconfig.json 에 내용 추가 2  
   `"sourceMap":"true"`  
   `"outDir":"./dist"`  
   `"rootDir":"./src"`
 - ts 소스 빌드  
   `shift + ctrl + b` 또는 터미널에서 `tsc`
 
-### 1.1.3. 디버깅
+### 1.1.3. vscode 디버깅
 
 - 로컬 웹서버 실행 (live server 또는 webpack-dev-server)
 - launch.json 에서 디버깅 URL 로컬 웹서버와 같이 맞추기
 - 디버깅 실행  
   `f5`
 
-### 1.1.4. ts 소스 빌드시 아무 방해 메세지도 안뜨게 하는 법
+### 1.1.4. vscode 에서 ts 빌드시 아무 방해 메세지도 안뜨게 하는 법
 
 - `f1`
 - `tasks:configure default build task` 선택
@@ -48,7 +48,20 @@
 
 - `shift + ctrl + b` 로 빌드
 
-### 1.1.5. 문법
+### 1.1.5. webstorm 디버깅
+
+- 크롬 스토어에서 Jetbrain 확장 설치
+- webstorm에서 html 파일 우클릭 후 debug 실행 (내장 웹서버 실행됨)
+
+### 1.1.6. webstorm 에서 ts 빌드 매크로 만들기
+
+- start macro
+- Compile typescript
+- Debug > Rerun
+- stop macro
+- Debug 선택 후 `shift + ctrl + b` 로 실행
+
+### 1.1.7. 문법
 
 타입 종류
 
@@ -77,4 +90,27 @@ function foo() {
   console.log(arguments[0]);
   console.log(arguments[1]);
 }
+```
+
+사용자 정의 데이터 타입
+
+```typescript
+type ChatMsg = {
+  uid: string;
+  nam: string;
+  typ: string;
+  tim: string;
+  msg: string;
+};
+//또는
+class ChatMsg {
+    uid!: string;
+    nam!: string;
+    typ!: string;
+    tim!: string;
+    msg!: string;
+}
+
+//사용법
+let msg:ChatMsg = = {nam:"111", typ:"2222", msg:"ddd", id:"d", tim:"ddd"};
 ```

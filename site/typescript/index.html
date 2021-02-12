@@ -324,6 +324,12 @@
 <code>type UNIQID = string | null</code></p>
 <p>유저 타입 정의 (특정 값만 받아들이게)<br />
 <code>type USER_TYPE = 'TESTER' | 'ADMIN'</code></p>
+<p>함수의 모든 파라미터 사용하기</p>
+<pre><code class="language-typescript">function foo() {
+  console.log(arguments[0]);
+  console.log(arguments[1]);
+}
+</code></pre>
               
             </div>
           </div>

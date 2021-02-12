@@ -80,9 +80,9 @@ npm run-script reload
 - 프로젝트 초기화  
   `npm init`  
   `npm init -y`
-- 디펜던시 편집  
+- 디펜던시 편집 (수동을 할 필요 없음)
   `package.json`
-- 라이브러리 설치  
+- 라이브러리 설치 (package.json이 이미 있는 경우)
   `npm i`
 - 특정 라이브러리 설치 (+ package.json에 추가)  
   `npm i [라이브러리이름] --save`

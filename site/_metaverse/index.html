@@ -82,7 +82,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#124">1.2.4. 타입 스크립트 컴파일</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#125-js">1.2.5. 빌드 (js묶음 + 미니파이)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#125-ts-js">1.2.5. 빌드 (ts컴파일 + js묶음 + 미니파이)</a>
     </li>
         </ul>
     </li>
@@ -259,7 +259,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="1-social-universe">1. Social Universe (메타버스) 프로젝트</h1>
+                <h1 id="1-virtual-space">1. Virtual Space (메타버스) 프로젝트</h1>
 <blockquote>
 <p>3D 소셜 공간을 웹 기반으로 구현한다.</p>
 </blockquote>
@@ -276,10 +276,9 @@
 <h2 id="12">1.2. 프로젝트 설정</h2>
 <h3 id="121">1.2.1. 사전준비</h3>
 <p><code>nodejs 다운로드 설치</code><br />
-<code>nodejs i three</code><br />
-<code>nodejs i rxjs</code>
-<code>nodejs i -g typescript</code><br />
-<code>nodejs i -g parcel</code></p>
+<code>npm i three</code><br />
+<code>npm i -g typescript</code><br />
+<code>npm i -g parcel</code></p>
 <h3 id="122">1.2.2. 타입 스크립트 설정</h3>
 <p>tsconfig.json</p>
 <pre><code class="language-json">&quot;target&quot;: &quot;es5&quot;
@@ -302,7 +301,7 @@
 <pre><code class="language-json">&quot;module&quot;: &quot;commonjs&quot;
 &quot;moduleResolution&quot;: &quot;node&quot;
 </code></pre>
-<p>타입스크립트 컴파일시 팝업창 안뜨고 조용히 진행되게<br />
+<p>vscode 에서 타입스크립트 컴파일시 팝업창 안뜨고 조용히 진행되게<br />
 tasks.json</p>
 <pre><code class="language-json">&quot;presentation&quot;: {
 &quot;reveal&quot;: &quot;silent&quot;,
@@ -314,7 +313,7 @@ tasks.json</p>
 <p><code>node i</code></p>
 <h3 id="124">1.2.4. 타입 스크립트 컴파일</h3>
 <p><code>shift + ctrl + b</code> 또는 터미널에서 <code>tsc</code></p>
-<h3 id="125-js">1.2.5. 빌드 (js묶음 + 미니파이)</h3>
+<h3 id="125-ts-js">1.2.5. 빌드 (ts컴파일 + js묶음 + 미니파이)</h3>
 <p><code>npm run build</code></p>
               
             </div>
