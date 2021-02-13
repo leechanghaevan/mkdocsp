@@ -10,15 +10,25 @@
 
 ## 설치
 
-- `npm install -g create-react-app`
+- `npm install -g create-react-app` npx를 사용하게 되면 이렇게 설치할 필요가 없다.
+- `npm install -g create-next-app` npx를 사용하게 되면 이렇게 설치할 필요가 없다.create
 
-## 프로젝트 생성
+## 프로젝트 생성 기본
 
-- `create-react-app hello-react` 프로젝트 생성
+- `npx create-react-app hello-react` 프로젝트 생성
+- `npx create-react-app hello-react --template typescript` 타입스크립트 프로젝트 생성
 - `yarn start` 개발서버 시작
 - `yarn build` 번들
 - `yarn test` 테스트서버 시작
 - `yarn eject`
+
+## 프로젝트 생성 (React + Next.js + Typescript)
+
+- `npx create-next-app --example with-typescript hello-react` 앱생성
+- `cd test-app` 폴더 이동
+- `npm i` 종속성 설치
+- `npm i redux react-redux immer @types/react-redux typesafe-actions` 추가 라이브러리 설치
+- `npm run dev` 개발 서버 실행
 
 ## 기본 문법
 
