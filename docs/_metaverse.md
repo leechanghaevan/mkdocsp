@@ -15,12 +15,28 @@
 
 ## 1.2. 프로젝트 설정
 
-### 1.2.1. 사전준비
+### 1.2.1. 프로젝트 생성 과정
 
-`nodejs 다운로드 설치`  
-`npm i three`  
-`npm i -g typescript`  
-`npm i -g parcel`
+- `npm i -g typescript`
+- `npm i -g parcel`
+- `mkdir metaverse`
+- `cd metaverse`
+- `npm init`
+- `npm i three`
+- `npm i jquery`
+- `npm i -D @types/jquery`
+- `npm i socket.io-client`
+- `npm i -D @types/socket.io-client`
+
+### 1.2.1. 프로젝트 생성 과정 (with 리액트)
+
+- `npx create-react-app metaverse-react-ts --template typescript`
+- `cd metaverse-react-ts`
+- `npm i three`
+- `npm i jquery`
+- `npm i -D @types/jquery`
+- `npm i socket.io-client`
+- `npm i -D @types/socket.io-client`
 
 ### 1.2.2. 타입 스크립트 설정
 

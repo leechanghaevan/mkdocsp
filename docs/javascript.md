@@ -253,7 +253,7 @@ requestAnimationFrame(run);
 
 - 다음 리페인트에서 그 다음 프레임을 애니메이트하려면 콜백 루틴이 반드시 스스로 requestAnimationFrame()을 호출해야합니다.
 
-### foreach 반복
+### 1.5.2. foreach 반복
 
 ```javascript
 //foreach가 존재하긴 하나 콜백 형태로 괴랄하다. 아래와 같이 for of를 사용하자.
@@ -271,4 +271,26 @@ dic['rabbit'] = 'bunny';
 for (let key in dic) {
   console.log(dic[key]);
 }
+```
+
+### 1.5.3. ... 문법
+
+```javascript
+//객체 복제
+var prevState = {
+  name: 'yuddomack',
+  birth: '1996-11-01',
+  age: 22,
+};
+
+var state = {
+  ...prevState,
+  age: 23,
+};
+```
+
+```javascript
+//배열 복제
+let a = [1, 2, 3, 4];
+let b = [...a]; //단순 참조가 아닌 새로운 객체가 생성되고 값이 복사된다.
 ```
