@@ -39,3 +39,20 @@
   `cd docker run -d -p 80:80 --name docker-tutorial docker101tutorial`
 - 브라우저에서 확인  
   [http://127.0.0.1/](http://127.0.0.1/)
+
+## nginx 실행하기
+
+- `docker pull nginx` 도커허브에서 이미지 설치
+- 대시보드에서 이미지 클릭 후 Run
+- 포워딩할 Port 지정
+- Webroot 폴더 마운트 (Host Path 내부 경로 / Container Path 이미지 내부 경로)
+- 위의 3단계를 명령어로 바꾸면  
+  `docker run -it --rm -d -p 80:80 --name mynginx -v /mnt/e/webroot:/usr/share/nginx/html nginx`
+
+## redis 실행
+
+- `docker pull redis`
+- 외부 폴더에 데이터 저장소를 두고 싶을 경우  
+  `docker run --name some-redis -d -v /mnt/e/redis:/data redis redis-server --appendonly yes`
+- 다른 컨테이너에 저장소를 두고 싶은 경우  
+  `docker run --name some-redis -d --volumes-from some-volume-container redis redis-server --appendonly yes`
