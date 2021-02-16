@@ -278,7 +278,7 @@ for (let key in dic) {
 ```javascript
 //객체 복제
 var prevState = {
-  name: 'yuddomack',
+  name: '홍길동',
   birth: '1996-11-01',
   age: 22,
 };
