@@ -4,11 +4,27 @@
 
 > 도커는 리눅스의 응용 프로그램들을 소프트웨어 컨테이너 안에 배치시키는 일을 자동화하는 오픈 소스 프로젝트이다. 도커 웹 페이지의 기능을 인용하면 다음과 같다: 도커 컨테이너는 일종의 소프트웨어를 소프트웨어의 실행에 필요한 모든 것을 포함하는 완전한 파일 시스템 안에 감싼다. - 위키백과
 
-- 도커 이미지가 가상머신 이미지와 다른것은 리눅스 OS가 빠져있다. (즉 가볍다)
-- 도커는 리눅스 기반이므로 윈도에선 WSL 설치가 필수이다.
+## 용어
+
+- 이미지: 파일 하나로 구운 형태
+- 컨테이너: 이미지를 풀어서 설정을 정의하고 등록한 상태. 컨테이너는 실행, 종료 두가지 상태를 가진다. 하나의 이미지에서 여러 컨테이너 등록이 가능한다.
+
+## CLI 명령어
+
+- 도커 실행 `docker run --name myhello hello-world` (hello-world 이미지를 컨테이너로 올린다)
+- 도커 이미지 리스트 `docker images`
+- 도커 컨테이너 리스트 `docker ps -a`
+- 도커 (실행중인) 컨테이너 리스트 `docker ps`
+- 컨테이너 삭제 `docker rm [컨테이너이름1],[컨테이너이름2]`
+- 이미지 삭제 `docker rmi -f [이미지이름]`
+
+## CentOS에 설치
+
+- 참고:<https://docs.docker.com/engine/install/centos/>
 
 ## Window에 설치
 
+- (도커는 리눅스 기반이므로 윈도에선 WSL 설치가 필수이다)
 - vscode에서 마이크로소프트 도커 플러그인 검색 & 설치
 - Docker Desktop 설치하라고 뜸
 - 설치 후 리붓
@@ -40,7 +56,13 @@
 - 브라우저에서 확인  
   [http://127.0.0.1/](http://127.0.0.1/)
 
-## nginx 실행하기
+## mariadb 실행
+
+- <https://hub.docker.com/_/mariadb>
+- `docker pull mariadb`
+- `docker run --name some-mariadb -p 80:80 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag`
+
+## nginx 실행
 
 - `docker pull nginx` 도커허브에서 이미지 설치
 - 대시보드에서 이미지 클릭 후 Run
@@ -56,3 +78,10 @@
   `docker run --name some-redis -d -v /mnt/e/redis:/data redis redis-server --appendonly yes`
 - 다른 컨테이너에 저장소를 두고 싶은 경우  
   `docker run --name some-redis -d --volumes-from some-volume-container redis redis-server --appendonly yes`
+
+## 도커 설치 (centos)
+
+## 부팅시 도커 서비스 자동 실행 등록
+
+- `$ sudo systemctl enable docker.service`
+- `$ sudo systemctl enable containerd.service`

@@ -6,6 +6,9 @@
 
 ## 명령어
 
+- **깃 삭제**
+  `rm -rf .git`
+
 - **빈 리포지토리 생성**  
   `git init`
 
@@ -100,4 +103,4 @@
 참고
 
 1. [git - 간편 안내서](https://rogerdudler.github.io/git-guide/index.ko.html)
-1. [누구나 쉽게 이해할 수 있는 Git](https://backlog.com/git-tutorial/kr/)
+2. [누구나 쉽게 이해할 수 있는 Git](https://backlog.com/git-tutorial/kr/)
