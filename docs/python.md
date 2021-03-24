@@ -59,15 +59,22 @@
 - 기본 가상환경 이름은 base이다. 나만의 가상 환경을 생성하려면 아래처럼 한다.
 - Anaconda Powershell 을 연다
 - 아나콘다 업데이트  
-  `conda update conda`
+   `conda update conda`
 - 가상환경 목록 조회  
   `conda env list`
 - 가상환경 생성  
-  `conda create -n [MY_ENV]`
+  `conda create -n [MY_ENV] python=3.8`
+- 가상환경 삭제  
+  `conda env remove -n [My_ENV]`
 - 현재 가상환경 활성화  
   `conda activate [MY_ENV]`
 - 현재 가상환경 비활성화  
   `conda deactivate [MY_ENV]`
+
+## 파이썬 패키지 설치
+
+- 패키지 설치  
+  `pip install [패키지명]`
 
 ## 클라우드형 개발 환경
 
@@ -75,8 +82,16 @@
 - [Datalore](https://www.anaconda.com/datalore_navigator)
 - [Colab](https://colab.research.google.com/notebooks/intro.ipynb)
 
----
+## 문법
+
+```
+private __xxx
+protected _xxx
+public xxx
+```
+
+--
 
 참고
 
-1. [Anaconda Download](https://docs.anaconda.com/anaconda/install/)
+1. [Anaconda Download](https://docs.anaconda.com/anaconda/install/

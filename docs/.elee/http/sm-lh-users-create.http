@@ -1,0 +1,11 @@
+POST http://20.194.2.233:3000/api/users HTTP/1.1
+content-type: application/json
+accept: application/json
+
+{
+  "password": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "email": "user@example.com",
+  "username": "string"
+}

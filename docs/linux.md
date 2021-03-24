@@ -5,7 +5,6 @@
 ## Linux 명령어
 
 - 리눅스 버전 보기 `cat /etc/os-release`
--
 
 ### 프로그램 추가삭제 (Ubuntu 환경)
 
@@ -25,11 +24,17 @@
   `exit`
 - 리부팅  
   `reboot`
+- 프로세스 죽이기 (pid로)
+  `kill pid`
+- 프로세스 죽이기 (이름으로)
+  `pkill -f -9 [프로세스이름에 포함된 단어]`
 
 ### 인터넷
 
 - 다운로드  
   `curl [URL] > [파일이름]`
+- 포트번호와 사용 프로그램 보기
+  `etstat -ltnp`
 
 ### 파일
 
@@ -42,7 +47,7 @@
 - 현재 폴더 읽기쓰기권한 변경  
   `chmod 777 .`
 - 디렉토리 삭제  
-  `rmdir [디렉토리이름]`
+  `rmdir -r [디렉토리이름]`
 - 파일 삭제  
   `rm [파일이름]`
 - 파일 복사  
@@ -106,7 +111,7 @@ firewall-cmd --add-port=8080/tcp --zone=public --permanent
 firewall-cmd --reload 포트 갱신
 firewall-cmd --list-ports 열린 포트 확인
 
-foo & 백그라운드에 실행
+foo & //뒤에 & 붙이면 백그라운드에서 실행
 
 [sudo 계정 생성]
 root 로 로그인

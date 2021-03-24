@@ -294,3 +294,8 @@ var state = {
 let a = [1, 2, 3, 4];
 let b = [...a]; //단순 참조가 아닌 새로운 객체가 생성되고 값이 복사된다.
 ```
+
+## await / async / Promise
+
+//3초 대기
+await new Promise((resolve, reject) => setTimeout(resolve, 3000));

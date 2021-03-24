@@ -1,0 +1,12 @@
+GET http://20.194.2.233:3000/api/users HTTP/1.1
+Authorization: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+
+###
+
+POST http://20.194.2.233:3000/api HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
