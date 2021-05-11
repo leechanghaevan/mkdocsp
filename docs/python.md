@@ -73,8 +73,8 @@
 
 ## 파이썬 패키지 설치
 
-- 패키지 설치  
-  `pip install [패키지명]`
+- 패키지 설치
+- `pip `pip install [패키지명]`
 
 ## 클라우드형 개발 환경
 
@@ -86,8 +86,8 @@
 
 ```
 private __xxx
-protected _xxx
 public xxx
+protected _xxx
 ```
 
 --

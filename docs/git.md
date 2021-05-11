@@ -46,6 +46,9 @@
 >       깃헙에 push 할때 마다 Logon failed 떠서 github계정을 다시 물어보는 경우가 있다.
 >           - 무시해도 잘 진행 된다
 
+- 원격 저장소 주소 변경
+  `git remote set-url origin https://github.com/leechanghaevan/thanos_server_main.git`
+
 - 현재 유저 이름 조회/변경  
   `git config user.name`  
   `git config user.email`  

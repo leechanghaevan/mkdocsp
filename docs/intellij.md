@@ -24,7 +24,7 @@
 - `shift + enter` 아래에 행 삽입
 
 - `ctrl + space` 자동완성: 추천 값
-- `alt + enter` 자동완성: 에러 수정
+- `alt + enter` 자동완성: 에러 수정 (show context actions)
 
 - `ctrl + alt + l` 포매팅
 - `shift + arrow` 선택: 한칸씩
